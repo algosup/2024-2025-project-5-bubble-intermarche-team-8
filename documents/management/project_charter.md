@@ -1,4 +1,4 @@
-# 2023 - 2024 Project-5 Flutter Team-8 - Project Charter
+# 2024 - 2025 Bubble Intermarché Project - Team 8 | Project Charter
 
 ## Project definition
 
@@ -31,29 +31,33 @@ This implementation should be only targeting the front-end at first and should o
 
 ## Project Plan
 
-It was decided that additional questions would be made via e-mail and that those communication documents could be uploaded to Github if needed.
+Because of the geographical distance between ALGOSUP and the Intermarché located in Sait-Rémy-de-Provence, the kick-off metting has been done remotely, via a video-conference on April 23rd, 2025.
 
-This project will be using the waterfall project method due to the limited timeframe. However, we plan to use some aspects of SCRUM management with iterations over an MVP. This incrementation will limit the number of bugs by allowing regression testing.
+Additionally, for further questions which may arise after project kick-off, it was decided the communication would take place via emails. If needed, shared videoconferences between all the teams and needed stakeholders can be done.
 
-The planning will be made by defining the tasks and objectives pointed out in the brief and during the meeting. Each of these will be sorted by importance and distributed accordingly. To manage them, we will use a GitHub project in our repository to centralize all the resources. Additional management tools will be used to track the achievements and bottlenecks during the project and keep the client informed during the whole duration of the project.
+The timeframe of the project being quite short, we will be mainly applying waterfall principles, even though we will use some SCRUM aspects in order to stay as flexible as possible. This will allow us ti iterate over our MVP to reduce the number of potential bugs thorugh user testing and regression testing and meet best the client's expectations.
 
-After the final presentation which will take place on June, 21st 2024, we will do a post-mortem analysis to summarize what happened and make a report to the client.
+For user testing, we've been informed we could head to Issoudun's Intermarché to test our product directly in the supermarket and make it test by users.
+
+Through the project, our milestones will be sent to the client in order to have regular feedback.
+
+After the final presentation which will take place on June, 20th 2025, we will do a post-mortem analysis to summarize what happened and make a report to the client and our school director.
 
 ## Milestones
 
 | Date       | Time   | Milestones                        |
 | ---------- | ------ | --------------------------------- |
-| 05/13/2024 | 9 A.M. | Project kick-off with the client  |
-| 05/24/2024 | 5 P.M. | Functional Specification delivery |
-| 06/07/2024 | 5 P.M. | Technical Specification delivery  |
-| 06/07/2024 | 5 P.M. | Test Plan delivery                |
-| 06/14/2024 | 5 P.M. | Final product codebase delivery   |
-| 06/14/2024 | 5 P.M. | User Manual Delivery              |
-| 06/21/2024 | 9 A.M. | Final Presentation Pitch          |
+| 04/22/2025 | 9 A.M. | Project kick-off with the client  |
+| 05/16/2025 | 5 P.M. | Functional Specification delivery |
+| 05/28/2025 | 5 P.M. | Technical Specification delivery  |
+| 06/06/2025 | 5 P.M. | Test Plan delivery                |
+| 06/16/2025 | 5 P.M. | Final product codebase delivery   |
+| 06/16/2025 | 5 P.M. | User Manual Delivery              |
+| 06/20/2025 | 9 A.M. | Final Presentation Pitch          |
 
 ## Deliverables
 
-The main deliverable is the source code of the application. In addition, to ensure we stay on the right track, we will submit multiple mock-ups and prototypes to the client.
+The main deliverable is the source code of the application. In addition, to ensure we stay on the right track, we will submit multiple mock-ups and prototypes to the client via e-mail.
 
 Additional documents will be given to the client:
 
@@ -62,15 +66,15 @@ Additional documents will be given to the client:
 - Test Plan
 - Management Planning & Weekly reports
 
-In addition, a presentation of our work will be done to the client as a 15-minute long presentation.
+In addition, a presentation of our work will be done to the client and our school director as a 15-minute long presentation.
 
 ## Allocated Resources
 
 Budget: 0€
 Workforce allocated: 4 team members
-Worktime: 16 half-days of 3h30 each
+Worktime: 40 half-days of 3h30 each
 
-Total human hours estimation: 336h
+Total human hours estimation: 560h
 
 ## Risks
 

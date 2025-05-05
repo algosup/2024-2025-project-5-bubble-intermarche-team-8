@@ -1,8 +1,8 @@
-# 2024-2025 Bubble Intermarché Project - Team 8 | Management Artifacts
+# 2024 - 2025 Bubble Intermarché Project - Team 8 | Management Artifacts
 
 This document aims to centralize the management artifacts links and resources listed below:
 
-- [2024-2025 Bubble Intermarché Project - Team 8 | Management Artifacts](#2024-2025-bubble-intermarché-project---team-8--management-artifacts)
+- [2024 - 2025 Bubble Intermarché Project - Team 8 | Management Artifacts](#2024---2025-bubble-intermarché-project---team-8--management-artifacts)
   - [Tasks and Schedule](#tasks-and-schedule)
   - [RACI Matrix](#raci-matrix)
   - [Risks \& Assumptions](#risks--assumptions)
