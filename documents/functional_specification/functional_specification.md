@@ -1,6 +1,6 @@
 # Functional Specification - BiteMatch <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
   - [Project Overview](#project-overview)
@@ -26,12 +26,20 @@
   - [Color Palette](#color-palette)
   - [Logo](#logo)
   - [Font](#font)
+- [Funtional Requirements](#funtional-requirements)
+  - [Languages](#languages)
   - [Data](#data)
     - [Meals](#meals)
     - [Tags](#tags)
-  - [Image Assets](#image-assets)
-- [Funtional Requirements](#funtional-requirements)
+  - [Product Description](#product-description)
+  - [Personas](#personas)
+  - [User Workflow](#user-workflow)
 - [Non-Functional Requirements](#non-functional-requirements)
+  - [Performance](#performance)
+  - [Connectivity](#connectivity)
+  - [Responsiveness](#responsiveness)
+  - [Marketing](#marketing)
+  - [Technical Requirements](#technical-requirements)
 - [Glossary](#glossary)
 
 ## Introduction
@@ -155,23 +163,32 @@ External project reviewers have been appointed by the project owner to review ou
 
 **End Goal and Deadline**:
 
-<!-- TODO -->
+Launch of a new application to help tourist find good wines/cheeses for their meal by June 20, 2025.
 
 **Key Milestones**:
 
-<!-- TODO -->
+- Final Testing completed by June 16, 2025.
+- Final Product codebase completed by June 14, 2025.
+- Functional Specification completed by May 16, 2025.
 
 **Task Breakdown**:
 
-<!-- TODO -->
+- Correcting codebase product from June 11 to June 13, 2025.
+- Testing codebase product from June 11 to June 13, 2025.
+- Implementing Nice-to-have features from June 4 to June 11, 2025.
+- Implementing core features from May 22 to June 2, 2025.
+- Reviewing Functional Specification from May 14 to May 16, 2025.
+- Defining Functional Specification from May 7 to May 14, 2025.
+- Creating the mock-up from April 28 to May 7, 2025.
 
 **Critical Path**:
 
-<!-- TODO -->
+- Core feature development must be completed before final testing.
+- Mock-up must be completed before Implementing Core features.
 
 **Timeline Visualization**:
 
-<!-- TODO -->
+<!-- TODO: Wainting for PM Gantt Chart -->
 
 ---
 
@@ -197,11 +214,14 @@ External project reviewers have been appointed by the project owner to review ou
 
 **Task Dependencies**:
 
-<!-- TODO -->
+- The Final Testing cannot start until Core Features are developed.
+- The Nice-to-have Feature Development cannot start until Core Features are developed.
+- The Core Feature Development cannot start until the mockup is approved.
 
 **Resource Dependencies**:
 
-<!-- TODO -->
+- QA must be available for the testing phase from June 2 to June 13, 2025.
+- Tech Lead must be available for code review from June 11 to June 13, 2025.
 
 ---
 
@@ -211,11 +231,18 @@ External project reviewers have been appointed by the project owner to review ou
 
 **Assumptions**:
 
-<!-- TODO -->
+- Tourists have access to smartphones with internet connectivity while shopping, at least to download the application.
+- Intermarché will allow application usage in-store and possibly promote it.
+- The application will run on both iOS and Android platforms.
+- The application will use a simple and intuitive interface to accommodate casual or non-tech-savvy users.
 
 **Constraints**:
 
-<!-- TODO -->
+- Limited access to real-time inventory from the grocery store may restrict accuracy of in-stock recommendations.
+- The search bar will only be used for cheeses and wines in the Proof Of Concept.
+- Must comply with local regulations for food labeling, allergens, and data privacy (e.g., GDPR).
+- The application must function offline or with limited connectivity, at least for basic features.
+- UI must accommodate quick usage in a shopping setting.
 
 ---
 
@@ -309,6 +336,16 @@ Also, the brown color has been slightly lighten up to have a more harmonious pag
 Home button has been replaced by the [BiteMatch Logo](#logo). \
 Finally, Intermarché's logo has been implemented in the middle of the top bar.
 
+**Arabic Version**:
+
+This application will be translated in many languages to be used by the most people possible. You can find which languages will the application be translated too at the following part, [Languages](#languages).
+
+However, some languages aren't writting the same way as europeans do (up-to-down or right-to-left) which is the case of Arabic. Therefore, another design with a different layout has been designed to avoid issues when cretaing the application on bubble.
+
+Here is a picture of the arabic Mockups:
+
+![Version Two Mockup In Arabic](./img/version_two_mockup_arabic.png)
+
 ---
 
 <!--
@@ -371,6 +408,38 @@ This application would be written with the `Inter` font because it is widely use
 
 ---
 
+<!-- ### Image Assets
+
+---
+
+TODO
+
+--- -->
+
+## Funtional Requirements
+
+### Languages
+
+---
+
+Since this appliaction is meant to be used by tourist, it will be translated in many languages.
+
+The two main languages of the application would be French and English, as we are in France and that English is most spoken language abroad.
+
+However, we decided not to stop to these two languages and to implant other languages which are:
+
+| Language | Flag | Reason                                                                                                                                    |
+| -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Greek    | 🇬🇷   | A team member comes from Greece.                                                                                                          |
+| Arabic   | 🇦🇪   | Arabic is a widespread language, it also allows the application to change, since Arabic is written from right to left.                    |
+| German   | 🇩🇪   | Germans are the second greatest tourist in France.                                                                                        |
+| Spanish  | 🇪🇸   | Spanish are one of the most used languages in France. Moreover, Spain is near France, allowing Spanish people to do tourism quite easily. |
+| Chinese  | 🇨🇳   | This is the most spoken language in the world.                                                                                            |
+
+You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
+
+---
+
 ### Data
 
 ---
@@ -402,32 +471,165 @@ For this application, the main page would display meal cards which would be pred
 
 ---
 
-<!-- TODO -->
+This application will allow user to search for wine or cheese with a search bar, as explained in the [Mockups](#mockups) section.
+
+Therefore, some tags have been defined and classified into subcategories which are:
+
+- Wine
+- Cheese
+- Accompaniement
+- Label
+- Season
+
+Hereunder are a more detailed table for each of those subcategories.
+
+**Wine**:
+
+| Categories | Name      | Definition                                                                                |
+| ---------- | --------- | ----------------------------------------------------------------------------------------- |
+| Type       | Red       | Wine made primarily from dark-colored grape varieties; typically bold and rich in flavor. |
+| Type       | White     | Wine made from green or yellowish grapes; usually light and crisp.                        |
+| Type       | Sparkling | Wine containing significant levels of carbon dioxide, making it fizzy or bubbly.          |
+| Type       | Rosé      | Wine with a pink hue, made from red grapes with limited skin contact during fermentation. |
+| Alcohol%   | Natural   | Wine with no added alcohol; alcohol content arises solely from natural fermentation.      |
+| Alcohol%   | 0%        | Non-alcoholic wine with 0% alcohol by volume (ABV).                                       |
+| Alcohol%   | <8%       | Wine with a low alcohol content, typically light and often sweet.                         |
+| Alcohol%   | <14%      | Standard table wine with moderate alcohol content.                                        |
+| Alcohol%   | <23%      | Fortified wine with higher alcohol content, often due to added spirits.                   |
+| Alcohol%   | 23+%      | Very high-alcohol content, typically liqueur-style or for cooking use.                    |
+| Taste      | Spicy     | Flavor profile with notes similar to spices like pepper, clove, or cinnamon.              |
+| Taste      | Bitter    | Sharp, slightly harsh taste often found in tannins or certain grape skins.                |
+| Taste      | Salt      | Rare in wine, but refers to a saline or mineral-like taste.                               |
+| Taste      | Fat       | A rich, full-bodied mouthfeel, often from high glycerol or alcohol content.               |
+| Taste      | Sweet     | Noticeable sugar content, ranging from off-dry to dessert-level sweetness.                |
+| Taste      | Acid      | Tart, tangy sensation that gives wine its freshness and balance.                          |
+
+**Cheese**:
+
+| Categories   | Name        | Definition                                                                                                                       |
+| ------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Animal Milk  | Goat        | Milk from goats, often used for cheeses with a tangy flavor and softer texture.                                                  |
+| Animal Milk  | Cow         | The most common milk source for cheese, offering a wide variety of textures and flavors.                                         |
+| Animal Milk  | Sheep       | Rich, fatty milk that yields creamy and tangy cheeses like Roquefort and Manchego.                                               |
+| Animal Milk  | Buffalo     | High-fat milk known for producing rich, creamy cheeses like mozzarella di bufala.                                                |
+| Vegetal Milk | Nut         | Plant-based milk made from nuts (e.g., almond, cashew), used in vegan cheese alternatives.                                       |
+| Vegetal Milk | Soy         | Milk from soybeans, commonly used in dairy-free cheese products due to its high protein content.                                 |
+| Vegetal Milk | Coconut     | Creamy, plant-based milk from coconuts, adding a mild sweetness to vegan cheeses.                                                |
+| Vegetal Milk | Oat         | Dairy-free milk from oats, often used in plant-based cheese for its creamy texture.                                              |
+| Vegetal Milk | Hemp        | Nutrient-rich milk from hemp seeds, used in alternative cheeses for its earthy flavor.                                           |
+| Vegetal Milk | Rice        | Mild-flavored milk from rice, typically used in lighter vegan cheese products.                                                   |
+| Vegetal Milk | Pea Protein | Plant-based milk derived from yellow peas, rich in protein and used in vegan cheese products.                                    |
+| Type         | Fresh       | Cheese that is not aged, with a soft texture and high moisture content (e.g., ricotta).                                          |
+| Type         | Soft        | Slightly aged cheese with a creamy interior and edible rind (e.g., Brie, Camembert).                                             |
+| Type         | Semi-hard   | Firm cheese with lower moisture, aged longer for fuller flavor (e.g., Gouda, Edam).                                              |
+| Type         | Hard        | Aged for extended periods, with a crumbly or firm texture (e.g., Parmesan, Pecorino).                                            |
+| Type         | Blue        | Cheese inoculated with mold cultures, resulting in blue or green veins and a strong, tangy flavor (e.g., Gorgonzola, Roquefort). |
+
+**Accompaniement**:
+
+| Categories | Name      | Definition                                                                                         |
+| ---------- | --------- | -------------------------------------------------------------------------------------------------- |
+| Meat       | Red       | Meat from mammals with darker-colored flesh, typically richer in flavor (e.g., beef, lamb).        |
+| Meat       | White     | Lighter-colored meat, generally leaner and milder in flavor (e.g., chicken, turkey).               |
+| Meat       | Fish      | Meat from freshwater or saltwater fish, known for being light and high in protein.                 |
+| Meat       | Sea       | Edible marine animals other than fish, such as shellfish and crustaceans (e.g., shrimp, scallops). |
+| Meat       | Wild      | Meat from non-domesticated animals hunted in the wild (e.g., venison, boar).                       |
+| Dessert    | Cake      | Baked sweet dessert, typically made from flour, sugar, and eggs, often layered or frosted.         |
+| Dessert    | Fruit     | Desserts based on fresh or cooked fruits, such as tarts, compotes, or fruit salads.                |
+| Dessert    | Chocolate | Desserts where chocolate is the main ingredient, including mousse, brownies, or truffles.          |
+| Dessert    | Ice       | Frozen desserts like ice cream, sorbet, or gelato, served cold and often creamy or fruity.         |
+
+**Label**:
+
+| Name                                     | Definition                                                                                                                  |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Local                                    | Products sourced from a specific nearby region, often highlighting freshness and reduced transport.                         |
+| AOP (Appellation d'Origine Protégée)     | EU certification guaranteeing that products are made entirely in a specific region using traditional methods.               |
+| AOC (Appellation d'Origine Contrôlée)    | French certification for origin and quality, often a precursor to AOP, ensuring strict geographic and production standards. |
+| IGP (Indication Géographique Protégée)   | Indicates that at least one stage of production, processing, or preparation takes place in the designated area.             |
+| Label Rouge                              | French quality label awarded to products that have superior taste and production standards compared to regular products.    |
+| STG (Spécialité Traditionnelle Garantie) | EU label highlighting traditional character, either in composition or means of production, without linking to a region.     |
+| Bio (AB)                                 | French organic certification ("Agriculture Biologique") ensuring the product is made without synthetic chemicals or GMOs.   |
+
+**Season**:
+
+| Name   | Definition                                                                                                                                                                                                                                    |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spring | A season for light, fresh wines such as Sauvignon Blanc, Pinot Grigio, and young rosés that pair well with seasonal vegetables and mild weather. |
+| Summer | Ideal for chilled, refreshing wines like rosé, sparkling wines, and crisp whites (e.g., Riesling, Albariño), often paired with light meals and outdoor dining. |
+| Autumn | A transitional season favoring fuller whites and lighter reds such as Chardonnay, Pinot Noir, or Grenache, complementing richer harvest foods. |
+| Winter | Best suited for bold, warming reds like Cabernet Sauvignon, Syrah, or fortified wines such as Port, often served with hearty dishes.                        |
 
 ---
 
-### Image Assets
+### Product Description
 
 ---
 
-<!-- TODO -->
+<!-- TODO: Say the different parts of the description page, how they are useful and so on -->
 
 ---
 
-## Funtional Requirements
+### Personas
 
-<!-- TODO -->
+---
+
+<!-- TODO: Create three personas (at least 2) about a professional of wine, a tourist that wants to try cheeses according to regional specialities, someone from the region that wants to have a good wine for their party -->
+
+---
+
+### User Workflow
+
+---
+
+<!-- TODO: Create a mermaid about the application workflow, meaning from wich page to start to wich page it goes, ect -->
 
 ---
 
 ## Non-Functional Requirements
 
-<!-- TODO -->
+### Performance
+
+---
+
+<!-- TODO: The application should run quickly without long loading time. -->
+
+---
+
+### Connectivity
+
+---
+
+<!-- TODO: The application should only use internet (4G, 5G, wifi) to install the application and the application should be usable without any internet access. -->
+
+---
+
+### Responsiveness
+
+---
+
+<!-- TODO: The application should be compatible to mainly used phones. They could be iOS or Android. -->
+
+---
+
+### Marketing
+
+---
+
+<!-- TODO: Explain how users will know about the application, maybe "etiquettes" with QR code or something else. -->
+
+---
+
+### Technical Requirements
+
+---
+
+<!-- TODO: Explain the technical requirement needed to complete the project in time. -->
 
 ---
 
 ## Glossary
 
-<!-- TODO -->
+<!-- TODO: Find all the words that could be missinterpreted or unknown by the most common one. Create a table gathering all of them. Create html tags for every one of them and link them so you can go back and forth the glossary in one click. -->
 
 ---
