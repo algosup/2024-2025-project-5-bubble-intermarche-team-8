@@ -1,6 +1,7 @@
 # Functional Specification - BiteMatch <!-- omit in toc -->
 
-## Table of Contents <!-- omit in toc -->
+<details>
+<summary> Table of Contents </summary>
 
 - [Introduction](#introduction)
   - [Project Overview](#project-overview)
@@ -20,6 +21,9 @@
     - [Dependencies](#dependencies)
     - [Assumptions/Constraints](#assumptionsconstraints)
     - [Risks/Mitigation](#risksmitigation)
+- [Personas and Use Cases](#personas-and-use-cases)
+  - [Personas](#personas)
+  - [Use Cases](#use-cases)
 - [UI/UX](#uiux)
   - [Wireframes](#wireframes)
   - [Mockups](#mockups)
@@ -29,10 +33,10 @@
 - [Funtional Requirements](#funtional-requirements)
   - [Languages](#languages)
   - [Data](#data)
+    - [Products](#products)
     - [Meals](#meals)
     - [Tags](#tags)
-  - [Product Description](#product-description)
-  - [Personas](#personas)
+  - [Product Description Page](#product-description-page)
   - [User Workflow](#user-workflow)
 - [Non-Functional Requirements](#non-functional-requirements)
   - [Performance](#performance)
@@ -41,6 +45,8 @@
   - [Marketing](#marketing)
   - [Technical Requirements](#technical-requirements)
 - [Glossary](#glossary)
+
+</details>
 
 ## Introduction
 
@@ -257,6 +263,24 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 ---
 
+## Personas and Use Cases
+
+### Personas
+
+---
+
+<!-- TODO: Create three personas (at least 2) about a professional of wine, a tourist that wants to try cheeses according to regional specialities, someone from the region that wants to have a good wine for their party -->
+
+---
+
+### Use Cases
+
+---
+
+<!-- TODO: Create some use cases formated as in AfterWords documentation. -->
+
+---
+
 ## UI/UX
 
 ### Wireframes
@@ -269,7 +293,7 @@ This project has been into many states and was at first designed as a wireframe 
 
 The first workflow idea was to enter the name of the meal the user would like to eat and a recomendation of wines or cheeses would appear underneath the search input.
 
-![First Workflow Idea](./img/first_workflow_idea.png)
+![First Workflow Idea](./img/design/first_workflow_idea.png)
 
 This idea wasn't retained because the database necessary at its well-behavement wasn't feasable for this project.
 
@@ -277,7 +301,7 @@ This idea wasn't retained because the database necessary at its well-behavement 
 
 This one was more based in a menu "a la carte" way. The user could choose between many predefined dishes (local culinary specifities) and it would send them to a description page of the meal with recommendations for wine and cheese.
 
-![Second Workflow Idea](./img/second_workflow_idea.png)
+![Second Workflow Idea](./img/design/second_workflow_idea.png)
 
 This idea was not retained due to the lack of possible dishes. The user could want something totally different from what is shown in the cards.
 
@@ -285,7 +309,7 @@ This idea was not retained due to the lack of possible dishes. The user could wa
 
 This idea was solely based on a tag system. The user could select in the navigation bar (top bar) if he was searching for a wine or a cheese. Afterward, they could select tags to filter results until they find the expected wine/cheese.
 
-![Third Workflow Idea](./img/third_workflow_idea.png)
+![Third Workflow Idea](./img/design/third_workflow_idea.png)
 
 This idea was rejected for being too specific. Only amateurs of wine and cheese could easily navigate through the different tags to select the desired product.
 
@@ -295,7 +319,7 @@ None of those ideas was convenient enough to solve the client's requirement. How
 
 **Final Idea**:
 
-![Final Workflow Idea](./img/final_workflow_idea.png)
+![Final Workflow Idea](./img/design/final_workflow_idea.png)
 
 This idea combines the search bar from the first idea, the cards from the second one, and tags from the last one. However some differences can be spotten.
 
@@ -321,7 +345,7 @@ BiteMatch's Mockups were made following previously mentionned wireframes and thr
 
 This version was made following the last version of the wireframe. Colors used was Intermarché's one, referred as choice 1 in [Color Palette](#color-palette).
 
-![Version One Mockup](./img/version_one_mockup.png)
+![Version One Mockup](./img/design/version_one_mockup.png)
 
 This version had some changes, mainly on the sizes of different elements, judged as too big, and feeling like an application for elders, which was not the point.
 
@@ -329,7 +353,7 @@ This version had some changes, mainly on the sizes of different elements, judged
 
 This version was modified according to the first version feedback.
 
-![Version Two Mockup](./img/version_two_mockup.png)
+![Version Two Mockup](./img/design/version_two_mockup.png)
 
 For this version, the cards (wine, cheese, meals) has been reduced as well as the font size and pictures, giving a more recent feeling about the application. \
 Also, the brown color has been slightly lighten up to have a more harmonious page. \
@@ -344,18 +368,9 @@ However, some languages aren't writting the same way as europeans do (up-to-down
 
 Here is a picture of the arabic Mockups:
 
-![Version Two Mockup In Arabic](./img/version_two_mockup_arabic.png)
+![Version Two Mockup In Arabic](./img/design/version_two_mockup_arabic.png)
 
 ---
-
-<!--
-### Unique UI Feature
-
----
-
-TODO
-
---- -->
 
 ### Color Palette
 
@@ -386,15 +401,15 @@ As none of the team members are graphic designers and that a logo could be quite
 
 The first selection was generated with a prompt containing information about the project and chart colors. DeepAI returned these six:
 
-|                          Logo 1                           |                          Logo 2                           |                           Logo 3                            |                           Logo 4                           |                           Logo 5                           |                          Logo 6                           |
-| :-------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------: | :--------------------------------------------------------: | :--------------------------------------------------------: | :-------------------------------------------------------: |
-| <img alt="Logo 1" src="./img/logo_one.png" width="200px"> | <img alt="Logo 2" src="./img/logo_two.png" width="200px"> | <img alt="Logo 3" src="./img/logo_three.png" width="200px"> | <img alt="Logo 4" src="./img/logo_four.png" width="200px"> | <img alt="Logo 5" src="./img/logo_five.png" width="200px"> | <img alt="Logo 6" src="./img/logo_six.png" width="200px"> |
+|                             Logo 1                             |                             Logo 2                             |                              Logo 3                              |                             Logo 4                              |                             Logo 5                              |                             Logo 6                             |
+| :------------------------------------------------------------: | :------------------------------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :------------------------------------------------------------: |
+| <img alt="Logo 1" src="./img/logo/logo_one.png" width="200px"> | <img alt="Logo 2" src="./img/logo/logo_two.png" width="200px"> | <img alt="Logo 3" src="./img/logo/logo_three.png" width="200px"> | <img alt="Logo 4" src="./img/logo/logo_four.png" width="200px"> | <img alt="Logo 5" src="./img/logo/logo_five.png" width="200px"> | <img alt="Logo 6" src="./img/logo/logo_six.png" width="200px"> |
 
 However, none of them has been consider as a good option since they weren't personified enough. Therefore, the team chosed a name for the application and a new prompt was generated with BiteMatch:
 
-|                                        Logo 1                                         |                                        Logo 2                                         |                                         Logo 3                                          |
-| :-----------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-| <img alt="Logo 1 Second Prompt" src="./img/logo_one_second_prompt.png" width="200px"> | <img alt="Logo 2 Second Prompt" src="./img/logo_two_second_prompt.png" width="200px"> | <img alt="Logo 3 Second Prompt" src="./img/logo_three_second_prompt.png" width="200px"> |
+|                                           Logo 1                                           |                                           Logo 2                                           |                                            Logo 3                                            |
+| :----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
+| <img alt="Logo 1 Second Prompt" src="./img/logo/logo_one_second_prompt.png" width="200px"> | <img alt="Logo 2 Second Prompt" src="./img/logo/logo_two_second_prompt.png" width="200px"> | <img alt="Logo 3 Second Prompt" src="./img/logo/logo_three_second_prompt.png" width="200px"> |
 
 This second prompt exceeded our expectations giving us three good logos. After mindful reflections, the logo chosed was the second one, judged as more adequate with the application colors.
 
@@ -407,14 +422,6 @@ This second prompt exceeded our expectations giving us three good logos. After m
 This application would be written with the `Inter` font because it is widely used in application and websites.
 
 ---
-
-<!-- ### Image Assets
-
----
-
-TODO
-
---- -->
 
 ## Funtional Requirements
 
@@ -444,26 +451,135 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 
 ---
 
+#### Products
+
+---
+
+| Image                     | Product Name                   | ITM8          | EAN           | Tags | Description | Link                                                                                                             |
+| ------------------------- | ------------------------------ | ------------- | ------------- | ---- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| ![alt text](image-1.png)  | CHEVRE NATURE OU AROMATISE     | 0000099006106 | 0205010000000 |      |             | [Link](https://www.intermarche.com/produit/yaourt-au-lait-de-chevre-nature/3250391945993)                        |
+| ![alt text](image.png)    | YAOURT AUX FRUITS MERE RICHARD | 0000099064583 | 0000000000198 |      |             | [Link](https://www.intermarche.com/produit/yaourt-onctueux-aux-fruits-mixes-fruits-rouges/3250392046705)         |
+| ![alt text](image.png)    | P&C ROCAMADOUR AOP NU 35G      | 0000043439167 | 2663702000000 |      |             | [Link](https://www.intermarche.com/produit/rocamadour-aop/2663702000000)                                         |
+| ![alt text](image.png)    | TOME DE PROVENCE               | 0000099060048 | 0204410000000 |      |             | [Link](https://www.intermarche.com/produit/tomme-des-pyrenees-igp/3250391594146)                                 |
+| ![alt text](image.png)    | PELARDON                       | 0000099041865 | 0204510000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-1.png)  | ST MARCELLIN MERE RICHARD      | 0000099041874 | 0204600000000 |      |             | [Link](https://www.intermarche.com/produit/saint-marcellin/3250390153344)                                        |
+| ![alt text](image-2.png)  | ST FELICIEN MERE RICHARD       | 0000099041873 | 0204590000000 |      |             | [Link](https://www.intermarche.com/produit/saint-felicien/3250390213994)                                         |
+| ![alt text](image-3.png)  | SECHONS DE CHEVRE              | 0000099041867 | 0204530000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-4.png)  | FE ST FELICIEN ST MARCEL 260G  | 0000019315996 | 3237054005744 |      |             | [Link](https://www.intermarche.com/produit/duo-saint-marcellin-igp-saint-felicien/3237054005744)                 |
+| ![alt text](image-5.png)  | CROTTIN DE CHAVIGNOL AOP 60G   | 0000043439418 | 2663716000000 |      |             | [Link](https://www.intermarche.com/produit/crottin-de-chavignol-aop/3250390155478)                               |
+| ![alt text](image-6.png)  | ETOILE QUERCY PAVE DU LOT 180G | 0000019026731 | 2663713000000 |      |             | [Link](https://www.intermarche.com/produit/fromage-de-chevre-rocamadour/3346200101039)                           |
+| ![alt text](image-7.png)  | LE VENTOUX                     | 0000099060040 | 0204830000000 |      |             | [Link](https://www.intermarche.com/produit/ventoux-vin-rouge/3250391461554)                                      |
+| ![alt text](image-8.png)  | BANON FEUILLE                  | 0000099041863 | 2670978000000 |      |             | [Link](https://www.intermarche.com/produit/banon-aop-cave-25%25-mg/2670978000000)                                |
+| ![alt text](image-9.png)  | ST FELICIEN TENTATION 200G     | 0000019026713 | 2663532000000 |      |             | [Link](https://www.intermarche.com/produit/fromage-saint-felicien/3237055000724)                                 |
+| ![alt text](image-10.png) | BOUYGUETTE                     | 0000099041859 | 0204450000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-11.png) | FE ST FELICIEN AFFINE 150G     | 0000019676898 | 3523230034289 |      |             | [Link](https://www.intermarche.com/produit/saint-felicien/3523230034289)                                         |
+| ![alt text](image-12.png) | PICODON AOP MERE RICHARD       | 0000099059676 | 0204660000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-13.png) | FE P&C ST MARCELLIN IGP 2X80GR | 0000043434119 | 3250391104116 |      |             | [Link](https://www.intermarche.com/produit/st-marcellin-igp/3250391104116)                                       |
+| ![alt text](image-14.png) | MOZZARELLA DI BUFFALA          | 0000099006090 | 0204880000000 |      |             | [Link](https://www.intermarche.com/produit/mozzarella-di-bufala/3760056265316)                                   |
+| ![alt text](image-15.png) | XV DU PIC                      | 0000099031468 | 0206360000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-16.png) | FE CHEVRE FRAIS 115G           | 0000019278690 | 3358150002120 |      |             | [Link](https://www.intermarche.com/produit/fromage-de-chevre-frais-12%25-mg/3358150002120)                       |
+| ![alt text](image-17.png) | DEMI BRILLAT SAVARIN AFFINE    | 0000099041870 | 0204560000000 |      |             | [Link](https://www.intermarche.com/produit/brillat-savarin-moule-a-la-louche-affine-40%25-mg/3296651111937)      |
+| ![alt text](image-18.png) | ST MARCELLIN CERAMIQUE         | 3266360612018 | 3266360612018 |      |             | Not found                                                                                                        |
+| ![alt text](image-19.png) | RIGOTTE DE CONDRIEU AOP        | 0000099041876 | 0204620000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-20.png) | QUATRE VENTS                   | 0000099021317 | 0204650000000 |      |             | [Link](https://www.intermarche.com/produit/languedoc-la-clape-aop-vin-blanc-sec-cuvee-des-4-vents/3760176170156) |
+| ![alt text](image-21.png) | FE ROCAMADOUR AOP 2X35G        | 0000019026725 | 3428380002549 |      |             | [Link](https://www.intermarche.com/produit/rocamadour-aop/3428380002549)                                         |
+| ![alt text](image-22.png) | CHEVRE FRAIS AUX FLEURS        | 0000099041850 | 0204370000000 |      |             | [Link](https://www.intermarche.com/produit/fromage-de-chevre-la-pyramide/3250390749332)                          |
+| ![alt text](image-23.png) | LE CHEVROT NU 200G             | 0000043439409 | 2663700000000 |      |             | Not found                                                                                                        |
+| ![alt text](image-24.png) | P&C STE MAURE TOURAINE AOP250G | 0000043439400 | 2663715000000 |      |             | [Link](https://www.intermarche.com/produit/sainte-maure-de-touraine-aop-au-lait-cru/3250391420797)               |
+| ![alt text](image-25.png) | FE VIVALDI BURRATA 200G        | 0000999211445 | 8002461872419 |      |             | [Link](https://www.intermarche.com/produit/burrata-di-bufala/8002461872525)                                      |
+| ![alt text](image-26.png) | YAOURT NATURE MERE RICHARD     | 0000099043122 | 0000000000197 |      |             | [Link](https://www.intermarche.com/produit/yaourt-a-la-grecque-nature/3250392060015)                             |
+| ![alt text](image-27.png) | FE MOZZA DI BUFALA BONBON 200G | 0000019076830 | 2663760000000 |      |             | [Link](https://www.intermarche.com/produit/mozzarella-di-latte-di-bufala/8000430900231)                          |
+| ![alt text](image-28.png) | FE P&C 1/2REBLOCHON AOP LC250G | 0000043434095 | 2873981000000 |      |             | [Link](https://www.intermarche.com/produit/reblochon-de-savoie-aop/3294580201019)                                |
+| ![alt text](image-29.png) | BUCHE DE CHEVRE                | 0000099006105 | 0205000000000 |      |             | [Link](https://www.intermarche.com/produit/buche-de-chevre/3250392551407)                                        |
+|                           | FE BURRATA DE CHEVRE 120G      | 0000019969645 | 3417881210577 |      |             | [Link]()                                                                                                         |
+|                           | BRIQUE CENDREE                 | 0000099041298 | 0204040000000 |      |             | [Link]()                                                                                                         |
+|                           | FROMAGE DE CHEVRE FERMIER X2   | 0000099090403 | 0000000000176 |      |             | [Link]()                                                                                                         |
+|                           | 1/2M ABONDANCE LC AOP 4K5/5KG  | 0000043439380 | 2663664000000 |      |             | [Link]()                                                                                                         |
+|                           | P&C SELLES/CHER AOP 150G       | 0000043439405 | 2663704000000 |      |             | [Link]()                                                                                                         |
+|                           | TOMME AUX FLEURS               | 0000099006095 | 0204930000000 |      |             | [Link]()                                                                                                         |
+|                           | MOZZARELLA DI BUFALA TRESSE    | 0000099006154 | 3770007325617 |      |             | [Link]()                                                                                                         |
+|                           | COMTE EXTRA AOP 18M 1/8 5KG    | 0000019665927 | 2843295000000 |      |             | [Link]()                                                                                                         |
+|                           | P&C CHABICHOU AOP 150G         | 0000043439396 | 2663703000000 |      |             | [Link]()                                                                                                         |
+|                           | FE PLATEAU 3 FROMAGES 190G     | 0000019453295 | 3492847279003 |      |             | [Link]()                                                                                                         |
+|                           | CABECOU PERIGORD CAISSE 12X35G | 0009919362340 | 2891829000000 |      |             | [Link]()                                                                                                         |
+|                           | APERITIF BQ LAIT CRU VACHE     | 0000099026567 | 3760081251155 |      |             | [Link]()                                                                                                         |
+|                           | COUPE FROMAGE LS               | 0000000000016 | 0000000000016 |      |             | [Link]()                                                                                                         |
+|                           | GORGONZOLA A LA CUILLERE       | 0000099006089 | 0204870000000 |      |             | [Link]()                                                                                                         |
+|                           | FIGOU                          | 0000099041453 | 0204160000000 |      |             | [Link]()                                                                                                         |
+|                           | SAINT DOMNIN A LA LAVANDE      | 0000099041858 | 0204440000000 |      |             | [Link]()                                                                                                         |
+|                           | BRIE DE MEAUX                  | 0000099041848 | 0204350000000 |      |             | [Link]()                                                                                                         |
+|                           | FE PARMI REGG AOP COPEAUX 100G | 0000043434033 | 8001868003129 |      |             | [Link]()                                                                                                         |
+|                           | ENROBE AIRELLES 80G            | 0000043439092 | 2663695000000 |      |             | [Link]()                                                                                                         |
+|                           | PARMIGIANO REGG AOP 24M 4.5KG  | 0000019950665 | 2831292000000 |      |             | [Link]()                                                                                                         |
+|                           | EMMENTAL LT CRU 1/8M 27% 10KG  | 0000019782641 | 2839011000000 |      |             | [Link]()                                                                                                         |
+|                           | MOTHAIS SUR FEUILLE            | 0000099041844 | 0204310000000 |      |             | [Link]()                                                                                                         |
+|                           | MORBIER AOP 100J 1/2M 3K5      | 0000019849086 | 2843995000000 |      |             | [Link]()                                                                                                         |
+|                           | LOU PERAC PERAIL BREBIS 150G   | 0000043439450 | 2663709000000 |      |             | [Link]()                                                                                                         |
+|                           | \*MASCARPONE GORGONZOLA 1.2KG  | 0000024389388 | 2824730000000 |      |             | [Link]()                                                                                                         |
+|                           | GALLETOUT                      | 0000099041511 | 0204170000000 |      |             | [Link]()                                                                                                         |
+|                           | BURRATA                        | 0000099008081 | 0205070000000 |      |             | [Link]()                                                                                                         |
+|                           | FE CAMEMBERT PYRO ISIGNY 250G  | 0000019118070 | 3254550030193 |      |             | [Link]()                                                                                                         |
+|                           | FE CAMEMBERT LAIT CRU AOP 250G | 0000043439007 | 2663503000000 |      |             | [Link]()                                                                                                         |
+|                           | RACLETTE                       | 0000099009832 | 0205160000000 |      |             | [Link]()                                                                                                         |
+|                           | GRAND MORIN A LA TRUFFE D'ETE  | 0000099041288 | 0204030000000 |      |             | [Link]()                                                                                                         |
+|                           | ST NECTAIRE FERMIER            | 0000099041837 | 0204240000000 |      |             | [Link]()                                                                                                         |
+|                           | EMMENTAL LT CRU 1/8M 27% 10KG  | 0009919782641 | 2839008000000 |      |             | [Link]()                                                                                                         |
+|                           | GRUYERE FRANCE IGP 5K5         | 0009919667068 | 2843122000000 |      |             | [Link]()                                                                                                         |
+|                           | \*L'ENROBE ABRICOT 80G         | 0000024447157 | 2849441000000 |      |             | [Link]()                                                                                                         |
+|                           | FE FETA GRECQUE AOP 180G       | 0000019443461 | 5202425001128 |      |             | [Link]()                                                                                                         |
+|                           | LE SAUVAGET                    | 0000099006094 | 0204920000000 |      |             | [Link]()                                                                                                         |
+|                           | VAGNE COMTE 9/12MOIS 1/8M 5KG  | 0000043439327 | 2663571000000 |      |             | [Link]()                                                                                                         |
+|                           | COMTE 12 MOIS                  | 0000099041350 | 0204080000000 |      |             | [Link]()                                                                                                         |
+|                           | BEAUFORT PTPERCE AOP 1/12M 3K5 | 0009943439268 | 2890729000000 |      |             | [Link]()                                                                                                         |
+|                           | COURONNE LOCHOISE              | 0000099041420 | 0204130000000 |      |             | [Link]()                                                                                                         |
+|                           | P&C ST NECTAIRE LAITIE AOP 1K7 | 0009943439221 | 2890801000000 |      |             | [Link]()                                                                                                         |
+|                           | FE BRILLAT SAVARIN IGP 200G    | 0000019248513 | 3296651111937 |      |             | [Link]()                                                                                                         |
+|                           | FE HALLOUMI AOP 225G           | 0000024454373 | 3760280680817 |      |             | [Link]()                                                                                                         |
+|                           | \*PICODON AOP 60G              | 0009919915032 | 2844180000000 |      |             | [Link]()                                                                                                         |
+|                           | FE EPOISSES AOP 250G           | 0000043439171 | 2663495000000 |      |             | [Link]()                                                                                                         |
+|                           | P&C MORBIER AOP LC 6K5         | 0000043439334 | 2663661000000 |      |             | [Link]()                                                                                                         |
+|                           | GP CANTAL JEUNE LAIT CRU AOP5K | 0009919362372 | 2891827000000 |      |             | [Link]()                                                                                                         |
+|                           | TOMME CAZELLES BREBIS 4.4ENV   | 0000019749800 | 2843639000000 |      |             | [Link]()                                                                                                         |
+|                           | TOMME DE MONTAGNE CHARTREUSE   | 0000099006097 | 0204950000000 |      |             | [Link]()                                                                                                         |
+|                           | OLIVES DE NYONS                | 0000099041877 | 0204630000000 |      |             | [Link]()                                                                                                         |
+|                           | PETIT POT CREME CHOCOLAT       | 0000099011577 | 3483130046402 |      |             | [Link]()                                                                                                         |
+|                           | P'TIT BASQUE PUR BREBIS 660G   | 0000043439455 | 2663545000000 |      |             | [Link]()                                                                                                         |
+|                           | REBLOCHON FERMIER AOP          | 0000099041875 | 0204610000000 |      |             | [Link]()                                                                                                         |
+|                           | ITCHEBAI CHEVRE&BREBIS 4K5     | 0000024105511 | 2831762000000 |      |             | [Link]()                                                                                                         |
+|                           | PICHOLINES NATURES             | 0000099060024 | 0204690000000 |      |             | [Link]()                                                                                                         |
+|                           | FE P&C CHAOURCE AOP 250G       | 0000043434115 | 3250391105335 |      |             | [Link]()                                                                                                         |
+|                           | PELISSONNE D'ARDECHE           | 0000099041839 | 0204260000000 |      |             | [Link]()                                                                                                         |
+|                           | TOMME DE TARENTAISE            | 0000099041838 | 0204250000000 |      |             | [Link]()                                                                                                         |
+|                           | COMTE 24 MOIS                  | 0000099041352 | 0204100000000 |      |             | [Link]()                                                                                                         |
+|                           | COMTE VAGNE AOP 18 MOIS 5KG    | 0000043439371 | 2663568000000 |      |             | [Link]()                                                                                                         |
+|                           | BROCCIU FRAIS FERMIER AOP      | 0000099052839 | 3429881511936 |      |             | [Link]()                                                                                                         |
+|                           | PETIT POT CREME CAFE           | 0000099011579 | 3483130046419 |      |             | [Link]()                                                                                                         |
+|                           | ROITELET BRIE 3,150KG          | 0000043439010 | 2663499000000 |      |             | [Link]()                                                                                                         |
+|                           | PAVE DU LARZAC                 | 0000099006092 | 0204900000000 |      |             | [Link]()                                                                                                         |
+|                           | PETIT POT CREME CARAMEL        | 0000099011576 | 3483130046426 |      |             | [Link]()                                                                                                         |
+
+---
+
 #### Meals
 
 ---
 
 For this application, the main page would display meal cards which would be predefined and regional specialities. You can find the selection hereunder:
 
-|         Meal Name         |                                         Picture                                         |                                                              Meal description                                                               |
-| :-----------------------: | :-------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-|         Anchoïade         |              <img alt="Anchoiade" src="./img/anchoiade.png" width="200px">              |          A savory dip made from anchovies, garlic, olive oil, and sometimes capers, typically served with raw vegetables or bread.          |
-|           Aïoli           |                  <img alt="aioli" src="./img/aioli.png" width="200px">                  |                 A garlic mayonnaise often served with vegetables, fish, or hard-boiled eggs, central to Provençal cuisine.                  |
-|  Tomate à la Provençale   | <img alt="Tomate a la Provencale" src="./img/tomate_a_la_provencale.png" width="200px"> |                            Tomatoes baked with herbs, garlic, and breadcrumbs—an aromatic and simple side dish.                             |
-|       Bouillabaisse       |          <img alt="Bouillabaisse" src="./img/bouillabaisse.png" width="200px">          | A traditional fish stew from Marseille made with various local fish, shellfish, and a flavorful broth, served with rouille sauce and bread. |
-| Ratatouille de Saint-Rémy |     <img alt="Ratatuoille de Saint-Remy" src="./img/ratatouille.png" width="200px">     |              A slow-cooked vegetable medley of eggplant, zucchini, peppers, tomatoes, and herbs, originating from Saint-Rémy.               |
-|           Socca           |                  <img alt="Socca" src="./img/socca.png" width="200px">                  |                         A thin, crispy chickpea flour pancake from Nice, seasoned with olive oil and black pepper.                          |
-|         Broufado          |               <img alt="Broufado" src="./img/broufado.png" width="200px">               |                A hearty Provençal beef stew marinated in red wine and slow-cooked with onions, herbs, and sometimes olives.                 |
-|         Crespeou          |               <img alt="Crespeou" src="./img/crespeou.png" width="200px">               |                       A layered savory cake made of different colored omelets with herbs and vegetables, served cold.                       |
-|     Tian aux Légumes      |       <img alt="Tian aux Legumes" src="./img/tian_aux_legumes.png" width="200px">       |     A baked dish of sliced vegetables (usually zucchini, tomatoes, and eggplant) arranged in a colorful spiral and roasted with herbs.      |
-|       Pissaladière        |           <img alt="Pissaladiere" src="./img/pissaladiere.png" width="200px">           |                    A savory tart from Nice topped with caramelized onions, anchovies, and olives, on a bread-like crust.                    |
-|     Daube Provençale      |       <img alt="Daube Provencale" src="./img/daube_provencale.png" width="200px">       |             A rich beef stew braised in red wine with carrots, garlic, and Provençal herbs, often served with pasta or polenta.             |
-|         Tapenade          |               <img alt="Tapenade" src="./img/tapenade.png" width="200px">               |                   A spread made of finely chopped olives, capers, anchovies, and olive oil, served on toast or as a dip.                    |
+|         Meal Name         |                                           Picture                                            |                                                              Meal description                                                               |
+| :-----------------------: | :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
+|         Anchoïade         |              <img alt="Anchoiade" src="./img/meal/anchoiade.png" width="200px">              |          A savory dip made from anchovies, garlic, olive oil, and sometimes capers, typically served with raw vegetables or bread.          |
+|           Aïoli           |                  <img alt="aioli" src="./img/meal/aioli.png" width="200px">                  |                 A garlic mayonnaise often served with vegetables, fish, or hard-boiled eggs, central to Provençal cuisine.                  |
+|  Tomate à la Provençale   | <img alt="Tomate a la Provencale" src="./img/meal/tomate_a_la_provencale.png" width="200px"> |                            Tomatoes baked with herbs, garlic, and breadcrumbs—an aromatic and simple side dish.                             |
+|       Bouillabaisse       |          <img alt="Bouillabaisse" src="./img/meal/bouillabaisse.png" width="200px">          | A traditional fish stew from Marseille made with various local fish, shellfish, and a flavorful broth, served with rouille sauce and bread. |
+| Ratatouille de Saint-Rémy |     <img alt="Ratatuoille de Saint-Remy" src="./img/meal/ratatouille.png" width="200px">     |              A slow-cooked vegetable medley of eggplant, zucchini, peppers, tomatoes, and herbs, originating from Saint-Rémy.               |
+|           Socca           |                  <img alt="Socca" src="./img/meal/socca.png" width="200px">                  |                         A thin, crispy chickpea flour pancake from Nice, seasoned with olive oil and black pepper.                          |
+|         Broufado          |               <img alt="Broufado" src="./img/meal/broufado.png" width="200px">               |                A hearty Provençal beef stew marinated in red wine and slow-cooked with onions, herbs, and sometimes olives.                 |
+|         Crespeou          |               <img alt="Crespeou" src="./img/meal/crespeou.png" width="200px">               |                       A layered savory cake made of different colored omelets with herbs and vegetables, served cold.                       |
+|     Tian aux Légumes      |       <img alt="Tian aux Legumes" src="./img/meal/tian_aux_legumes.png" width="200px">       |     A baked dish of sliced vegetables (usually zucchini, tomatoes, and eggplant) arranged in a colorful spiral and roasted with herbs.      |
+|       Pissaladière        |           <img alt="Pissaladiere" src="./img/meal/pissaladiere.png" width="200px">           |                    A savory tart from Nice topped with caramelized onions, anchovies, and olives, on a bread-like crust.                    |
+|     Daube Provençale      |       <img alt="Daube Provencale" src="./img/meal/daube_provencale.png" width="200px">       |             A rich beef stew braised in red wine with carrots, garlic, and Provençal herbs, often served with pasta or polenta.             |
+|         Tapenade          |               <img alt="Tapenade" src="./img/meal/tapenade.png" width="200px">               |                   A spread made of finely chopped olives, capers, anchovies, and olive oil, served on toast or as a dip.                    |
 
 ---
 
@@ -480,6 +596,8 @@ Therefore, some tags have been defined and classified into subcategories which a
 - Accompaniement
 - Label
 - Season
+
+Those tags can be access within the "add tags" button. Moreover, every product description page would have tags associated with them. Learn more about it in [Product Description Page](#product-description-page).
 
 Hereunder are a more detailed table for each of those subcategories.
 
@@ -553,28 +671,63 @@ Hereunder are a more detailed table for each of those subcategories.
 
 **Season**:
 
-| Name   | Definition                                                                                                                                                                                                                                    |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Spring | A season for light, fresh wines such as Sauvignon Blanc, Pinot Grigio, and young rosés that pair well with seasonal vegetables and mild weather. |
+| Name   | Definition                                                                                                                                                     |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spring | A season for light, fresh wines such as Sauvignon Blanc, Pinot Grigio, and young rosés that pair well with seasonal vegetables and mild weather.               |
 | Summer | Ideal for chilled, refreshing wines like rosé, sparkling wines, and crisp whites (e.g., Riesling, Albariño), often paired with light meals and outdoor dining. |
-| Autumn | A transitional season favoring fuller whites and lighter reds such as Chardonnay, Pinot Noir, or Grenache, complementing richer harvest foods. |
-| Winter | Best suited for bold, warming reds like Cabernet Sauvignon, Syrah, or fortified wines such as Port, often served with hearty dishes.                        |
+| Autumn | A transitional season favoring fuller whites and lighter reds such as Chardonnay, Pinot Noir, or Grenache, complementing richer harvest foods.                 |
+| Winter | Best suited for bold, warming reds like Cabernet Sauvignon, Syrah, or fortified wines such as Port, often served with hearty dishes.                           |
 
 ---
 
-### Product Description
+### Product Description Page
 
 ---
 
-<!-- TODO: Say the different parts of the description page, how they are useful and so on -->
+The description page will be separated in seven distinct parts, each of them would describe a partocular thing about the product it is referring to.
 
----
+**Basic Information**:
 
-### Personas
+This section is composed of:
 
----
+- The Name of the Product.
+- A picture of the Product if provided in the database.
+- The Price of the Product.
+- The Region it comes from.
 
-<!-- TODO: Create three personas (at least 2) about a professional of wine, a tourist that wants to try cheeses according to regional specialities, someone from the region that wants to have a good wine for their party -->
+And the percentage of alcohol for wines.
+
+**Tags**:
+
+In this section will be a list of all the tags corresponding to the Product. They will be displayed in a row.
+
+**Suggestions**:
+
+As the application should be a recommemdation one, two meals will be displayed as suggestion for the product. Allowing users to mix their product better and have the best experience possible. \
+The two meals would be displayed only if they are predifined in the database. However, the application is a proof of concept, therefore, some data could be missing. Consequently, this section could be empty. \
+In the case of an empty section, the section would be hidden/removed for the product only.
+
+**Taste**:
+
+This section would only be present for wines.
+
+It will be composed of three bars showing the different taste of the wine. They would be sorted like following:
+
+- Salt/Fat
+- Sweetness/Spice
+- Bitterness/Acidity
+
+**Where to find it**:
+
+This section would be a procedure to find the product within the grocery store. This could be done thanks to our client and a system that they already have implemented.
+
+**Labels**:
+
+This section will hold every labels the product have. They would also be displayed as tags. However, they would be more described and the full name would be written, unlike tags.
+
+**Description**:
+
+Finally, the description part is here to give more information about the wine in itself. It couuld be little history, how the wine was made, the year of production.
 
 ---
 
@@ -582,7 +735,40 @@ Hereunder are a more detailed table for each of those subcategories.
 
 ---
 
-<!-- TODO: Create a mermaid about the application workflow, meaning from wich page to start to wich page it goes, ect -->
+```mermaid
+graph TD
+  %% BiteMatch Flow
+  subgraph BiteMatch Flow
+    P1[Loading Page] --> P2[Home Page]
+
+    P2 --> P3[Language Choice Pop-up]
+    P2 -->|One for each Meal Card| P4[Meal Description Page]
+    P2 -->|body| P5[Search Page]
+
+    P3 -->|Left-to-right Languages| L1[English 'Default', French 'Mandatory', Greek, German, Spanish, Chinese]
+    P3 -->|Right-to-left Languages| L2[Arabic]
+
+    P4 -->|By default| S1[Wine Selection]
+    P4 --> S2[Cheese Selection]
+    S1 --> P6[Wine Description Page]
+    S2 --> P7[Cheese Description Page]
+
+    P5 -->|With Results| P9[Result Page]
+    P5 -->|No Result| P10[Error Page]
+    P5 --> F[Feature]
+    F --> F1[Search input for a Product]
+    F --> P8[Tags Filter Pop-up]
+    F -->|Slider from €0 to most expensive one| F2[Budget Range]
+
+    P8 -->|Category| TC[Wine, Cheese, Accompaniement, Label, Season]
+
+    P9 --> P6
+    P9 --> P7
+  end
+```
+
+> [!note]
+> As you might have noticed, BiteMatch is a login-free application, meaning the user doesn't need to login to use the application.
 
 ---
 
