@@ -23,6 +23,9 @@
     - [Risks/Mitigation](#risksmitigation)
 - [Personas and Use Cases](#personas-and-use-cases)
   - [Personas](#personas)
+    - [Persona 1: Hao Huang](#persona-1-hao-huang)
+    - [Persona 2: Remi Passereau](#persona-2-remi-passereau)
+    - [Persona 3: Maxence Vidal](#persona-3-maxence-vidal)
   - [Use Cases](#use-cases)
 - [UI/UX](#uiux)
   - [Wireframes](#wireframes)
@@ -270,7 +273,71 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 <!-- TODO: Create three personas (at least 2) about a professional of wine, a tourist that wants to try cheeses according to regional specialities, someone from the region that wants to have a good wine for their party -->
 
+#### Persona 1: Hao Huang
+
 ---
+
+**Name**: Hao Huang
+
+**Age Range**: 20-60 years old
+
+**Description**: Hao Huang is a tourist that want to discover new traditional meals from her different trip.
+
+**Frustrations**:
+
+- She can't read description card in the store because she doesn't speak French.
+- She never found traditional dish from Provence.
+- She really liked a wine in her country but can't find one that tastes the same.
+
+**Goals**:
+
+- She wants to use an application translated in many languages.
+- She wants to discover new traditional dishesof the region.
+- She wants to find wines that taste the same as those in her hometown.
+
+#### Persona 2: Remi Passereau
+
+---
+
+**Name**: Remi Passereau
+
+**Age Range**: 45-65
+
+**Description**: Remi is a wine amateurs and love to discover new wines.
+
+**Frustrations**:
+
+- No application gives enough details about wine tastes in its opinion.
+- He would like to filter his research for a more accurate result.
+- He never find the bottle in the store aisle.
+
+**Goals**:
+
+- He wants to select his wine according to wines tastes description.
+- He wants to find the bottle quickly without getting lost in the aisle.
+- He wants a precise research and not to lose time while searching.
+
+#### Persona 3: Maxence Vidal
+
+---
+
+**Name**: Maxence Vidal
+
+**Age Range**: 18-30
+
+**Description**: A young person new to culinary word and traditions.
+
+**Frustrations**:
+
+- Maxence never tasted a traditional dish of the region.
+- Maxence have nough of searching for wines and cheeses on different applications.
+- Maxence can't use online application due to it's poor quality internet connection.
+
+**Goals**:
+
+- They want to discover traditional dishes of their heart region.
+- They want to save time in their research by searching for both cheeses and wines on the same application.
+- They want a free-connection application to use it even with their connection.
 
 ### Use Cases
 
@@ -589,108 +656,108 @@ The following products would be in the application database:
 
 **Wines database**:
 
-| Image | Product Name                   | ITM8          | EAN           | Tags | Description | Links |
-| ----- | ------------------------------ | ------------- | ------------- | ---- | ----------- | ----- |
-|       | IGP ALPILLES ROSE TRADITION    | 3760076070020 | 0000099056669 |      |             |       |
-|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |             |       |
-|       | GRAND MAS DE LANSAC BLAN       | 3760059140030 | 0000099016142 |      |             |       |
-|       | IGP VAR GRIS GRIS DE ROSE      | 3760146021815 | 0000099005260 |      |             |       |
-|       | GRAND MAS LANSAC ROSE          | 3760059140023 | 0000099016143 |      |             |       |
-|       | AOP FOLIE EN PROVENCE 2023 COT | 3760092070349 | 0000099064698 |      |             |       |
-|       | LANSAC ROSE 5L                 | 3760059140078 | 0000099016147 |      |             |       |
-|       | LAGOY VIN ROSE IGP ALPILLES BI | 3760063300321 | 0000099010236 |      |             |       |
-|       | LE GRIS MAS MARIGNAN           | 3538650074333 | 0000099066408 |      |             |       |
-|       | LUBERON LES CLAPES             | 3760028200048 | 0000099060230 |      |             |       |
-|       | ROSE CUVEE EVIDENCE MAS LANSAC | 3760059140184 | 0000099012318 |      |             |       |
-|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |             |       |
-|       | TRADITION 2023 AOP BIO         | 3760025420012 | 0000099016911 |      |             |       |
-|       | GRAND MAS DE LANSAC RGE        | 3760059140108 | 0000099063709 |      |             |       |
-|       | AOP BIO PASSE-ROSE 2024 750ML  | 3760025420029 | 0000099016912 |      |             |       |
-|       | ETOILE DES ALPILLES IGP BLANC  | 3760251190154 | 0000099037189 |      |             |       |
-|       | ALPILLES IGP TRADITION BLANC   | 3760076070037 | 0000099056670 |      |             |       |
-|       | IGP TERRE CAMARGUE RS BIO75CL  | 3545440120149 | 0000029500338 |      |             |       |
-|       | IGP ALPILLES BIO TRADITION 202 | 3760025420036 | 0000099016913 |      |             |       |
-|       | ALPILLES IGP TRADITION ROUGE   | 3760076070013 | 0000099056662 |      |             |       |
-|       | MAS GOURGONNIER ROUGE TRADITIO | 3760104593026 | 0000099024947 |      |             |       |
-|       | COTES DU VENTOUX DOMAINE DE GO | 3760146021914 | 0000099032673 |      |             |       |
-|       | PROSECCO SPUMANTE DOC BOTTER   | 8008863011081 | 0000099030361 |      |             |       |
-|       | MAS DE LA DAME RESEVE DU RGE   | 3464725107517 | 0000099016137 |      |             |       |
-|       | IGP MEDITERRANNEE TERRES DE BO | 3760171263181 | 0000099067489 |      |             |       |
-|       | MAS DAME LA GOURMANDE ROSE     | 3464722207517 | 0000099028421 |      |             |       |
-|       | VENTOUX SECRET DE TRUFFE ROUGE | 3700026507640 | 0000099040655 |      |             |       |
-|       | VCE BLANC VALRIAN 25 CL X 6    | 3250392151645 | 0000052335025 |      |             |       |
-|       | VIN ESPAGNE BLC VALRIAN3X25CL  | 3250390488828 | 0000052335010 |      |             |       |
-|       | CUVEE GOURMANDE ROUGE          | 3464721107511 | 0000099024028 |      |             |       |
-|       | R.MAZET IGPOC RGE MERLOT 75CL  | 3175520018655 | 0000052337510 |      |             |       |
-|       | LUBERON LES CLAPES             | 3760028200161 | 0000099037518 |      |             |       |
-|       | IGP CTE TARN BLC MOEL.EC75CL   | 3250390207634 | 0000052338035 |      |             |       |
-|       | IGP ALPILLES ROSE CUVEE EVIDEN | 3760059140153 | 0000099038691 |      |             |       |
-|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |             |       |
-|       | MAS GOURGONNIER BLANC TRADITIO | 3760104593224 | 0000099024945 |      |             |       |
-|       | LANSAC ROUGE 5L                | 3760059140061 | 0000099016145 |      |             |       |
-|       | IGP VAR 100% ROLLE             | 3760146021754 | 0000099012664 |      |             |       |
-|       | CDR SEGURET VILLAGES 2021      | 3341332013137 | 0000099040700 |      |             |       |
-|       | IGP TER.MIDI RS GRAINS LISTEL  | 3244081500005 | 0000029499905 |      |             |       |
-|       | IGP VAR MISS GRIS              | 3760146023659 | 0000099032690 |      |             |       |
-|       | AOC 2021 LES TROIS ORATOIRES C | 3760012970506 | 0000099041482 |      |             |       |
-|       | IGP T.CAMARGUE BLC BIO 75CL    | 3545440130148 | 0000029500339 |      |             |       |
-|       | TERRES ET LUMIeRES VENTOUX BLA | 3760033100081 | 0000099003837 |      |             |       |
-|       | IGP ROUGE FRISSON VAL DE L'OUL | 3435600000230 | 0000099036806 |      |             |       |
-|       | VENTOUX ROSE 1911 LEGENDE 75CL | 3760106128462 | 0000099089046 |      |             |       |
-|       | IGP ROUGE CUVEE ALPILLES BIO 2 | 3760063300628 | 0000099010235 |      |             |       |
-|       | MAS DE LA DAME ROSE DU MAS     | 3464723207516 | 0000099016135 |      |             |       |
-|       | LANSAC BLANC 5L                | 3760059140085 | 0000099016148 |      |             |       |
-|       | VAL DE L'OULE ROUGE EMOTION    | 3435600000209 | 0000099037386 |      |             |       |
-|       | COTES DE PROVENCE CŒUR ROSE    | 3760057981154 | 0000099020444 |      |             |       |
-|       | LAGOY VIN ROSE 5L              | 3760063300352 | 0000099051061 |      |             |       |
-|       | AOP CAB.ANJOU RS EX.CLUB 75CL  | 3250390261735 | 0000052344335 |      |             |       |
-|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |             |       |
-|       | BORDEAUX CHaTEAU MARQUIS DES B | 3259354143001 | 0000099031283 |      |             |       |
-|       | COTEAUX VAROIS LES RESTANQUES  | 3760146023567 | 0000099013634 |      |             |       |
-|       | DOMAINE DE LAGOY BIO 2023      | 3760063300024 | 0000099013439 |      |             |       |
-|       | IGP HERAULT RGE E.CLUB75CL     | 3250390051534 | 0000052337100 |      |             |       |
-|       | COTES DU RHONE PERRIN ROUGE    | 3296180000160 | 0000099005112 |      |             |       |
-|       | IGPOC CIN.GRENACH RS R.MAZET75 | 3175520018686 | 0000052339397 |      |             |       |
-|       | IGP OC CAB SAUV RG CX PIN 75CL | 3250390801078 | 0000052337602 |      |             |       |
-|       | VAL DE L'OULE BLANC PLAISIR    | 3435600000223 | 0000099037388 |      |             |       |
-|       | AOP PETIT CHABLIS BL EXP CLUB  | 3250392362898 | 0000017468346 |      |             |       |
-|       | IGP OC GRIS DES LAUNES         | 3392120003533 | 0000099002256 |      |             |       |
-|       | COTES DU RHONE RGE GUIGAL      | 3536650501002 | 0000017376801 |      |             |       |
-|       | VAL DE L'OULE ROSE DESIR       | 3435600000032 | 0000099088812 |      |             |       |
-|       | IGP OC MERLOT RSE XPIN 75CL    | 3250392336707 | 0000017410880 |      |             |       |
-|       | IGP OC SAUVIGNON BL CX PIN 75  | 3250390800996 | 0000052338202 |      |             |       |
-|       | AOP CHABLIS BLC EXPERT CLUB 75 | 3250391594993 | 0000017058346 |      |             |       |
-|       | AOP CTE RHONE RGE TRADITION 75 | 3410280017815 | 0000052341015 |      |             |       |
-|       | MAS GOURGONNIER ROSE TRADITION | 3760104593125 | 0000099024946 |      |             |       |
-|       | IGP VAR DOMAINE DE PELISSE - C | 3760146021358 | 0000099005261 |      |             |       |
-|       | IGP DES MAURES CUVEE ANE VOLAN | 3760057981192 | 0000099023011 |      |             |       |
-|       | IGP TERRE CAMARGUE ROUGE 75CL  | 3545440110140 | 0000029500337 |      |             |       |
-|       | COTES DU RHONE PRESTIGE LE SER | 3700025909339 | 0000099006929 |      |             |       |
-|       | MAS DE LA DAME LA STELE BLANC  | 3464720001001 | 0000099016133 |      |             |       |
-|       | AOP CTE RHONE RG JOANNES75     | 3410280017792 | 0000052341010 |      |             |       |
-|       | IGPOC RG O.CAMBRAS CAB SAUV 75 | 3211203420039 | 0000017110890 |      |             |       |
-|       | AOP BOURG.ALIGOTE EX.CLUB 75CL | 3250390167075 | 0000052346261 |      |             |       |
-|       | LE GRIS MAS MARIGNAN PRESTIGE  | 3770016080224 | 0000099020195 |      |             |       |
-|       | AOP CDR PRESTIGE RG 75CL       | 3179071000978 | 0000052341245 |      |             |       |
-|       | LE MAS BLANC MARIGNANE         | 3538650007058 | 0000099073088 |      |             |       |
-|       | COTES DU RHONE PERRIN BLANC    | 3296180000177 | 0000099005113 |      |             |       |
-|       | IGP MED PLAISIR BLANC          | 3760092070110 | 0000099035255 |      |             |       |
-|       | VAL DE L'OULE ROUGE SEDUCTION  | 3435600000049 | 0000099088813 |      |             |       |
-|       | AOP MACON VILL.BL EX.CLUB 75CL | 3250391325245 | 0000052346051 |      |             |       |
-|       | COTES DE PROVENCE DOMAINE LES  | 3760255430058 | 0000099087646 |      |             |       |
-|       | COTES DU RHONE SAINTE ROCHE    | 3344392118408 | 0000099003282 |      |             |       |
-|       | MAS DAME LA GOURMANDE BLANC    | 3464724307512 | 0000099016136 |      |             |       |
-|       | VCE ROUGE VALRIAN 12 1,5L      | 3250391786909 | 0000052334210 |      |             |       |
-|       | IGP HERAULT ROSE 75CL          | 3250390145349 | 0000052339100 |      |             |       |
-|       | AOP CTE PROV. BERNE GD RECOLTE | 3760033590028 | 0000017410177 |      |             |       |
-|       | AOC VENTOUX MOT DEXCUSE 2020 R | 3760028200314 | 0000099035453 |      |             |       |
-|       | AOC CDR RESERVE ROUGE GRAND CH | 3365385001545 | 0000099066251 |      |             |       |
-|       | MAS DE LA DAMELA STELE RGE     | 3464726107516 | 0000099016138 |      |             |       |
-|       | BANDOL DOMAINE L'OLIVETTE ROSE | 3458301571120 | 0000099032689 |      |             |       |
-|       | AOP COST.NIME.RG.E.CLUB 75CL   | 3250390261797 | 0000052340033 |      |             |       |
-|       | IGP MED ROSE STUD MIRAVAL      | 3296180007794 | 0000999221454 |      |             |       |
-|       | BIB ROSE TERRE DE CAMARGUE REY | 3545441020417 | 0000099022053 |      |             |       |
-|       | MAS SAINTE BERTHE LA CHAPELLE  | 1212121212121 | 1212121212121 |      |             |       |
+| Image | Product Name                   | ITM8          | EAN           | Tags | Taste | Description | Links |
+| ----- | ------------------------------ | ------------- | ------------- | ---- | ----- | ----------- | ----- |
+|       | IGP ALPILLES ROSE TRADITION    | 3760076070020 | 0000099056669 |      |       |             |       |
+|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |       |             |       |
+|       | GRAND MAS DE LANSAC BLAN       | 3760059140030 | 0000099016142 |      |       |             |       |
+|       | IGP VAR GRIS GRIS DE ROSE      | 3760146021815 | 0000099005260 |      |       |             |       |
+|       | GRAND MAS LANSAC ROSE          | 3760059140023 | 0000099016143 |      |       |             |       |
+|       | AOP FOLIE EN PROVENCE 2023 COT | 3760092070349 | 0000099064698 |      |       |             |       |
+|       | LANSAC ROSE 5L                 | 3760059140078 | 0000099016147 |      |       |             |       |
+|       | LAGOY VIN ROSE IGP ALPILLES BI | 3760063300321 | 0000099010236 |      |       |             |       |
+|       | LE GRIS MAS MARIGNAN           | 3538650074333 | 0000099066408 |      |       |             |       |
+|       | LUBERON LES CLAPES             | 3760028200048 | 0000099060230 |      |       |             |       |
+|       | ROSE CUVEE EVIDENCE MAS LANSAC | 3760059140184 | 0000099012318 |      |       |             |       |
+|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |       |             |       |
+|       | TRADITION 2023 AOP BIO         | 3760025420012 | 0000099016911 |      |       |             |       |
+|       | GRAND MAS DE LANSAC RGE        | 3760059140108 | 0000099063709 |      |       |             |       |
+|       | AOP BIO PASSE-ROSE 2024 750ML  | 3760025420029 | 0000099016912 |      |       |             |       |
+|       | ETOILE DES ALPILLES IGP BLANC  | 3760251190154 | 0000099037189 |      |       |             |       |
+|       | ALPILLES IGP TRADITION BLANC   | 3760076070037 | 0000099056670 |      |       |             |       |
+|       | IGP TERRE CAMARGUE RS BIO75CL  | 3545440120149 | 0000029500338 |      |       |             |       |
+|       | IGP ALPILLES BIO TRADITION 202 | 3760025420036 | 0000099016913 |      |       |             |       |
+|       | ALPILLES IGP TRADITION ROUGE   | 3760076070013 | 0000099056662 |      |       |             |       |
+|       | MAS GOURGONNIER ROUGE TRADITIO | 3760104593026 | 0000099024947 |      |       |             |       |
+|       | COTES DU VENTOUX DOMAINE DE GO | 3760146021914 | 0000099032673 |      |       |             |       |
+|       | PROSECCO SPUMANTE DOC BOTTER   | 8008863011081 | 0000099030361 |      |       |             |       |
+|       | MAS DE LA DAME RESEVE DU RGE   | 3464725107517 | 0000099016137 |      |       |             |       |
+|       | IGP MEDITERRANNEE TERRES DE BO | 3760171263181 | 0000099067489 |      |       |             |       |
+|       | MAS DAME LA GOURMANDE ROSE     | 3464722207517 | 0000099028421 |      |       |             |       |
+|       | VENTOUX SECRET DE TRUFFE ROUGE | 3700026507640 | 0000099040655 |      |       |             |       |
+|       | VCE BLANC VALRIAN 25 CL X 6    | 3250392151645 | 0000052335025 |      |       |             |       |
+|       | VIN ESPAGNE BLC VALRIAN3X25CL  | 3250390488828 | 0000052335010 |      |       |             |       |
+|       | CUVEE GOURMANDE ROUGE          | 3464721107511 | 0000099024028 |      |       |             |       |
+|       | R.MAZET IGPOC RGE MERLOT 75CL  | 3175520018655 | 0000052337510 |      |       |             |       |
+|       | LUBERON LES CLAPES             | 3760028200161 | 0000099037518 |      |       |             |       |
+|       | IGP CTE TARN BLC MOEL.EC75CL   | 3250390207634 | 0000052338035 |      |       |             |       |
+|       | IGP ALPILLES ROSE CUVEE EVIDEN | 3760059140153 | 0000099038691 |      |       |             |       |
+|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |       |             |       |
+|       | MAS GOURGONNIER BLANC TRADITIO | 3760104593224 | 0000099024945 |      |       |             |       |
+|       | LANSAC ROUGE 5L                | 3760059140061 | 0000099016145 |      |       |             |       |
+|       | IGP VAR 100% ROLLE             | 3760146021754 | 0000099012664 |      |       |             |       |
+|       | CDR SEGURET VILLAGES 2021      | 3341332013137 | 0000099040700 |      |       |             |       |
+|       | IGP TER.MIDI RS GRAINS LISTEL  | 3244081500005 | 0000029499905 |      |       |             |       |
+|       | IGP VAR MISS GRIS              | 3760146023659 | 0000099032690 |      |       |             |       |
+|       | AOC 2021 LES TROIS ORATOIRES C | 3760012970506 | 0000099041482 |      |       |             |       |
+|       | IGP T.CAMARGUE BLC BIO 75CL    | 3545440130148 | 0000029500339 |      |       |             |       |
+|       | TERRES ET LUMIeRES VENTOUX BLA | 3760033100081 | 0000099003837 |      |       |             |       |
+|       | IGP ROUGE FRISSON VAL DE L'OUL | 3435600000230 | 0000099036806 |      |       |             |       |
+|       | VENTOUX ROSE 1911 LEGENDE 75CL | 3760106128462 | 0000099089046 |      |       |             |       |
+|       | IGP ROUGE CUVEE ALPILLES BIO 2 | 3760063300628 | 0000099010235 |      |       |             |       |
+|       | MAS DE LA DAME ROSE DU MAS     | 3464723207516 | 0000099016135 |      |       |             |       |
+|       | LANSAC BLANC 5L                | 3760059140085 | 0000099016148 |      |       |             |       |
+|       | VAL DE L'OULE ROUGE EMOTION    | 3435600000209 | 0000099037386 |      |       |             |       |
+|       | COTES DE PROVENCE CŒUR ROSE    | 3760057981154 | 0000099020444 |      |       |             |       |
+|       | LAGOY VIN ROSE 5L              | 3760063300352 | 0000099051061 |      |       |             |       |
+|       | AOP CAB.ANJOU RS EX.CLUB 75CL  | 3250390261735 | 0000052344335 |      |       |             |       |
+|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |       |             |       |
+|       | BORDEAUX CHaTEAU MARQUIS DES B | 3259354143001 | 0000099031283 |      |       |             |       |
+|       | COTEAUX VAROIS LES RESTANQUES  | 3760146023567 | 0000099013634 |      |       |             |       |
+|       | DOMAINE DE LAGOY BIO 2023      | 3760063300024 | 0000099013439 |      |       |             |       |
+|       | IGP HERAULT RGE E.CLUB75CL     | 3250390051534 | 0000052337100 |      |       |             |       |
+|       | COTES DU RHONE PERRIN ROUGE    | 3296180000160 | 0000099005112 |      |       |             |       |
+|       | IGPOC CIN.GRENACH RS R.MAZET75 | 3175520018686 | 0000052339397 |      |       |             |       |
+|       | IGP OC CAB SAUV RG CX PIN 75CL | 3250390801078 | 0000052337602 |      |       |             |       |
+|       | VAL DE L'OULE BLANC PLAISIR    | 3435600000223 | 0000099037388 |      |       |             |       |
+|       | AOP PETIT CHABLIS BL EXP CLUB  | 3250392362898 | 0000017468346 |      |       |             |       |
+|       | IGP OC GRIS DES LAUNES         | 3392120003533 | 0000099002256 |      |       |             |       |
+|       | COTES DU RHONE RGE GUIGAL      | 3536650501002 | 0000017376801 |      |       |             |       |
+|       | VAL DE L'OULE ROSE DESIR       | 3435600000032 | 0000099088812 |      |       |             |       |
+|       | IGP OC MERLOT RSE XPIN 75CL    | 3250392336707 | 0000017410880 |      |       |             |       |
+|       | IGP OC SAUVIGNON BL CX PIN 75  | 3250390800996 | 0000052338202 |      |       |             |       |
+|       | AOP CHABLIS BLC EXPERT CLUB 75 | 3250391594993 | 0000017058346 |      |       |             |       |
+|       | AOP CTE RHONE RGE TRADITION 75 | 3410280017815 | 0000052341015 |      |       |             |       |
+|       | MAS GOURGONNIER ROSE TRADITION | 3760104593125 | 0000099024946 |      |       |             |       |
+|       | IGP VAR DOMAINE DE PELISSE - C | 3760146021358 | 0000099005261 |      |       |             |       |
+|       | IGP DES MAURES CUVEE ANE VOLAN | 3760057981192 | 0000099023011 |      |       |             |       |
+|       | IGP TERRE CAMARGUE ROUGE 75CL  | 3545440110140 | 0000029500337 |      |       |             |       |
+|       | COTES DU RHONE PRESTIGE LE SER | 3700025909339 | 0000099006929 |      |       |             |       |
+|       | MAS DE LA DAME LA STELE BLANC  | 3464720001001 | 0000099016133 |      |       |             |       |
+|       | AOP CTE RHONE RG JOANNES75     | 3410280017792 | 0000052341010 |      |       |             |       |
+|       | IGPOC RG O.CAMBRAS CAB SAUV 75 | 3211203420039 | 0000017110890 |      |       |             |       |
+|       | AOP BOURG.ALIGOTE EX.CLUB 75CL | 3250390167075 | 0000052346261 |      |       |             |       |
+|       | LE GRIS MAS MARIGNAN PRESTIGE  | 3770016080224 | 0000099020195 |      |       |             |       |
+|       | AOP CDR PRESTIGE RG 75CL       | 3179071000978 | 0000052341245 |      |       |             |       |
+|       | LE MAS BLANC MARIGNANE         | 3538650007058 | 0000099073088 |      |       |             |       |
+|       | COTES DU RHONE PERRIN BLANC    | 3296180000177 | 0000099005113 |      |       |             |       |
+|       | IGP MED PLAISIR BLANC          | 3760092070110 | 0000099035255 |      |       |             |       |
+|       | VAL DE L'OULE ROUGE SEDUCTION  | 3435600000049 | 0000099088813 |      |       |             |       |
+|       | AOP MACON VILL.BL EX.CLUB 75CL | 3250391325245 | 0000052346051 |      |       |             |       |
+|       | COTES DE PROVENCE DOMAINE LES  | 3760255430058 | 0000099087646 |      |       |             |       |
+|       | COTES DU RHONE SAINTE ROCHE    | 3344392118408 | 0000099003282 |      |       |             |       |
+|       | MAS DAME LA GOURMANDE BLANC    | 3464724307512 | 0000099016136 |      |       |             |       |
+|       | VCE ROUGE VALRIAN 12 1,5L      | 3250391786909 | 0000052334210 |      |       |             |       |
+|       | IGP HERAULT ROSE 75CL          | 3250390145349 | 0000052339100 |      |       |             |       |
+|       | AOP CTE PROV. BERNE GD RECOLTE | 3760033590028 | 0000017410177 |      |       |             |       |
+|       | AOC VENTOUX MOT DEXCUSE 2020 R | 3760028200314 | 0000099035453 |      |       |             |       |
+|       | AOC CDR RESERVE ROUGE GRAND CH | 3365385001545 | 0000099066251 |      |       |             |       |
+|       | MAS DE LA DAMELA STELE RGE     | 3464726107516 | 0000099016138 |      |       |             |       |
+|       | BANDOL DOMAINE L'OLIVETTE ROSE | 3458301571120 | 0000099032689 |      |       |             |       |
+|       | AOP COST.NIME.RG.E.CLUB 75CL   | 3250390261797 | 0000052340033 |      |       |             |       |
+|       | IGP MED ROSE STUD MIRAVAL      | 3296180007794 | 0000999221454 |      |       |             |       |
+|       | BIB ROSE TERRE DE CAMARGUE REY | 3545441020417 | 0000099022053 |      |       |             |       |
+|       | MAS SAINTE BERTHE LA CHAPELLE  | 1212121212121 | 1212121212121 |      |       |             |       |
 
 ---
 
