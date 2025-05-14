@@ -27,6 +27,8 @@
     - [Persona 2: Remi Passereau](#persona-2-remi-passereau)
     - [Persona 3: Maxence Vidal](#persona-3-maxence-vidal)
   - [Use Cases](#use-cases)
+    - [Selecting a Wine for a Meal](#selecting-a-wine-for-a-meal)
+    - [Selecting a Cheese with Filters](#selecting-a-cheese-with-filters)
 - [UI/UX](#uiux)
   - [Wireframes](#wireframes)
   - [Mockups](#mockups)
@@ -279,7 +281,7 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 **Name**: Hao Huang
 
-**Age Range**: 20-60 years old
+**Age Range**: 20-60 years
 
 **Description**: Hao Huang is a tourist that want to discover new traditional meals from her different trip.
 
@@ -301,7 +303,7 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 **Name**: Remi Passereau
 
-**Age Range**: 45-65
+**Age Range**: 45-65 years
 
 **Description**: Remi is a wine amateurs and love to discover new wines.
 
@@ -323,7 +325,7 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 **Name**: Maxence Vidal
 
-**Age Range**: 18-30
+**Age Range**: 18-30 years
 
 **Description**: A young person new to culinary word and traditions.
 
@@ -343,7 +345,75 @@ Launch of a new application to help tourist find good wines/cheeses for their me
 
 ---
 
-<!-- TODO: Create some use cases formated as in AfterWords documentation. -->
+#### Selecting a Wine for a Meal
+
+---
+
+**Actor**: user \
+**Goal**: Want to select a wine corresponding to a traditional meal of Provence.
+
+**Preconditions**:
+
+- Need to have a phone.
+- Need to have access to the application (QRcode).
+
+> [!Note]
+> If it is the first time the user download the application, they would need an internet connection.
+
+**Basic Flow**:
+
+1. Scroll through the predifined meals suggested by the application.
+2. Select the desired traditional meal.
+3. Select the Wine Tab.
+4. Scroll through the corresponding wine.
+5. Click on the desired one.
+
+> [!Warning] Alternate Flows
+>
+> - The intended meal isn't available on the application.
+> - The desired wine isn't in the database.
+
+**Postconditions**:
+
+- The user can find the wine by following "Where to find" section's instructions.
+
+---
+
+#### Selecting a Cheese with Filters
+
+---
+
+**Actor**: user \
+**Goal**: Want to select a cheese with filters for better time management.
+
+**Preconditions**:
+
+- Need to have a phone.
+- Need to know a bit about cheeses.
+- Need to know the kind of cheese they want.
+- Need to have access to the application (QRcode).
+
+> [!Note]
+> If it is the first time the user download the application, they would need an internet connection.
+
+**Basic Flow**:
+
+1. Click on the "Add Tags" Button.
+2. Select Tags according to the needed cheese by cicking on them.
+3. Close the Pop-up.
+4. Click the "Search button".
+5. Scroll through Cheeses.
+6. Click on the desired Cheese.
+
+> [!Warning] Alternate Flows
+>
+> - None of the cheeses correspond to the filters.
+> - Non of the cheeses appear.
+> - The desired cheese aren't in the database
+
+**Postconditions**:
+
+- Follow instructions in "Where to find" section to find the product within the building.
 
 ---
 
