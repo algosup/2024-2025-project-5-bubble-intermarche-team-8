@@ -43,7 +43,6 @@
   - [Connectivity](#connectivity)
   - [Responsiveness](#responsiveness)
   - [Marketing](#marketing)
-  - [Technical Requirements](#technical-requirements)
 - [Glossary](#glossary)
 
 </details>
@@ -56,7 +55,7 @@
 
 This project is about creating an application to recommend to user wine and cheese according to the meal they want to eat.
 
-The client is "Intermarché Saint-Rémy-de-Provence". <!-- Our contact point is ___, the --> <!-- TODO: add name & role. -->
+The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Célia Moustier and Chrys Cadeau, respectively the Intermarché's representative and the intern aisle responsible.
 
 ---
 
@@ -413,6 +412,11 @@ However, none of them has been consider as a good option since they weren't pers
 
 This second prompt exceeded our expectations giving us three good logos. After mindful reflections, the logo chosed was the second one, judged as more adequate with the application colors.
 
+Moreover, the application would also use Intermarché's logo on the main page as it is a project in collaboration with them. \
+This logo would be only displayed on the main page for design purpose. The logo used is the following:
+
+![Intermarché's Logo](img/logo/intermarche_logo.png)
+
 ---
 
 ### Font
@@ -457,13 +461,13 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 
 **Cheeses database**:
 
-| Image                                                                           | Product Name                   | ITM8          | EAN           | Tags | Description | Link                                                                                                               |
-| ------------------------------------------------------------------------------- | ------------------------------ | ------------- | ------------- | ---- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
+| Image                                                                                               | Product Name                   | ITM8          | EAN           | Tags | Description | Link                                                                                                               |
+| --------------------------------------------------------------------------------------------------- | ------------------------------ | ------------- | ------------- | ---- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
 | ![CHEVRE NATURE OU AROMATISE Picture](<img/product/cheeses/CHEVRE NATURE OU AROMATISE.png>)         | CHEVRE NATURE OU AROMATISE     | 0000099006106 | 0205010000000 |      |             | [Link](https://www.intermarche.com/produit/yaourt-au-lait-de-chevre-nature/3250391945993)                          |
 | ![YAOURT AUX FRUITS MERE RICHARD Picture](<img/product/cheeses/YAOURT AUX FRUITS MERE RICHARD.png>) | YAOURT AUX FRUITS MERE RICHARD | 0000099064583 | 0000000000198 |      |             | [Link](https://www.intermarche.com/produit/yaourt-onctueux-aux-fruits-mixes-fruits-rouges/3250392046705)           |
 | ![P&C ROCAMADOUR AOP NU 35G Picture](<img/product/cheeses/P&C ROCAMADOUR AOP NU 35G.png>)           | P&C ROCAMADOUR AOP NU 35G      | 0000043439167 | 2663702000000 |      |             | [Link](https://www.intermarche.com/produit/rocamadour-aop/2663702000000)                                           |
 | ![TOME DE PROVENCE Picture](<img/product/cheeses/TOME DE PROVENCE.png>)                             | TOME DE PROVENCE               | 0000099060048 | 0204410000000 |      |             | [Link](https://www.intermarche.com/produit/tomme-des-pyrenees-igp/3250391594146)                                   |
-| ![PELARDON Picture](<img/product/cheeses/PELARDON.png>)                                               | PELARDON                       | 0000099041865 | 0204510000000 |      |             | Not found                                                                                                          |
+| ![PELARDON Picture](img/product/cheeses/PELARDON.png)                                               | PELARDON                       | 0000099041865 | 0204510000000 |      |             | Not found                                                                                                          |
 | ![ST MARCELLIN MERE RICHARD Picture](<img/product/cheeses/ST MARCELLIN MERE RICHARD.png>)           | ST MARCELLIN MERE RICHARD      | 0000099041874 | 0204600000000 |      |             | [Link](https://www.intermarche.com/produit/saint-marcellin/3250390153344)                                          |
 | ![ST FELICIEN MERE RICHARD Picture](<img/product/cheeses/ST FELICIEN MERE RICHARD.png>)             | ST FELICIEN MERE RICHARD       | 0000099041873 | 0204590000000 |      |             | [Link](https://www.intermarche.com/produit/saint-felicien/3250390213994)                                           |
 | ![SECHONS DE CHEVRE Picture](<img/product/cheeses/SECHONS DE CHEVRE.png>)                           | SECHONS DE CHEVRE              | 0000099041867 | 0204530000000 |      |             | Not found                                                                                                          |
@@ -473,7 +477,7 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 | ![LE VENTOUX Picture](<img/product/cheeses/LE VENTOUX.png>)                                         | LE VENTOUX                     | 0000099060040 | 0204830000000 |      |             | [Link](https://www.intermarche.com/produit/ventoux-vin-rouge/3250391461554)                                        |
 | ![BANON FEUILLE Picture](<img/product/cheeses/BANON FEUILLE.png>)                                   | BANON FEUILLE                  | 0000099041863 | 2670978000000 |      |             | [Link](https://www.intermarche.com/produit/banon-aop-cave-25%25-mg/2670978000000)                                  |
 | ![ST FELICIEN TENTATION 200G Picture](<img/product/cheeses/ST FELICIEN TENTATION 200G.png>)         | ST FELICIEN TENTATION 200G     | 0000019026713 | 2663532000000 |      |             | [Link](https://www.intermarche.com/produit/fromage-saint-felicien/3237055000724)                                   |
-| ![BOUYGUETTE Picture](<img/product/cheeses/BOUYGUETTE.png>)                                           | BOUYGUETTE                     | 0000099041859 | 0204450000000 |      |             | Not found                                                                                                          |
+| ![BOUYGUETTE Picture](img/product/cheeses/BOUYGUETTE.png)                                           | BOUYGUETTE                     | 0000099041859 | 0204450000000 |      |             | Not found                                                                                                          |
 | ![FE ST FELICIEN AFFINE 150G Picture](<img/product/cheeses/FE ST FELICIEN AFFINE 150G.png>)         | FE ST FELICIEN AFFINE 150G     | 0000019676898 | 3523230034289 |      |             | [Link](https://www.intermarche.com/produit/saint-felicien/3523230034289)                                           |
 | ![PICODON AOP MERE RICHARD Picture](<img/product/cheeses/PICODON AOP MERE RICHARD.png>)             | PICODON AOP MERE RICHARD       | 0000099059676 | 0204660000000 |      |             | Not found                                                                                                          |
 | ![FE P&C ST MARCELLIN IGP 2X80GR Picture](<img/product/cheeses/FE P&C ST MARCELLIN IGP 2X80GR.png>) | FE P&C ST MARCELLIN IGP 2X80GR | 0000043434119 | 3250391104116 |      |             | [Link](https://www.intermarche.com/produit/st-marcellin-igp/3250391104116)                                         |
@@ -507,7 +511,7 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 | ![APERITIF BQ LAIT CRU VACHE     Picture](<img/product/cheeses/APERITIF BQ LAIT CRU VACHE.png>)     | APERITIF BQ LAIT CRU VACHE     | 0000099026567 | 3760081251155 |      |             | Not found                                                                                                          |
 | ![COUPE FROMAGE LS               Picture](<img/product/cheeses/COUPE FROMAGE LS.png>)               | COUPE FROMAGE LS               | 0000000000016 | 0000000000016 |      |             | [Link](https://www.intermarche.com/produit/comte-fromage-a-pate-presse-cuite-affine-9-mois-minimum/2663571000000)  |
 | ![GORGONZOLA A LA CUILLERE       Picture](<img/product/cheeses/GORGONZOLA A LA CUILLERE.png>)       | GORGONZOLA A LA CUILLERE       | 0000099006089 | 0204870000000 |      |             | [Link](https://www.intermarche.com/produit/gorgonzola-aop-'a-la-louche'/2843303000000)                             |
-| ![FIGOU                          Picture](<img/product/cheeses/FIGOU.png>)                            | FIGOU                          | 0000099041453 | 0204160000000 |      |             | Not found                                                                                                          |
+| ![FIGOU                          Picture](img/product/cheeses/FIGOU.png)                            | FIGOU                          | 0000099041453 | 0204160000000 |      |             | Not found                                                                                                          |
 | ![SAINT DOMNIN A LA LAVANDE      Picture](<img/product/cheeses/SAINT DOMNIN A LA LAVANDE.png>)      | SAINT DOMNIN A LA LAVANDE      | 0000099041858 | 0204440000000 |      |             | Not found                                                                                                          |
 | ![BRIE DE MEAUX                  Picture](<img/product/cheeses/BRIE DE MEAUX.png>)                  | BRIE DE MEAUX                  | 0000099041848 | 0204350000000 |      |             | [Link](https://www.intermarche.com/produit/brie-de-meaux-aop/2663500000000)                                        |
 | ![FE PARMI REGG AOP COPEAUX 100G Picture](<img/product/cheeses/FE PARMI REGG AOP COPEAUX 100G.png>) | FE PARMI REGG AOP COPEAUX 100G | 0000043434033 | 8001868003129 |      |             | [Link](https://www.intermarche.com/produit/parmigiano-reggiano-aop-en-copeaux/8002461871832)                       |
@@ -517,14 +521,14 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 | ![MORBIER AOP 100J 1/2M 3K5      Picture](<img/product/cheeses/MORBIER AOP 100J 1/2M 3K5.png>)      | MORBIER AOP 100J 1/2M 3K5      | 0000019849086 | 2843995000000 |      |             | [Link](https://www.intermarche.com/produit/morbier-aop/2663662000000)                                              |
 | ![LOU PERAC PERAIL BREBIS 150G   Picture](<img/product/cheeses/LOU PERAC PERAIL BREBIS 150G.png>)   | LOU PERAC PERAIL BREBIS 150G   | 0000043439450 | 2663709000000 |      |             | [Link](https://www.intermarche.com/produit/la-brique-pur-brebis/3023260031017)                                     |
 | ![*MASCARPONE GORGONZOLA 1.2KG  Picture](<img/product/cheeses/MASCARPONE GORGONZOLA 1.2KG.png>)     | \*MASCARPONE GORGONZOLA 1.2KG  | 0000024389388 | 2824730000000 |      |             | [Link](https://www.intermarche.com/produit/torta-gorgonzola-mascarpone/2663725000000)                              |
-| ![GALLETOUT                      Picture](<img/product/cheeses/GALLETOUT.png>)                        | GALLETOUT                      | 0000099041511 | 0204170000000 |      |             | Not found                                                                                                          |
-| ![BURRATA                        Picture](<img/product/cheeses/BURRATA.png>)                          | BURRATA                        | 0000099008081 | 0205070000000 |      |             | [Link](https://www.intermarche.com/produit/burrata/3250392341695)                                                  |
+| ![GALLETOUT                      Picture](img/product/cheeses/GALLETOUT.png)                        | GALLETOUT                      | 0000099041511 | 0204170000000 |      |             | Not found                                                                                                          |
+| ![BURRATA                        Picture](img/product/cheeses/BURRATA.png)                          | BURRATA                        | 0000099008081 | 0205070000000 |      |             | [Link](https://www.intermarche.com/produit/burrata/3250392341695)                                                  |
 | ![FE CAMEMBERT PYRO ISIGNY 250G  Picture](<img/product/cheeses/FE CAMEMBERT PYRO ISIGNY 250G.png>)  | FE CAMEMBERT PYRO ISIGNY 250G  | 0000019118070 | 3254550030193 |      |             | [Link](https://www.intermarche.com/produit/camembert-au-lait-cru/3254550039639)                                    |
 | ![FE CAMEMBERT LAIT CRU AOP 250G Picture](<img/product/cheeses/FE CAMEMBERT LAIT CRU AOP 250G.png>) | FE CAMEMBERT LAIT CRU AOP 250G | 0000043439007 | 2663503000000 |      |             | [Link](https://www.intermarche.com/produit/camembert-de-normandie-au-lait-cru-aop/3252950012016)                   |
-| ![RACLETTE                       Picture](<img/product/cheeses/RACLETTE.png>)                         | RACLETTE                       | 0000099009832 | 0205160000000 |      |             | Not found                                                                                                          |
+| ![RACLETTE                       Picture](img/product/cheeses/RACLETTE.png)                         | RACLETTE                       | 0000099009832 | 0205160000000 |      |             | Not found                                                                                                          |
 | ![GRAND MORIN A LA TRUFFE D'ETE  Picture](<img/product/cheeses/GRAND MORIN A LA TRUFFE D'ETE.png>)  | GRAND MORIN A LA TRUFFE D'ETE  | 0000099041288 | 0204030000000 |      |             | Not found                                                                                                          |
 | ![ST NECTAIRE FERMIER            Picture](<img/product/cheeses/ST NECTAIRE FERMIER.png>)            | ST NECTAIRE FERMIER            | 0000099041837 | 0204240000000 |      |             | [Link](https://www.intermarche.com/produit/saint-nectaire-fermier-aop-29%25-mg/2829856000000)                      |
-| ![EMMENTAL LT CRU 27% 10KG Picture](<img/product/cheeses/EMMENTAL LT CRU 1/8M 27%25 10KG.png>)             | EMMENTAL LT CRU 1/8M 27% 10KG  | 0009919782641 | 2839008000000 |      |             | [Link](https://www.intermarche.com/produit/emmental-francais-est-central-grand-cru-label-cru/0212224000000)        |
+| ![EMMENTAL LT CRU 27% 10KG Picture](<img/product/cheeses/EMMENTAL LT CRU 1/8M 27%25 10KG.png>)      | EMMENTAL LT CRU 1/8M 27% 10KG  | 0009919782641 | 2839008000000 |      |             | [Link](https://www.intermarche.com/produit/emmental-francais-est-central-grand-cru-label-cru/0212224000000)        |
 | ![GRUYERE FRANCE IGP 5K5         Picture](<img/product/cheeses/GRUYERE FRANCE IGP 5K5.png>)         | GRUYERE FRANCE IGP 5K5         | 0009919667068 | 2843122000000 |      |             | [Link](https://www.intermarche.com/produit/gruyere-rape-igp-france/3250390547372)                                  |
 | ![*L'ENROBE ABRICOT 80G         Picture](<img/product/cheeses/L'ENROBE ABRICOT 80G.png>)            | \*L'ENROBE ABRICOT 80G         | 0000024447157 | 2849441000000 |      |             | Not found                                                                                                          |
 | ![FE FETA GRECQUE AOP 180G       Picture](<img/product/cheeses/FE FETA GRECQUE AOP 180G.png>)       | FE FETA GRECQUE AOP 180G       | 0000019443461 | 5202425001128 |      |             | [Link](https://www.intermarche.com/produit/feta-grecque-aop/3250391226078)                                         |
@@ -559,112 +563,160 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 | ![PAVE DU LARZAC                 Picture](<img/product/cheeses/PAVE DU LARZAC.png>)                 | PAVE DU LARZAC                 | 0000099006092 | 0204900000000 |      |             | [Link](https://www.intermarche.com/produit/pave-daffinois-l'original/3307907100084)                                |
 | ![PETIT POT CREME CARAMEL        Picture](<img/product/cheeses/PETIT POT CREME CARAMEL.png>)        | PETIT POT CREME CARAMEL        | 0000099011576 | 3483130046426 |      |             | Not found                                                                                                          |
 
+The database above could be too heavy for Bubble standards. Therefore, a selection for the most selled cheeses would be displayed according to the data provided by Intermarché. \
+The following products would be in the application database:
+
+- Comté 18 mois
+- Morbier
+- Roquefort société
+- Gorgonzola
+- St néctaire fermier
+- Tomme Tarentaise
+- Tomme aux fleurs
+- Manchego
+- Ossau Iraty
+- Tomme de chèvre
+- Crottin de Chavignol (piece)
+- Banon
+- Chèvre de St Rémy (piece)
+- Bouyguette (piece)
+- Pérail des Bruissières
+- St Marcellin (piece)
+- Munster
+- Brie de Meaux
+- Grand morin à la truffe
+- Camembert de Bufflonne (piece)
+
 **Wines database**:
 
-| Image | Product Name                      | ITM8             | EAN              | Tags | Description | Links |
-|-------|-----------------------------------|------------------|------------------|------|-------------|-------|
-|       |   IGP ALPILLES ROSE TRADITION     |   3760076070020  |   0000099056669  |      |             |       |
-|       |   VAL DE L OULE ROSE TENDRESSE    |   3435600000216  |   0000099037387  |      |             |       |
-|       |   GRAND MAS DE LANSAC BLAN        |   3760059140030  |   0000099016142  |      |             |       |
-|       |   IGP VAR GRIS GRIS DE ROSE       |   3760146021815  |   0000099005260  |      |             |       |
-|       |   GRAND MAS LANSAC ROSE           |   3760059140023  |   0000099016143  |      |             |       |
-|       |   AOP FOLIE EN PROVENCE 2023 COT  |   3760092070349  |   0000099064698  |      |             |       |
-|       |   LANSAC ROSE 5L                  |   3760059140078  |   0000099016147  |      |             |       |
-|       |   LAGOY VIN ROSE IGP ALPILLES BI  |   3760063300321  |   0000099010236  |      |             |       |
-|       |   LE GRIS MAS MARIGNAN            |   3538650074333  |   0000099066408  |      |             |       |
-|       |   LUBERON LES CLAPES              |   3760028200048  |   0000099060230  |      |             |       |
-|       |   ROSE CUVEE EVIDENCE MAS LANSAC  |   3760059140184  |   0000099012318  |      |             |       |
-|       |   IGP ROSE ETOILE DES ALPILLES    |   3760251190161  |   0000099035796  |      |             |       |
-|       |   TRADITION 2023 AOP BIO          |   3760025420012  |   0000099016911  |      |             |       |
-|       |   GRAND MAS DE LANSAC RGE         |   3760059140108  |   0000099063709  |      |             |       |
-|       |   AOP BIO PASSE-ROSE 2024 750ML   |   3760025420029  |   0000099016912  |      |             |       |
-|       |   ETOILE DES ALPILLES IGP BLANC   |   3760251190154  |   0000099037189  |      |             |       |
-|       |   ALPILLES IGP TRADITION BLANC    |   3760076070037  |   0000099056670  |      |             |       |
-|       |   IGP TERRE CAMARGUE RS BIO75CL   |   3545440120149  |   0000029500338  |      |             |       |
-|       |   IGP ALPILLES BIO TRADITION 202  |   3760025420036  |   0000099016913  |      |             |       |
-|       |   ALPILLES IGP TRADITION ROUGE    |   3760076070013  |   0000099056662  |      |             |       |
-|       |   MAS GOURGONNIER ROUGE TRADITIO  |   3760104593026  |   0000099024947  |      |             |       |
-|       |   COTES DU VENTOUX DOMAINE DE GO  |   3760146021914  |   0000099032673  |      |             |       |
-|       |   PROSECCO SPUMANTE DOC BOTTER (  |   8008863011081  |   0000099030361  |      |             |       |
-|       |   MAS DE LA DAME RESEVE DU RGE    |   3464725107517  |   0000099016137  |      |             |       |
-|       |   IGP MEDITERRANNEE TERRES DE BO  |   3760171263181  |   0000099067489  |      |             |       |
-|       |   MAS DAME LA GOURMANDE ROSE      |   3464722207517  |   0000099028421  |      |             |       |
-|       |   VENTOUX SECRET DE TRUFFE ROUGE  |   3700026507640  |   0000099040655  |      |             |       |
-|       |   VCE BLANC VALRIAN 25 CL X 6     |   3250392151645  |   0000052335025  |      |             |       |
-|       |   VIN  ESPAGNE BLC VALRIAN3X25CL  |   3250390488828  |   0000052335010  |      |             |       |
-|       |   CUVEE GOURMANDE ROUGE           |   3464721107511  |   0000099024028  |      |             |       |
-|       |   R.MAZET IGPOC RGE MERLOT 75CL   |   3175520018655  |   0000052337510  |      |             |       |
-|       |   LUBERON LES CLAPES              |   3760028200161  |   0000099037518  |      |             |       |
-|       |   IGP CTE TARN BLC MOEL.EC75CL    |   3250390207634  |   0000052338035  |      |             |       |
-|       |   IGP ALPILLES ROSE CUVEE EVIDEN  |   3760059140153  |   0000099038691  |      |             |       |
-|       |   VAL DE L OULE ROSE TENDRESSE    |   3435600000216  |   0000099037387  |      |             |       |
-|       |   MAS GOURGONNIER BLANC TRADITIO  |   3760104593224  |   0000099024945  |      |             |       |
-|       |   LANSAC ROUGE 5L                 |   3760059140061  |   0000099016145  |      |             |       |
-|       |   IGP VAR 100% ROLLE              |   3760146021754  |   0000099012664  |      |             |       |
-|       |   CDR SEGURET VILLAGES 2021       |   3341332013137  |   0000099040700  |      |             |       |
-|       |   IGP TER.MIDI RS GRAINS LISTEL   |   3244081500005  |   0000029499905  |      |             |       |
-|       |   IGP VAR MISS GRIS               |   3760146023659  |   0000099032690  |      |             |       |
-|       |   AOC 2021 LES TROIS ORATOIRES C  |   3760012970506  |   0000099041482  |      |             |       |
-|       |   IGP T.CAMARGUE BLC BIO 75CL     |   3545440130148  |   0000029500339  |      |             |       |
-|       |   TERRES ET LUMIeRES VENTOUX BLA  |   3760033100081  |   0000099003837  |      |             |       |
-|       |   IGP ROUGE FRISSON VAL DE L'OUL  |   3435600000230  |   0000099036806  |      |             |       |
-|       |   VENTOUX ROSE 1911 LEGENDE 75CL  |   3760106128462  |   0000099089046  |      |             |       |
-|       |   IGP ROUGE CUVEE ALPILLES BIO 2  |   3760063300628  |   0000099010235  |      |             |       |
-|       |   MAS DE LA DAME ROSE DU MAS      |   3464723207516  |   0000099016135  |      |             |       |
-|       |   LANSAC BLANC 5L                 |   3760059140085  |   0000099016148  |      |             |       |
-|       |   VAL DE L'OULE ROUGE EMOTION     |   3435600000209  |   0000099037386  |      |             |       |
-|       |   COTES DE PROVENCE CŒUR ROSE     |   3760057981154  |   0000099020444  |      |             |       |
-|       |   LAGOY VIN ROSE 5L               |   3760063300352  |   0000099051061  |      |             |       |
-|       |   AOP CAB.ANJOU RS EX.CLUB 75CL   |   3250390261735  |   0000052344335  |      |             |       |
-|       |   IGP ROSE ETOILE DES ALPILLES    |   3760251190161  |   0000099035796  |      |             |       |
-|       |   BORDEAUX CHaTEAU MARQUIS DES B  |   3259354143001  |   0000099031283  |      |             |       |
-|       |   COTEAUX VAROIS LES RESTANQUES   |   3760146023567  |   0000099013634  |      |             |       |
-|       |   DOMAINE DE LAGOY BIO 2023       |   3760063300024  |   0000099013439  |      |             |       |
-|       |   IGP HERAULT RGE E.CLUB75CL      |   3250390051534  |   0000052337100  |      |             |       |
-|       |   COTES DU RHONE PERRIN ROUGE     |   3296180000160  |   0000099005112  |      |             |       |
-|       |   IGPOC CIN.GRENACH RS R.MAZET75  |   3175520018686  |   0000052339397  |      |             |       |
-|       |   IGP OC CAB SAUV RG CX PIN 75CL  |   3250390801078  |   0000052337602  |      |             |       |
-|       |   VAL DE L'OULE BLANC PLAISIR     |   3435600000223  |   0000099037388  |      |             |       |
-|       |   AOP PETIT CHABLIS BL EXP CLUB   |   3250392362898  |   0000017468346  |      |             |       |
-|       |   IGP OC GRIS DES LAUNES          |   3392120003533  |   0000099002256  |      |             |       |
-|       |   COTES DU RHONE RGE GUIGAL       |   3536650501002  |   0000017376801  |      |             |       |
-|       |   VAL DE L'OULE ROSE DESIR        |   3435600000032  |   0000099088812  |      |             |       |
-|       |   IGP OC MERLOT RSE XPIN 75CL     |   3250392336707  |   0000017410880  |      |             |       |
-|       |   IGP OC SAUVIGNON BL CX PIN 75   |   3250390800996  |   0000052338202  |      |             |       |
-|       |   AOP CHABLIS BLC EXPERT CLUB 75  |   3250391594993  |   0000017058346  |      |             |       |
-|       |   AOP CTE RHONE RGE TRADITION 75  |   3410280017815  |   0000052341015  |      |             |       |
-|       |   MAS GOURGONNIER ROSE TRADITION  |   3760104593125  |   0000099024946  |      |             |       |
-|       |   IGP VAR DOMAINE DE PELISSE - C  |   3760146021358  |   0000099005261  |      |             |       |
-|       |   IGP DES MAURES CUVEE ANE VOLAN  |   3760057981192  |   0000099023011  |      |             |       |
-|       |   IGP TERRE CAMARGUE ROUGE 75CL   |   3545440110140  |   0000029500337  |      |             |       |
-|       |   COTES DU RHONE PRESTIGE LE SER  |   3700025909339  |   0000099006929  |      |             |       |
-|       |   MAS DE LA DAME LA STELE BLANC   |   3464720001001  |   0000099016133  |      |             |       |
-|       |   AOP CTE RHONE RG JOANNES75      |   3410280017792  |   0000052341010  |      |             |       |
-|       |   IGPOC RG O.CAMBRAS CAB SAUV 75  |   3211203420039  |   0000017110890  |      |             |       |
-|       |   AOP BOURG.ALIGOTE EX.CLUB 75CL  |   3250390167075  |   0000052346261  |      |             |       |
-|       |   LE GRIS MAS MARIGNAN PRESTIGE   |   3770016080224  |   0000099020195  |      |             |       |
-|       |   AOP CDR PRESTIGE RG 75CL        |   3179071000978  |   0000052341245  |      |             |       |
-|       |   LE MAS  BLANC MARIGNANE         |   3538650007058  |   0000099073088  |      |             |       |
-|       |   COTES DU RHONE PERRIN BLANC     |   3296180000177  |   0000099005113  |      |             |       |
-|       |   IGP MED PLAISIR BLANC           |   3760092070110  |   0000099035255  |      |             |       |
-|       |   VAL DE L'OULE ROUGE SEDUCTION   |   3435600000049  |   0000099088813  |      |             |       |
-|       |   AOP MACON VILL.BL EX.CLUB 75CL  |   3250391325245  |   0000052346051  |      |             |       |
-|       |   COTES DE PROVENCE DOMAINE LES   |   3760255430058  |   0000099087646  |      |             |       |
-|       |   COTES DU RHONE SAINTE ROCHE     |   3344392118408  |   0000099003282  |      |             |       |
-|       |   MAS DAME LA GOURMANDE BLANC     |   3464724307512  |   0000099016136  |      |             |       |
-|       |   VCE ROUGE VALRIAN 12  1,5L      |   3250391786909  |   0000052334210  |      |             |       |
-|       |   IGP HERAULT ROSE 75CL           |   3250390145349  |   0000052339100  |      |             |       |
-|       |   AOP CTE PROV. BERNE GD RECOLTE  |   3760033590028  |   0000017410177  |      |             |       |
-|       |   AOC VENTOUX MOT DEXCUSE 2020 R  |   3760028200314  |   0000099035453  |      |             |       |
-|       |   AOC CDR RESERVE ROUGE GRAND CH  |   3365385001545  |   0000099066251  |      |             |       |
-|       |   MAS DE LA DAMELA STELE RGE      |   3464726107516  |   0000099016138  |      |             |       |
-|       |   BANDOL DOMAINE L'OLIVETTE ROSE  |   3458301571120  |   0000099032689  |      |             |       |
-|       |   AOP COST.NIME.RG.E.CLUB 75CL    |   3250390261797  |   0000052340033  |      |             |       |
-|       |   IGP MED ROSE STUD MIRAVAL       |   3296180007794  |   0000999221454  |      |             |       |
-|       |   BIB ROSE TERRE DE CAMARGUE REY  |   3545441020417  |   0000099022053  |      |             |       |
-|       |   MAS SAINTE BERTHE LA CHAPELLE   |   1212121212121  |   1212121212121  |      |             |       |
+| Image | Product Name                   | ITM8          | EAN           | Tags | Description | Links |
+| ----- | ------------------------------ | ------------- | ------------- | ---- | ----------- | ----- |
+|       | IGP ALPILLES ROSE TRADITION    | 3760076070020 | 0000099056669 |      |             |       |
+|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |             |       |
+|       | GRAND MAS DE LANSAC BLAN       | 3760059140030 | 0000099016142 |      |             |       |
+|       | IGP VAR GRIS GRIS DE ROSE      | 3760146021815 | 0000099005260 |      |             |       |
+|       | GRAND MAS LANSAC ROSE          | 3760059140023 | 0000099016143 |      |             |       |
+|       | AOP FOLIE EN PROVENCE 2023 COT | 3760092070349 | 0000099064698 |      |             |       |
+|       | LANSAC ROSE 5L                 | 3760059140078 | 0000099016147 |      |             |       |
+|       | LAGOY VIN ROSE IGP ALPILLES BI | 3760063300321 | 0000099010236 |      |             |       |
+|       | LE GRIS MAS MARIGNAN           | 3538650074333 | 0000099066408 |      |             |       |
+|       | LUBERON LES CLAPES             | 3760028200048 | 0000099060230 |      |             |       |
+|       | ROSE CUVEE EVIDENCE MAS LANSAC | 3760059140184 | 0000099012318 |      |             |       |
+|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |             |       |
+|       | TRADITION 2023 AOP BIO         | 3760025420012 | 0000099016911 |      |             |       |
+|       | GRAND MAS DE LANSAC RGE        | 3760059140108 | 0000099063709 |      |             |       |
+|       | AOP BIO PASSE-ROSE 2024 750ML  | 3760025420029 | 0000099016912 |      |             |       |
+|       | ETOILE DES ALPILLES IGP BLANC  | 3760251190154 | 0000099037189 |      |             |       |
+|       | ALPILLES IGP TRADITION BLANC   | 3760076070037 | 0000099056670 |      |             |       |
+|       | IGP TERRE CAMARGUE RS BIO75CL  | 3545440120149 | 0000029500338 |      |             |       |
+|       | IGP ALPILLES BIO TRADITION 202 | 3760025420036 | 0000099016913 |      |             |       |
+|       | ALPILLES IGP TRADITION ROUGE   | 3760076070013 | 0000099056662 |      |             |       |
+|       | MAS GOURGONNIER ROUGE TRADITIO | 3760104593026 | 0000099024947 |      |             |       |
+|       | COTES DU VENTOUX DOMAINE DE GO | 3760146021914 | 0000099032673 |      |             |       |
+|       | PROSECCO SPUMANTE DOC BOTTER   | 8008863011081 | 0000099030361 |      |             |       |
+|       | MAS DE LA DAME RESEVE DU RGE   | 3464725107517 | 0000099016137 |      |             |       |
+|       | IGP MEDITERRANNEE TERRES DE BO | 3760171263181 | 0000099067489 |      |             |       |
+|       | MAS DAME LA GOURMANDE ROSE     | 3464722207517 | 0000099028421 |      |             |       |
+|       | VENTOUX SECRET DE TRUFFE ROUGE | 3700026507640 | 0000099040655 |      |             |       |
+|       | VCE BLANC VALRIAN 25 CL X 6    | 3250392151645 | 0000052335025 |      |             |       |
+|       | VIN ESPAGNE BLC VALRIAN3X25CL  | 3250390488828 | 0000052335010 |      |             |       |
+|       | CUVEE GOURMANDE ROUGE          | 3464721107511 | 0000099024028 |      |             |       |
+|       | R.MAZET IGPOC RGE MERLOT 75CL  | 3175520018655 | 0000052337510 |      |             |       |
+|       | LUBERON LES CLAPES             | 3760028200161 | 0000099037518 |      |             |       |
+|       | IGP CTE TARN BLC MOEL.EC75CL   | 3250390207634 | 0000052338035 |      |             |       |
+|       | IGP ALPILLES ROSE CUVEE EVIDEN | 3760059140153 | 0000099038691 |      |             |       |
+|       | VAL DE L OULE ROSE TENDRESSE   | 3435600000216 | 0000099037387 |      |             |       |
+|       | MAS GOURGONNIER BLANC TRADITIO | 3760104593224 | 0000099024945 |      |             |       |
+|       | LANSAC ROUGE 5L                | 3760059140061 | 0000099016145 |      |             |       |
+|       | IGP VAR 100% ROLLE             | 3760146021754 | 0000099012664 |      |             |       |
+|       | CDR SEGURET VILLAGES 2021      | 3341332013137 | 0000099040700 |      |             |       |
+|       | IGP TER.MIDI RS GRAINS LISTEL  | 3244081500005 | 0000029499905 |      |             |       |
+|       | IGP VAR MISS GRIS              | 3760146023659 | 0000099032690 |      |             |       |
+|       | AOC 2021 LES TROIS ORATOIRES C | 3760012970506 | 0000099041482 |      |             |       |
+|       | IGP T.CAMARGUE BLC BIO 75CL    | 3545440130148 | 0000029500339 |      |             |       |
+|       | TERRES ET LUMIeRES VENTOUX BLA | 3760033100081 | 0000099003837 |      |             |       |
+|       | IGP ROUGE FRISSON VAL DE L'OUL | 3435600000230 | 0000099036806 |      |             |       |
+|       | VENTOUX ROSE 1911 LEGENDE 75CL | 3760106128462 | 0000099089046 |      |             |       |
+|       | IGP ROUGE CUVEE ALPILLES BIO 2 | 3760063300628 | 0000099010235 |      |             |       |
+|       | MAS DE LA DAME ROSE DU MAS     | 3464723207516 | 0000099016135 |      |             |       |
+|       | LANSAC BLANC 5L                | 3760059140085 | 0000099016148 |      |             |       |
+|       | VAL DE L'OULE ROUGE EMOTION    | 3435600000209 | 0000099037386 |      |             |       |
+|       | COTES DE PROVENCE CŒUR ROSE    | 3760057981154 | 0000099020444 |      |             |       |
+|       | LAGOY VIN ROSE 5L              | 3760063300352 | 0000099051061 |      |             |       |
+|       | AOP CAB.ANJOU RS EX.CLUB 75CL  | 3250390261735 | 0000052344335 |      |             |       |
+|       | IGP ROSE ETOILE DES ALPILLES   | 3760251190161 | 0000099035796 |      |             |       |
+|       | BORDEAUX CHaTEAU MARQUIS DES B | 3259354143001 | 0000099031283 |      |             |       |
+|       | COTEAUX VAROIS LES RESTANQUES  | 3760146023567 | 0000099013634 |      |             |       |
+|       | DOMAINE DE LAGOY BIO 2023      | 3760063300024 | 0000099013439 |      |             |       |
+|       | IGP HERAULT RGE E.CLUB75CL     | 3250390051534 | 0000052337100 |      |             |       |
+|       | COTES DU RHONE PERRIN ROUGE    | 3296180000160 | 0000099005112 |      |             |       |
+|       | IGPOC CIN.GRENACH RS R.MAZET75 | 3175520018686 | 0000052339397 |      |             |       |
+|       | IGP OC CAB SAUV RG CX PIN 75CL | 3250390801078 | 0000052337602 |      |             |       |
+|       | VAL DE L'OULE BLANC PLAISIR    | 3435600000223 | 0000099037388 |      |             |       |
+|       | AOP PETIT CHABLIS BL EXP CLUB  | 3250392362898 | 0000017468346 |      |             |       |
+|       | IGP OC GRIS DES LAUNES         | 3392120003533 | 0000099002256 |      |             |       |
+|       | COTES DU RHONE RGE GUIGAL      | 3536650501002 | 0000017376801 |      |             |       |
+|       | VAL DE L'OULE ROSE DESIR       | 3435600000032 | 0000099088812 |      |             |       |
+|       | IGP OC MERLOT RSE XPIN 75CL    | 3250392336707 | 0000017410880 |      |             |       |
+|       | IGP OC SAUVIGNON BL CX PIN 75  | 3250390800996 | 0000052338202 |      |             |       |
+|       | AOP CHABLIS BLC EXPERT CLUB 75 | 3250391594993 | 0000017058346 |      |             |       |
+|       | AOP CTE RHONE RGE TRADITION 75 | 3410280017815 | 0000052341015 |      |             |       |
+|       | MAS GOURGONNIER ROSE TRADITION | 3760104593125 | 0000099024946 |      |             |       |
+|       | IGP VAR DOMAINE DE PELISSE - C | 3760146021358 | 0000099005261 |      |             |       |
+|       | IGP DES MAURES CUVEE ANE VOLAN | 3760057981192 | 0000099023011 |      |             |       |
+|       | IGP TERRE CAMARGUE ROUGE 75CL  | 3545440110140 | 0000029500337 |      |             |       |
+|       | COTES DU RHONE PRESTIGE LE SER | 3700025909339 | 0000099006929 |      |             |       |
+|       | MAS DE LA DAME LA STELE BLANC  | 3464720001001 | 0000099016133 |      |             |       |
+|       | AOP CTE RHONE RG JOANNES75     | 3410280017792 | 0000052341010 |      |             |       |
+|       | IGPOC RG O.CAMBRAS CAB SAUV 75 | 3211203420039 | 0000017110890 |      |             |       |
+|       | AOP BOURG.ALIGOTE EX.CLUB 75CL | 3250390167075 | 0000052346261 |      |             |       |
+|       | LE GRIS MAS MARIGNAN PRESTIGE  | 3770016080224 | 0000099020195 |      |             |       |
+|       | AOP CDR PRESTIGE RG 75CL       | 3179071000978 | 0000052341245 |      |             |       |
+|       | LE MAS BLANC MARIGNANE         | 3538650007058 | 0000099073088 |      |             |       |
+|       | COTES DU RHONE PERRIN BLANC    | 3296180000177 | 0000099005113 |      |             |       |
+|       | IGP MED PLAISIR BLANC          | 3760092070110 | 0000099035255 |      |             |       |
+|       | VAL DE L'OULE ROUGE SEDUCTION  | 3435600000049 | 0000099088813 |      |             |       |
+|       | AOP MACON VILL.BL EX.CLUB 75CL | 3250391325245 | 0000052346051 |      |             |       |
+|       | COTES DE PROVENCE DOMAINE LES  | 3760255430058 | 0000099087646 |      |             |       |
+|       | COTES DU RHONE SAINTE ROCHE    | 3344392118408 | 0000099003282 |      |             |       |
+|       | MAS DAME LA GOURMANDE BLANC    | 3464724307512 | 0000099016136 |      |             |       |
+|       | VCE ROUGE VALRIAN 12 1,5L      | 3250391786909 | 0000052334210 |      |             |       |
+|       | IGP HERAULT ROSE 75CL          | 3250390145349 | 0000052339100 |      |             |       |
+|       | AOP CTE PROV. BERNE GD RECOLTE | 3760033590028 | 0000017410177 |      |             |       |
+|       | AOC VENTOUX MOT DEXCUSE 2020 R | 3760028200314 | 0000099035453 |      |             |       |
+|       | AOC CDR RESERVE ROUGE GRAND CH | 3365385001545 | 0000099066251 |      |             |       |
+|       | MAS DE LA DAMELA STELE RGE     | 3464726107516 | 0000099016138 |      |             |       |
+|       | BANDOL DOMAINE L'OLIVETTE ROSE | 3458301571120 | 0000099032689 |      |             |       |
+|       | AOP COST.NIME.RG.E.CLUB 75CL   | 3250390261797 | 0000052340033 |      |             |       |
+|       | IGP MED ROSE STUD MIRAVAL      | 3296180007794 | 0000999221454 |      |             |       |
+|       | BIB ROSE TERRE DE CAMARGUE REY | 3545441020417 | 0000099022053 |      |             |       |
+|       | MAS SAINTE BERTHE LA CHAPELLE  | 1212121212121 | 1212121212121 |      |             |       |
 
 ---
+
+As for cheeses, wines would have a selection that will be within the database if space constraints are applicable to Bubble. \
+The following wines would be:
+
+- IGP VAR GRIS DE ROSE
+- LAGOY VIN ROSE IGP ALPILLES BI
+- ROSE CUVEE EVIDENCE MAS LANSAC
+- GRAND MAS DE LANSAC BLAN
+- GRAND MAS LANSAC ROSE
+- LANSAC ROSE 5L
+- MAS STE BERTHE ROUGE TRADITION
+- MAS STE BERTHE ROSE 75 CL
+- MAS STE BERTHE BLANC DE BLANC
+- COEUR DE CAMARGUE ROSE
+- IGP ROSE ETOILE DES ALPILLES
+- ETOILE DES ALPILLES IGP BLANC
+- VAL DE L OULE ROSE TENDRESSE
+- PINOT NOIR 2022 ROUGE
+- IGP ALPILLES ROSE TRADITION
+- ALPILLES IGP TRADITION BLANC
+- LUBERON LES CLAPES
+- GRAND MAS DE LANSAC RGE
+- AOP FOLIE EN PROVENCE 2023 COT
+- LE GRIS MAS MARIGNAN
 
 #### Meals
 
@@ -884,7 +936,14 @@ graph TD
 
 ---
 
-<!-- TODO: The application should run quickly without long loading time. -->
+Our product would be used into the Intermarché grocery store of Saint-Rémy-De-Provence. The loading time should be short and the application intuitive for the users not to lose time.
+
+However, our application still need to be loaded into the client device, at least once, so they could have access to the entire database. The user should not download the application data everytime they use the application but only the forst time, so the loading time would be greatly reduced afterwards.
+
+In other words:
+
+- The first time the application is loaded, it should take at most 10 sec.
+- The next usages would take less than a second to load the entire application.
 
 ---
 
@@ -892,7 +951,11 @@ graph TD
 
 ---
 
-<!-- TODO: The application should only use internet (4G, 5G, wifi) to install the application and the application should be usable without any internet access. -->
+The application should be usable without any internet connection. It would avoid losing people who do not possessed any connection within the building. \
+However, we are forced to used connection at least once to download all the database into the users' device. \
+To avoid this problem we thought of using the free connection offered by Intermarché.
+
+Once the application would be fully loaded, an internet connection won't be necessary anymore.
 
 ---
 
@@ -900,7 +963,10 @@ graph TD
 
 ---
 
-<!-- TODO: The application should be compatible to mainly used phones. They could be iOS or Android. -->
+This application is designed for mobile devices, since it would be used mainly inside Intermarché. We assume people don't go shopping with their laptop.
+
+However, our application should be usable for every operating system and on the main screen sizes. \
+Therefore, th epllication would be developed on the main screensize spread sround the world which is 360x800px. It would also be usable on the range of 350 to 375 pixel width.
 
 ---
 
@@ -908,15 +974,10 @@ graph TD
 
 ---
 
-<!-- TODO: Explain how users will know about the application, maybe "etiquettes" with QR code or something else. -->
+As none of the team members are part of a marketing role or had any marketing experience, this section won't be really enhanced. \
+However, the application could be downloaded via a QRcode on a basic poster or sign, that could be displayed at the entrance of the building and at both sides of the related departments.
 
----
-
-### Technical Requirements
-
----
-
-<!-- TODO: Explain the technical requirement needed to complete the project in time. -->
+The team also rely on Intermarché's staff and marketing team to promote the application the best they could.
 
 ---
 
