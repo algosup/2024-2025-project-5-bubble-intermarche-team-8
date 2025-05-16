@@ -58,7 +58,7 @@
 
 ---
 
-This project is about creating an application to recommend to user wine and cheese according to the meal they want to eat.
+This project involves creating an application that recommends wine and cheese to users based on the meal they plan to eat.
 
 The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Célia Moustier and Chrys Cadeau, respectively, the Intermarché's representative and the intern aisle responsible.
 
@@ -307,8 +307,8 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Frustrations**:
 
-- No application gives enough details about wine tastes in its opinion.
-- He would like to filter his research for a more accurate result.
+- No application gives enough details about wine tastes in his opinion.
+- He would like to filter his search for a more accurate result.
 - He never finds the bottle in the store aisle.
 
 **Goals**:
@@ -330,14 +330,14 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 **Frustrations**:
 
 - Maxence never tasted a traditional dish of the region.
-- Maxence has enough to search for wines and cheeses on different applications.
+- Maxence had enough to search for wines and cheeses on different applications.
 - Maxence can't use the online application due to its poor quality internet connection.
 
 **Goals**:
 
 - They want to discover the traditional dishes of their heart region.
 - They want to save time in their research by searching for both cheeses and wines on the same application.
-- They want a free-connection application to use it even with their connection.
+- They want an application that functions without requiring an internet connection.
 
 ### Use Cases
 
@@ -363,7 +363,7 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 1. Scroll through the predefined meals suggested by the application.
 2. Select the desired traditional meal.
 3. Select the Wine Tab.
-4. Scroll through the corresponding wine.
+4. Scroll through the suggested list of wine.
 5. Click on the desired one.
 
 > [!Warning] Alternate Flows
@@ -387,8 +387,8 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 **Preconditions**:
 
 - Need to have a phone.
-- Need to know a bit about cheeses.
-- Need to know the kind of cheese they want.
+- Need to know a bit about cheese.
+- Need to know what kind of cheese they want.
 - Need to have access to the application (QR code).
 
 > [!Note]
@@ -400,7 +400,7 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 2. Select Tags according to the needed cheese by clicking on them.
 3. Close the Pop-up.
 4. Click the "Search button".
-5. Scroll through Cheeses.
+5. Scroll through Cheese options.
 6. Click on the desired Cheese.
 
 > [!Warning] Alternate Flows
@@ -469,7 +469,7 @@ Finally, tags won't be visible on the main screen, since there could be a lot of
 
 ---
 
-The Mockups have been made on Figma and can be found in two places, either in the [pdf folder](./pdf/) or with this link: [Figma, Read only](https://www.figma.com/design/YYSa0BxXfyM5PNkdnCFYeZ/BiteMatch-wine-cheese-application?node-id=0-1&t=jhOQGM6NhjMpkwJ6-1).
+The mockups were created using Figma and are available in two locations: in the [PDF folder](./pdf/) or via this [read-only Figma link](https://www.figma.com/design/YYSa0BxXfyM5PNkdnCFYeZ/BiteMatch-wine-cheese-application?node-id=0-1&t=jhOQGM6NhjMpkwJ6-1).
 
 BiteMatch's Mockups were made following previously mentioned wireframes and through a try & error process.
 
@@ -912,8 +912,8 @@ Hereunder is a more detailed table for each of those subcategories.
 | Alcohol%   | 23+%      | Very high-alcohol content, typically liqueur-style or for cooking use.                    |
 | Taste      | Spicy     | Flavor profile with notes similar to spices like pepper, clove, or cinnamon.              |
 | Taste      | Bitter    | Sharp, slightly harsh taste often found in tannins or certain grape skins.                |
-| Taste      | Salt      | Rare in wine, but refers to a saline or mineral-like taste.                               |
-| Taste      | Fat       | A rich, full-bodied mouthfeel, often from high glycerol or alcohol content.               |
+| Taste      | Salty     | Rare in wine, but refers to a saline or mineral-like taste.                               |
+| Taste      | Round     | A rich, full-bodied mouthfeel, often from high glycerol or alcohol content.               |
 | Taste      | Sweet     | Noticeable sugar content, ranging from off-dry to dessert-level sweetness.                |
 | Taste      | Acid      | Tart, tangy sensation that gives wine its freshness and balance.                          |
 
@@ -1025,7 +1025,7 @@ This section would only be present for wines.
 
 It will be composed of three bars showing the different tastes of the wine. They would be sorted as follows:
 
-- Salt<sup><a id="9-bis" href="#9">[9]</a></sup>/Fat<sup><a id="10-bis" href="#10">[10]</a></sup>
+- Salty<sup><a id="9-bis" href="#9">[9]</a></sup>/Round<sup><a id="10-bis" href="#10">[10]</a></sup>
 - Sweetness<sup><a id="11-bis" href="#11">[11]</a></sup>/Spicy<sup><a id="12-bis" href="#12">[12]</a></sup>
 - Bitterness<sup><a id="13-bis" href="#13">[13]</a></sup>/Acidity<sup><a id="14-bis" href="#14">[14]</a></sup>
 
@@ -1146,10 +1146,10 @@ The team also relies on Intermarché's staff and marketing team to promote the a
 | <a id="8" href="#8-bis">[8]</a>    | Bio         | In France, “Bio” indicates organic food certified under European regulations, free from synthetic pesticides and GMOs.                                       |
 | <a id="13" href="#13-bis">[13]</a> | Bitterness  | A taste characteristic often found in aged cheeses or certain wine varietals, balancing sweetness and acidity.                                               |
 | <a id="2" href="#2-bis">[2]</a>    | Bubble      | A no-code development platform used to build web applications through visual programming without traditional coding.                                         |
-| <a id="10" href="#10-bis">[10]</a> | Fat         | A component of food that affects texture and flavor; in cheese, fat content contributes to richness and mouthfeel.                                           |
+| <a id="10" href="#10-bis">[10]</a> | Round       | A component of food that affects texture and flavor; in cheese, fat content contributes to richness and mouthfeel.                                           |
 | <a id="7" href="#7-bis">[7]</a>    | IGP         | _Indication Géographique Protégée_; a European certification for products that have a specific geographical origin and possess qualities due to that origin. |
 | <a id="3" href="#3-bis">[3]</a>    | Mock-up     | A high-fidelity, static representation of a user interface, used for visual design evaluation and client feedback.                                           |
-| <a id="9" href="#9-bis">[9]</a>    | Salt        | A basic taste and nutrient, often used in cheese production to influence flavor, texture, and preservation.                                                  |
+| <a id="9" href="#9-bis">[9]</a>    | Salty       | A basic taste and nutrient, often used in cheese production to influence flavor, texture, and preservation.                                                  |
 | <a id="12" href="#12-bis">[12]</a> | Spicy       | A sensory property related to heat or pungency, sometimes present in cheeses or paired with wines to contrast flavors.                                       |
 | <a id="11" href="#11-bis">[11]</a> | Sweetness   | A taste quality indicating the presence of sugars; used in wine tasting to describe sugar levels.                                                            |
 | <a id="5" href="#5-bis">[5]</a>    | Wireframe   | A basic visual guide used to suggest the layout and structure of a user interface before final design or development.                                        |
