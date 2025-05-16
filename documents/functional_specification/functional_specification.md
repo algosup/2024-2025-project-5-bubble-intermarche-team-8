@@ -35,7 +35,7 @@
   - [Color Palette](#color-palette)
   - [Logo](#logo)
   - [Font](#font)
-- [Funtional Requirements](#funtional-requirements)
+- [Functional Requirements](#functional-requirements)
   - [Languages](#languages)
   - [Data](#data)
     - [Products](#products)
@@ -60,7 +60,7 @@
 
 This project is about creating an application to recommend to user wine and cheese according to the meal they want to eat.
 
-The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Célia Moustier and Chrys Cadeau, respectively the Intermarché's representative and the intern aisle responsible.
+The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Célia Moustier and Chrys Cadeau, respectively, the Intermarché's representative and the intern aisle responsible.
 
 ---
 
@@ -72,7 +72,7 @@ The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Cé
 
 ---
 
-The vision behind this project is to help people chose better wine assortiment<sup><a id="1-bis" href="#1">[1]</a></sup> for their meal all day long, even when there is no department expert in the store. Allowing new commers and tourist to try and find by themselves new and local product.
+The vision behind this project is to help people choose better wine assortments <sup><a id="1-bis" href="#1">[1]</a></sup> for their meal all day long, even when there is no department expert in the store. This allows newcomers and tourists to try and find new and local products for themselves.
 
 ---
 
@@ -80,9 +80,9 @@ The vision behind this project is to help people chose better wine assortiment<s
 
 ---
 
-- **Helping client finding meal assortiment**: The application should allow user to find wine, or cheese without any human help.
-- **Bringing discovery to client**: The application should permit client to discover new and local ingredients/wine. It would allow client to have a new experience with the French culture.
-- **Ease of use**: The application should be totally user-friendly and compatible in many languages. The application should be quick to use-no more than 3 pages to navigate through-and accessible without connection.
+- **Helping client find meal assortiment**: The application should allow the user to find wine or cheese without any human help.
+- **Bringing discovery to client**: The application should permit the client to discover new and local ingredients/wines. It would allow the client to have a new experience with the French culture.
+- **Ease of use**: The application should be totally user-friendly and compatible in many languages. The application should be quick to use no more than 3 pages to navigate through-and accessible without connection.
 
 ---
 
@@ -90,9 +90,9 @@ The vision behind this project is to help people chose better wine assortiment<s
 
 ---
 
-This peoject will be made in bubble<sup><a id="2-bis" href="#2">[2]</a></sup>, a no-code platform, and should be compatible with every mobile device. If this concept is adapted and should be spread around or scaled, then another language would be used to create the application.
+This project will be made in Bubble<sup><a id="2-bis" href="#2">[2]</a></sup>, a no-code platform, and should be compatible with every mobile device. If this concept is adapted and should be spread around or scaled, then another language would be used to create the application.
 
-The implementation would mainly concern the front-end as it is a UX project. A back-end would still be implemented. However, this one would be smaller than the actual database. As it is a proof of concept, quality would be prioritize as quantity.
+The implementation would mainly concern the front-end, as it is a UX project. A back-end would still be implemented. However, this one would be smaller than the actual database. As it is a proof of concept, quality would be prioritized over quantity.
 
 ---
 
@@ -100,13 +100,13 @@ The implementation would mainly concern the front-end as it is a UX project. A b
 
 ---
 
-**Tourist**: People that aren't from the region, wanting to discover more about the culture and culinary habits of its inhabitants. They would use the application in their own language (or most common one) to discover new wines and cheese quickly during their journey.
+**Tourist**: People who aren't from the region, wanting to discover more about the culture and culinary habits of its inhabitants. They would use the application in their own language (or the most common one) to discover new wines and cheese quickly during their journey.
 
-**Locals**: People that live annually or partially in the region. They could use the application for recommendation in particular events such as weddings or party.
+**Locals**: People who live annually or partially in the region. They could use the application for recommendations in particular events such as weddings or parties.
 
-**Wine Amateurs**: People that likes wines and have knowlegde about them. They could use the application to know more about the different tastes of the wine, with what it suits best.
+**Wine Amateurs**: People who like wines and have knowledge about them. They could use the application to know more about the different tastes of the wine, with what suits it best.
 
-**Cheese Amateurs**: People that likes cheeses and have knowlegde about them. They could use the application to know more about the different kind of the cheese and their best assortiment.
+**Cheese Amateurs**: People who like cheeses and have knowlegde about them. They could use the application to know more about the different kind of the cheese and their best assortiment.
 
 ---
 
@@ -122,7 +122,7 @@ The main deliverable of this project is the bubble application/source code. Alon
 - The User Manual
 - Management Planning and Weekly Reports
 
-In addition, a 15-minute long presentation would be done in front of the client to show this advancement.
+In addition, a 15-minute-long presentation would be done in front of the client to show this advancement.
 
 ---
 
@@ -173,7 +173,7 @@ External project reviewers have been appointed by the project owner to review ou
 
 **End Goal and Deadline**:
 
-Launch of a new application to help tourist find good wines/cheeses for their meal by June 20, 2025.
+Launch of a new application to help tourists find good wines/cheeses for their meal by June 20, 2025.
 
 **Key Milestones**:
 
@@ -248,8 +248,8 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Constraints**:
 
-- Limited access to real-time inventory from the grocery store may restrict accuracy of in-stock recommendations.
-- The search bar will only be used for cheeses and wines in the Proof Of Concept.
+- Limited access to real-time inventory from the grocery store may restrict the accuracy of in-stock recommendations.
+- The search bar will only be used for cheeses and wines in the Proof of Concept.
 - Must comply with local regulations for food labeling, allergens<sup><a id="4-bis" href="#4">[4]</a></sup>, and data privacy (e.g., GDPR).
 - The application must function offline or with limited connectivity, at least for basic features.
 - UI must accommodate quick usage in a shopping setting.
@@ -281,18 +281,18 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Age Range**: 20-60 years
 
-**Description**: Hao Huang is a tourist that want to discover new traditional meals from her different trip.
+**Description**: Hao Huang is a tourist who wants to discover new traditional meals from her different trips.
 
 **Frustrations**:
 
-- She can't read description card in the store because she doesn't speak French.
-- She never found traditional dish from Provence.
-- She really liked a wine in her country but can't find one that tastes the same.
+- She can't read the description card in the store because she doesn't speak French.
+- She never found traditional dishes from Provence.
+- She really liked a wine in her country, but can't find one that tastes the same.
 
 **Goals**:
 
-- She wants to use an application translated in many languages.
-- She wants to discover new traditional dishesof the region.
+- She wants to use an application translated into many languages.
+- She wants to discover new traditional dishes of the region.
 - She wants to find wines that taste the same as those in her hometown.
 
 #### Persona 2: Remi Passereau
@@ -303,19 +303,19 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Age Range**: 45-65 years
 
-**Description**: Remi is a wine amateurs and love to discover new wines.
+**Description**: Remi is a wine amateur and loves to discover new wines.
 
 **Frustrations**:
 
 - No application gives enough details about wine tastes in its opinion.
 - He would like to filter his research for a more accurate result.
-- He never find the bottle in the store aisle.
+- He never finds the bottle in the store aisle.
 
 **Goals**:
 
-- He wants to select his wine according to wines tastes description.
+- He wants to select his wine according to the wine's taste description.
 - He wants to find the bottle quickly without getting lost in the aisle.
-- He wants a precise research and not to lose time while searching.
+- He wants precise research and not to lose time while searching.
 
 #### Persona 3: Maxence Vidal
 
@@ -325,17 +325,17 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Age Range**: 18-30 years
 
-**Description**: A young person new to culinary word and traditions.
+**Description**: A young person new to the culinary world and traditions.
 
 **Frustrations**:
 
 - Maxence never tasted a traditional dish of the region.
-- Maxence have nough of searching for wines and cheeses on different applications.
-- Maxence can't use online application due to it's poor quality internet connection.
+- Maxence has enough to search for wines and cheeses on different applications.
+- Maxence can't use the online application due to its poor quality internet connection.
 
 **Goals**:
 
-- They want to discover traditional dishes of their heart region.
+- They want to discover the traditional dishes of their heart region.
 - They want to save time in their research by searching for both cheeses and wines on the same application.
 - They want a free-connection application to use it even with their connection.
 
@@ -353,14 +353,14 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 **Preconditions**:
 
 - Need to have a phone.
-- Need to have access to the application (QRcode).
+- Need to have access to the application (QR code).
 
 > [!Note]
-> If it is the first time the user download the application, they would need an internet connection.
+> If it is the first time the user downloads the application, they would need an internet connection.
 
 **Basic Flow**:
 
-1. Scroll through the predifined meals suggested by the application.
+1. Scroll through the predefined meals suggested by the application.
 2. Select the desired traditional meal.
 3. Select the Wine Tab.
 4. Scroll through the corresponding wine.
@@ -373,7 +373,7 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 **Postconditions**:
 
-- The user can find the wine by following "Where to find" section's instructions.
+- The user can find the wine by following the "Where to find" section's instructions.
 
 ---
 
@@ -389,15 +389,15 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 - Need to have a phone.
 - Need to know a bit about cheeses.
 - Need to know the kind of cheese they want.
-- Need to have access to the application (QRcode).
+- Need to have access to the application (QR code).
 
 > [!Note]
-> If it is the first time the user download the application, they would need an internet connection.
+> If it is the first time the user downloads the application, they would need an internet connection.
 
 **Basic Flow**:
 
 1. Click on the "Add Tags" Button.
-2. Select Tags according to the needed cheese by cicking on them.
+2. Select Tags according to the needed cheese by clicking on them.
 3. Close the Pop-up.
 4. Click the "Search button".
 5. Scroll through Cheeses.
@@ -406,12 +406,12 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 > [!Warning] Alternate Flows
 >
 > - None of the cheeses correspond to the filters.
-> - Non of the cheeses appear.
-> - The desired cheese aren't in the database
+> - None of the cheeses appear.
+> - The desired cheeses aren't in the database
 
 **Postconditions**:
 
-- Follow instructions in "Where to find" section to find the product within the building.
+- Follow the instructions in the "Where to find" section to find the product within the building.
 
 ---
 
@@ -421,23 +421,23 @@ The Gantt Chart could be found in the [management_artifacts.md file](../manageme
 
 ---
 
-This project has been into many states and was at first designed as a wireframe<sup><a id="5-bis" href="#5">[5]</a></sup> on Excalidraw. You can find it by clicking on the following link: [Excalidraw, Read only](https://excalidraw.com/#json=CeX56Qg24DF5ZD2TAaS40,9vrUyinyniIOAFH6zy5HQA).
+This project has been in many states and was at first designed as a wireframe<sup><a id="5-bis" href="#5">[5]</a></sup> on Excalidraw. You can find it by clicking on the following link: [Excalidraw, Read only](https://excalidraw.com/#json=CeX56Qg24DF5ZD2TAaS40,9vrUyinyniIOAFH6zy5HQA).
 
 **First Idea**:
 
-The first workflow idea was to enter the name of the meal the user would like to eat and a recomendation of wines or cheeses would appear underneath the search input.
+The first workflow idea was to enter the name of the meal the user would like to eat, and a recommendation of wines or cheeses would appear underneath the search input.
 
 ![First Workflow Idea](./img/design/first_workflow_idea.png)
 
-This idea wasn't retained because the database necessary at its well-behavement wasn't feasable for this project.
+This idea wasn't retained because the database necessary for its well-being wasn't feasible for this project.
 
 **Second Idea**:
 
-This one was more based in a menu "a la carte" way. The user could choose between many predefined dishes (local culinary specifities) and it would send them to a description page of the meal with recommendations for wine and cheese.
+This one was more based on a "menu a la carte" way. The user could choose between many predefined dishes (local culinary specialties), and it would send them to a description page of the meal with recommendations for wine and cheese.
 
 ![Second Workflow Idea](./img/design/second_workflow_idea.png)
 
-This idea was not retained due to the lack of possible dishes. The user could want something totally different from what is shown in the cards.
+This idea was not retained due to the lack of possible dishes. The user may want something totally different from what is shown in the cards.
 
 **Third Idea**:
 
@@ -449,19 +449,19 @@ This idea was rejected for being too specific. Only amateurs of wine and cheese 
 
 ---
 
-None of those ideas was convenient enough to solve the client's requirement. However, they all have a part that was interesting to dig in. Therefore, a last design was created by merging the three ideas.
+None of those ideas was convenient enough to solve the client's requirement. However, they all have a part that was interesting to dig into. Therefore, a last design was created by merging the three ideas.
 
 **Final Idea**:
 
 ![Final Workflow Idea](./img/design/final_workflow_idea.png)
 
-This idea combines the search bar from the first idea, the cards from the second one, and tags from the last one. However some differences can be spotten.
+This idea combines the search bar from the first idea, the cards from the second one, and tags from the last one. However, some differences can be spotted.
 
-Firstly, the search bar would be used for wines and cheeses, and not meals anymore. The user would enter the name of a product and they would apear underneath.
+Firstly, the search bar would be used for wines and cheeses, and not meals anymore. The user would enter the name of a product, and it would appear underneath.
 
 Secondly, in the meal description page, the "both section" has been removed, judged as useless with the two others.
 
-Finally, tags won't be visible on the main screen, since there could be a lot of them at the same time. They would be accessible through the "add tags" button and categorized by type and product (wines, cheeses, accompaniement).
+Finally, tags won't be visible on the main screen, since there could be a lot of them at the same time. They would be accessible through the "add tags" button and categorized by type and product (wines, cheeses, accompaniments).
 
 ---
 
@@ -471,11 +471,11 @@ Finally, tags won't be visible on the main screen, since there could be a lot of
 
 The Mockups have been made on Figma and can be found in two places, either in the [pdf folder](./pdf/) or with this link: [Figma, Read only](https://www.figma.com/design/YYSa0BxXfyM5PNkdnCFYeZ/BiteMatch-wine-cheese-application?node-id=0-1&t=jhOQGM6NhjMpkwJ6-1).
 
-BiteMatch's Mockups were made following previously mentionned wireframes and through a try & error process.
+BiteMatch's Mockups were made following previously mentioned wireframes and through a try & error process.
 
 **First Version**:
 
-This version was made following the last version of the wireframe. Colors used was Intermarché's one, referred as choice 1 in [Color Palette](#color-palette).
+This version was made following the last version of the wireframe. Colors used were Intermarché's one, referred to as choice 1 in [Color Palette](#color-palette).
 
 ![Version One Mockup](./img/design/version_one_mockup.png)
 
@@ -483,22 +483,22 @@ This version had some changes, mainly on the sizes of different elements, judged
 
 **Second Version**:
 
-This version was modified according to the first version feedback.
+This version was modified according to the first version's feedback.
 
 ![Version Two Mockup](./img/design/version_two_mockup.png)
 
-For this version, the cards (wine, cheese, meals) has been reduced as well as the font size and pictures, giving a more recent feeling about the application. \
-Also, the brown color has been slightly lighten up to have a more harmonious page. \
-Home button has been replaced by the [BiteMatch Logo](#logo). \
+For this version, the cards (wine, cheese, meals) have been reduced as well as the font size and pictures, giving a more recent feeling about the application. \
+Also, the brown color has been slightly lightened up to have a more harmonious page. \
+The "Home button" has been replaced by the [BiteMatch Logo](#logo). \
 Finally, Intermarché's logo has been implemented in the middle of the top bar.
 
 **Arabic Version**:
 
-This application will be translated in many languages to be used by the most people possible. You can find which languages will the application be translated too at the following part, [Languages](#languages).
+This application will be translated into many languages to be used by the many people possible. You can find which languages will the application be translated too at the following part, [Languages](#languages).
 
-However, some languages aren't writting the same way as europeans do (up-to-down or right-to-left) which is the case of Arabic. Therefore, another design with a different layout has been designed to avoid issues when cretaing the application on bubble.
+However, some languages aren't written the same way as Europeans do (up-to-down or right-to-left), as is the case with Arabic. Therefore, another design with a different layout has been designed to avoid issues when creating the application on Bubble.
 
-Here is a picture of the arabic Mockups:
+Here is a picture of the Arabic mockups:
 
 ![Version Two Mockup In Arabic](./img/design/version_two_mockup_arabic.png)
 
@@ -508,7 +508,7 @@ Here is a picture of the arabic Mockups:
 
 ---
 
-Many color charts has been defined for this project, but only three choices have been kept. They are the following:
+Many color charts have been defined for this project, but only three choices have been kept. They are the following:
 
 | Colors           | Choice 1 | Choice 2 | Choice 3 |
 | ---------------- | -------- | -------- | -------- |
@@ -521,7 +521,7 @@ Many color charts has been defined for this project, but only three choices have
 | Success          | #1E6C30  | #1E6C30  | #1E6C30  |
 | Alert            | #DCA114  | #DCA114  | #DCA114  |
 
-Since colors are quite easy and fast to change, the first choice was selected, as it was the same colors as Intermarché's ones.
+Since colors are quite easy and fast to change, the first choice was selected, as it was the same colors as Intermarché's.
 
 ---
 
@@ -529,7 +529,7 @@ Since colors are quite easy and fast to change, the first choice was selected, a
 
 ---
 
-As none of the team members are graphic designers and that a logo could be quite difficult to design, it was decided to use an AI ([DeepAI](https://deepai.org)) to generate our logo.
+As none of the team members are graphic designers and a logo could be quite difficult to design, it was decided to use an AI ([DeepAI](https://deepai.org)) to generate our logo.
 
 The first selection was generated with a prompt containing information about the project and chart colors. DeepAI returned these six:
 
@@ -537,16 +537,16 @@ The first selection was generated with a prompt containing information about the
 | :------------------------------------------------------------: | :------------------------------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: | :-------------------------------------------------------------: | :------------------------------------------------------------: |
 | <img alt="Logo 1" src="./img/logo/logo_one.png" width="200px"> | <img alt="Logo 2" src="./img/logo/logo_two.png" width="200px"> | <img alt="Logo 3" src="./img/logo/logo_three.png" width="200px"> | <img alt="Logo 4" src="./img/logo/logo_four.png" width="200px"> | <img alt="Logo 5" src="./img/logo/logo_five.png" width="200px"> | <img alt="Logo 6" src="./img/logo/logo_six.png" width="200px"> |
 
-However, none of them has been consider as a good option since they weren't personified enough. Therefore, the team chosed a name for the application and a new prompt was generated with BiteMatch:
+However, none of them has been considered a good option since they weren't personified enough. Therefore, the team chose a name for the application, and a new prompt was generated with BiteMatch:
 
 |                                           Logo 1                                           |                                           Logo 2                                           |                                            Logo 3                                            |
 | :----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
 | <img alt="Logo 1 Second Prompt" src="./img/logo/logo_one_second_prompt.png" width="200px"> | <img alt="Logo 2 Second Prompt" src="./img/logo/logo_two_second_prompt.png" width="200px"> | <img alt="Logo 3 Second Prompt" src="./img/logo/logo_three_second_prompt.png" width="200px"> |
 
-This second prompt exceeded our expectations giving us three good logos. After mindful reflections, the logo chosed was the second one, judged as more adequate with the application colors.
+This second prompt exceeded our expectations, giving us three good logos. After mindful reflections, the logo chosen was the second one, judged as more adequate with the application colors.
 
-Moreover, the application would also use Intermarché's logo on the main page as it is a project in collaboration with them. \
-This logo would be only displayed on the main page for design purpose. The logo used is the following:
+Moreover, the application would also use Intermarché's logo on the main page, as it is a project in collaboration with them. \
+This logo would be only displayed on the main page for design purposes. The logo used is the following:
 
 ![Intermarché's Logo](img/logo/intermarche_logo.png)
 
@@ -556,28 +556,28 @@ This logo would be only displayed on the main page for design purpose. The logo 
 
 ---
 
-This application would be written with the `Inter` font because it is widely used in application and websites.
+This application would be written with the `Inter` font because it is widely used in applications and websites.
 
 ---
 
-## Funtional Requirements
+## Functional Requirements
 
 ### Languages
 
 ---
 
-Since this appliaction is meant to be used by tourist, it will be translated in many languages.
+Since this application is meant to be used by tourists, it will be translated into many languages.
 
-The two main languages of the application would be French and English, as we are in France and that English is most spoken language abroad.
+The two main languages of the application would be French and English, as we are in France, and English is the most spoken language abroad.
 
-However, we decided not to stop to these two languages and to implant other languages which are:
+However, we decided not to stop to these two languages and to translate the application to other languages, which are:
 
 | Language | Flag | Reason                                                                                                                                    |
 | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Greek    | 🇬🇷   | A team member comes from Greece.                                                                                                          |
 | Arabic   | 🇦🇪   | Arabic is a widespread language, it also allows the application to change, since Arabic is written from right to left.                    |
-| German   | 🇩🇪   | Germans are the second greatest tourist in France.                                                                                        |
-| Spanish  | 🇪🇸   | Spanish are one of the most used languages in France. Moreover, Spain is near France, allowing Spanish people to do tourism quite easily. |
+| German   | 🇩🇪   | Germans are the second greatest tourists in France.                                                                                        |
+| Spanish  | 🇪🇸   | Spanish is one of the most used languages in France. Moreover, Spain is near France, allowing Spanish people to do tourism quite easily. |
 | Chinese  | 🇨🇳   | This is the most spoken language in the world.                                                                                            |
 
 You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
@@ -698,7 +698,7 @@ You can find the Mockup in Arabic above, in the [Mockups](#mockups) section.
 
 ---
 
-The database above could be too heavy for Bubble standards. Therefore, a selection for the most selled cheeses would be displayed according to the data provided by Intermarché. \
+The database above could be too heavy for Bubble standards. Therefore, a selection of the most sold cheeses would be displayed according to the data provided by Intermarché. \
 The following products would be in the application database:
 
 - Comté 18 mois
@@ -852,19 +852,21 @@ The following wines would be:
 - AOP FOLIE EN PROVENCE 2023 COT
 - LE GRIS MAS MARIGNAN
 
+---
+
 #### Meals
 
 ---
 
-For this application, the main page would display meal cards which would be predefined and regional specialities. You can find the selection hereunder:
+For this application, the main page would display meal cards, which would be predefined and regional specialities. You can find the selection hereunder:
 
 |         Meal Name         |                                           Picture                                            |                                                              Meal description                                                               |
 | :-----------------------: | :------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-|         Anchoïade         |              <img alt="Anchoiade" src="./img/meal/anchoiade.png" width="200px">              |          A savory dip made from anchovies, garlic, olive oil, and sometimes capers, typically served with raw vegetables or bread.          |
+|         Anchoïade         |              <img alt="Anchoïade" src="./img/meal/anchoiade.png" width="200px">              |          A savory dip made from anchovies, garlic, olive oil, and sometimes capers, typically served with raw vegetables or bread.          |
 |           Aïoli           |                  <img alt="aioli" src="./img/meal/aioli.png" width="200px">                  |                 A garlic mayonnaise often served with vegetables, fish, or hard-boiled eggs, central to Provençal cuisine.                  |
 |  Tomate à la Provençale   | <img alt="Tomate a la Provencale" src="./img/meal/tomate_a_la_provencale.png" width="200px"> |                            Tomatoes baked with herbs, garlic, and breadcrumbs—an aromatic and simple side dish.                             |
 |       Bouillabaisse       |          <img alt="Bouillabaisse" src="./img/meal/bouillabaisse.png" width="200px">          | A traditional fish stew from Marseille made with various local fish, shellfish, and a flavorful broth, served with rouille sauce and bread. |
-| Ratatouille de Saint-Rémy |     <img alt="Ratatuoille de Saint-Remy" src="./img/meal/ratatouille.png" width="200px">     |              A slow-cooked vegetable medley of eggplant, zucchini, peppers, tomatoes, and herbs, originating from Saint-Rémy.               |
+| Ratatouille de Saint-Rémy |     <img alt="Ratatouille de Saint-Remy" src="./img/meal/ratatouille.png" width="200px">     |              A slow-cooked vegetable medley of eggplant, zucchini, peppers, tomatoes, and herbs, originating from Saint-Rémy.               |
 |           Socca           |                  <img alt="Socca" src="./img/meal/socca.png" width="200px">                  |                         A thin, crispy chickpea flour pancake from Nice, seasoned with olive oil and black pepper.                          |
 |         Broufado          |               <img alt="Broufado" src="./img/meal/broufado.png" width="200px">               |                A hearty Provençal beef stew marinated in red wine and slow-cooked with onions, herbs, and sometimes olives.                 |
 |         Crespeou          |               <img alt="Crespeou" src="./img/meal/crespeou.png" width="200px">               |                       A layered savory cake made of different colored omelets with herbs and vegetables, served cold.                       |
@@ -879,20 +881,20 @@ For this application, the main page would display meal cards which would be pred
 
 ---
 
-This application will allow user to search for wine or cheese with a search bar, as explained in the [Mockups](#mockups) section.
+This application will allow users to search for wine or cheese with a search bar, as explained in the [Mockups](#mockups) section.
 
-Therefore, some tags have been defined and classified into subcategories which are:
+Therefore, some tags have been defined and classified into subcategories, which are:
 
 - Wine
 - Cheese
-- Accompaniement
+- Accompaniment
 - Label
 - Season
 - Allergen
 
-Those tags can be access within the "add tags" button. Moreover, every product description page would have tags associated with them. Learn more about it in [Product Description Page](#product-description-page).
+Those tags can be accessed through the "add tags" button. Moreover, every product description page would have tags associated with it. Learn more about it in [Product Description Page](#product-description-page).
 
-Hereunder are a more detailed table for each of those subcategories.
+Hereunder is a more detailed table for each of those subcategories.
 
 **Wine**:
 
@@ -945,7 +947,7 @@ Hereunder are a more detailed table for each of those subcategories.
 | Meat       | Fish      | Meat from freshwater or saltwater fish, known for being light and high in protein.                                                                       |
 | Meat       | Sea       | Edible marine animals other than fish, such as shellfish and crustaceans (e.g., shrimp, scallops).                                                       |
 | Meat       | Wild      | Meat from non-domesticated animals hunted in the wild (e.g., venison, boar).                                                                             |
-| Dessert    | Cake      | Baked sweet dessert, typically made from flour, sugar, and eggs, often layered or frosted.                                                               |
+| Dessert    | Cake      | A baked sweet dessert, typically made from flour, sugar, and eggs, often layered or frosted.                                                               |
 | Dessert    | Fruit     | Desserts based on fresh or cooked fruits, such as tarts, compotes, or fruit salads.                                                                      |
 | Dessert    | Chocolate | Desserts where chocolate is the main ingredient, including mousse, brownies, or truffles.                                                                |
 | Dessert    | Ice       | Frozen desserts like ice cream, sorbet, or gelato, served cold and often creamy or fruity.                                                               |
@@ -1005,7 +1007,7 @@ This section is composed of:
 - The Price of the Product.
 - The Region it comes from.
 
-And the percentage of alcohol for wines.
+And the percentage of alcohol in wines.
 
 **Tags**:
 
@@ -1013,15 +1015,15 @@ In this section will be a list of all the tags corresponding to the Product. The
 
 **Suggestions**:
 
-As the application should be a recommemdation one, two meals will be displayed as suggestion for the product. Allowing users to mix their product better and have the best experience possible. \
-The two meals would be displayed only if they are predifined in the database. However, the application is a proof of concept, therefore, some data could be missing. Consequently, this section could be empty. \
+As the application should be a recommendation one, two meals will be displayed as suggestions for the product. Allowing users to mix their products better and have the best experience possible. \
+The two meals would be displayed only if they are predefined in the database. However, the application is a proof of concept, therefore, some data could be missing. Consequently, this section could be empty. \
 In the case of an empty section, the section would be hidden/removed for the product only.
 
 **Taste**:
 
 This section would only be present for wines.
 
-It will be composed of three bars showing the different taste of the wine. They would be sorted like following:
+It will be composed of three bars showing the different tastes of the wine. They would be sorted as follows:
 
 - Salt<sup><a id="9-bis" href="#9">[9]</a></sup>/Fat<sup><a id="10-bis" href="#10">[10]</a></sup>
 - Sweetness<sup><a id="11-bis" href="#11">[11]</a></sup>/Spicy<sup><a id="12-bis" href="#12">[12]</a></sup>
@@ -1033,7 +1035,7 @@ This section would be a procedure to find the product within the grocery store. 
 
 **Labels**:
 
-This section will hold every labels the product have. They would also be displayed as tags. However, they would be more described and the full name would be written, unlike tags.
+This section will hold every label the product has. They would also be displayed as tags. However, they would be more descriptive, and the full name would be written, unlike tags.
 
 **Description**:
 
@@ -1047,38 +1049,38 @@ Finally, the description part is here to give more information about the wine in
 
 ```mermaid
 graph TD
-  %% BiteMatch Flow
-  subgraph BiteMatch Flow
-    P1[Loading Page] --> P2[Home Page]
+ %% BiteMatch Flow
+ subgraph BiteMatch Flow
+ P1[Loading Page] --> P2[Home Page]
 
-    P2 --> P3[Language Choice Pop-up]
-    P2 -->|One for each Meal Card| P4[Meal Description Page]
-    P2 -->|body| P5[Search Page]
+ P2 --> P3[Language Choice Pop-up]
+ P2 -->|One for each Meal Card| P4[Meal Description Page]
+ P2 -->|body| P5[Search Page]
 
-    P3 -->|Left-to-right Languages| L1[English 'Default', French 'Mandatory', Greek, German, Spanish, Chinese]
-    P3 -->|Right-to-left Languages| L2[Arabic]
+ P3 -->|Left-to-right Languages| L1[English 'Default', French 'Mandatory', Greek, German, Spanish, Chinese]
+ P3 -->|Right-to-left Languages| L2[Arabic]
 
-    P4 -->|By default| S1[Wine Selection]
-    P4 --> S2[Cheese Selection]
-    S1 --> P6[Wine Description Page]
-    S2 --> P7[Cheese Description Page]
+ P4 -->|By default| S1[Wine Selection]
+ P4 --> S2[Cheese Selection]
+ S1 --> P6[Wine Description Page]
+ S2 --> P7[Cheese Description Page]
 
-    P5 -->|With Results| P9[Result Page]
-    P5 -->|No Result| P10[Error Page]
-    P5 --> F[Feature]
-    F --> F1[Search input for a Product]
-    F --> P8[Tags Filter Pop-up]
-    F -->|Slider from €0 to most expensive one| F2[Budget Range]
+ P5 -->|With Results| P9[Result Page]
+ P5 -->|No Result| P10[Error Page]
+ P5 --> F[Feature]
+ F --> F1[Search input for a Product]
+ F --> P8[Tags Filter Pop-up]
+ F -->|Slider from €0 to most expensive one| F2[Budget Range]
 
-    P8 -->|Category| TC[Wine, Cheese, Accompaniement, Label, Season]
+ P8 -->|Category| TC[Wine, Cheese, Accompaniement, Label, Season]
 
-    P9 --> P6
-    P9 --> P7
-  end
+ P9 --> P6
+ P9 --> P7
+ end
 ```
 
 > [!note]
-> As you might have noticed, BiteMatch is a login-free application, meaning the user doesn't need to login to use the application.
+> As you might have noticed, BiteMatch is a login-free application, meaning the user doesn't need to log in to use the application.
 
 ---
 
@@ -1090,11 +1092,11 @@ graph TD
 
 Our product would be used into the Intermarché grocery store of Saint-Rémy-De-Provence. The loading time should be short and the application intuitive for the users not to lose time.
 
-However, our application still need to be loaded into the client device, at least once, so they could have access to the entire database. The user should not download the application data everytime they use the application but only the forst time, so the loading time would be greatly reduced afterwards.
+However, our application still needs to be loaded into the client device at least once, so they can have access to the entire database. The user should not download the application data every time they use the application, but only the first time, so the loading time would be greatly reduced afterwards.
 
 In other words:
 
-- The first time the application is loaded, it should take at most 10 sec.
+- The first time the application is loaded, it should take at most 10 seconds.
 - The next usages would take less than a second to load the entire application.
 
 ---
@@ -1103,11 +1105,11 @@ In other words:
 
 ---
 
-The application should be usable without any internet connection. It would avoid losing people who do not possessed any connection within the building. \
-However, we are forced to used connection at least once to download all the database into the users' device. \
-To avoid this problem we thought of using the free connection offered by Intermarché.
+The application should be usable without any internet connection. It would avoid losing people who do not possess any connection within the building. \
+However, we are forced to use a connection at least once to download all the database into the user's device. \
+To avoid this problem, we thought of using the free connection offered by Intermarché.
 
-Once the application would be fully loaded, an internet connection won't be necessary anymore.
+Once the application is fully loaded, an internet connection won't be necessary anymore.
 
 ---
 
@@ -1115,10 +1117,10 @@ Once the application would be fully loaded, an internet connection won't be nece
 
 ---
 
-This application is designed for mobile devices, since it would be used mainly inside Intermarché. We assume people don't go shopping with their laptop.
+This application is designed for mobile devices, since it would be used mainly inside Intermarché. We assume people don't go shopping with their laptops.
 
-However, our application should be usable for every operating system and on the main screen sizes. \
-Therefore, th epllication would be developed on the main screensize spread sround the world which is 360x800px. It would also be usable on the range of 350 to 375 pixel width.
+However, our application should be usable for every operating system and on all main screen sizes. \
+Therefore, the application would be developed on the main screensize spread around the world, which is 360x800px. It would also be usable on the range of 350 to 375 pixel width.
 
 ---
 
@@ -1126,10 +1128,10 @@ Therefore, th epllication would be developed on the main screensize spread sroun
 
 ---
 
-As none of the team members are part of a marketing role or had any marketing experience, this section won't be really enhanced. \
-However, the application could be downloaded via a QRcode on a basic poster or sign, that could be displayed at the entrance of the building and at both sides of the related departments.
+As none of the team members are part of a marketing role or have any marketing experience, this section won't be really enhanced. \
+However, the application could be downloaded via a QR code on a basic poster or sign, which could be displayed at the entrance of the building and at both sides of the related departments.
 
-The team also rely on Intermarché's staff and marketing team to promote the application the best they could.
+The team also relies on Intermarché's staff and marketing team to promote the application the best they can.
 
 ---
 
@@ -1139,7 +1141,7 @@ The team also rely on Intermarché's staff and marketing team to promote the app
 | ---------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <a id="6" href="#6-bis">[6]</a>    | AOP         | _Appellation d'Origine Protégée_; a French certification guaranteeing that a product is locally grown and produced using traditional methods.                |
 | <a id="14" href="#14-bis">[14]</a> | Acidity     | A taste descriptor in both wine and cheese, indicating tartness or sourness, often associated with freshness.                                                |
-| <a id="4" href="#4-bis">[4]</a>    | Allergen    | A substance capable of causing an allergic reaction, especially in food products like cheese or wine (e.g. milk, nuts, sulfites).                            |
+| <a id="4" href="#4-bis">[4]</a>    | Allergen    | A substance capable of causing an allergic reaction, especially in food products like cheese or wine (e.g., milk, nuts, sulfites).                            |
 | <a id="1" href="#1-bis">[1]</a>    | Assortiment | A combination or selection of complementary food items, such as wine and cheese, designed to enhance each other's flavors.                                   |
 | <a id="8" href="#8-bis">[8]</a>    | Bio         | In France, “Bio” indicates organic food certified under European regulations, free from synthetic pesticides and GMOs.                                       |
 | <a id="13" href="#13-bis">[13]</a> | Bitterness  | A taste characteristic often found in aged cheeses or certain wine varietals, balancing sweetness and acidity.                                               |
