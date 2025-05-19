@@ -91,9 +91,89 @@ This week was dedicated to finalizing the design phase and improving our underst
 
 Although this week introduced a slight delay, it marked a key milestone in the project's progress. We now have a clear visual foundation through our mockups and have taken important steps to streamline communication and reduce future risks. We are committed to focusing our efforts next week to get back on schedule, as outlined in the Gantt chart.
 
-## Weekly Report - Week 3
+## Weekly Report – Week 3
 
-## Weekly Report - Week 4
+**Schedule Status:** 🟢 *On Time*
+
+### Overview
+
+This week focused on product research and laying the foundation for development. We made significant progress in selecting our products, refining the user experience, and beginning both interface development and technical documentation.
+
+### Accomplishments
+
+1. **Product Selection**
+   - We finalized the list of wines and cheeses that will be featured in the proof of concept, including all necessary information (tags, descriptions, references).
+2. **User Experience Improvements**
+   - After exchanging emails with the client, we identified and addressed usability issues—particularly for tourists and non-experts. This led to adjustments in the user journey to make the app more intuitive.
+3. **Interface Development in Bubble**
+   - We began implementing the app’s visual layout in Bubble. This early development will help us prepare for real-world testing with Intermarché customers in four weeks.
+4. **Technical Specifications Draft**
+   - Work on the technical specifications has begun, and we’ve started discussing Bubble’s implementation limits with the client.
+
+### Challenges
+
+1. **Cross-Team Communication**
+   - One of the teams we coordinate sent a similar email to the client after ours. This overlap caused some confusion and could affect team's communication dynamics. We will reinforce communication protocols to avoid this in the future.
+2. **Bubble Plan Limitations**
+   - The free version of Bubble has imposed some technical constraints. We’re actively adapting our development strategy to work within these limitations.
+
+### Plans for Next Week
+
+1. **Finalize Functional Specifications**
+   - We aim to complete the functional specifications by Friday, incorporating client feedback on the mockups.
+2. **Refine Technical Specifications**
+   - Continue researching and consulting with our instructor Julien to ensure our technical solutions are appropriate and optimized for the project’s needs.
+3. **Meeting with Intermarché Aisle Chiefs**
+   - We’ve scheduled a meeting with aisle managers at Intermarché to fine-tune the app’s recommendation algorithm.
+
+### Conclusion
+
+This week marked a turning point, as we moved from preparation to active development. With the product list finalized and user journey refined, we now have a clear direction for building a relevant, accessible app. Our early progress in Bubble and ongoing documentation efforts put us in a strong position to meet upcoming milestones. Despite minor coordination issues and platform constraints, our team remains fully aligned and motivated. We’re confident in our ability to stay on track and deliver a high-quality proof of concept that meets both user needs and client expectations.
+
+## Weekly Report – Week 4
+
+**Schedule Status:** 🟢 *On Time*
+
+### Overview
+
+This week was focused on consolidating the project foundations. We finalized key documentation, held an in-depth meeting with the client, and made significant progress in our understanding of the Bubble environment.
+
+### Accomplishments
+
+1. **Client Meeting**
+
+   * We had an extended exchange with the client to clarify their feedback and expectations. Their positive response confirmed we are aligned with their vision and on the right track.
+2. **Functional Specifications Finalized**
+
+   * We completed the functional specifications, clearly outlining all user-facing features and functionalities of the application, with technical implementation details left for the upcoming technical specifications.
+3. **Improved Technical Understanding of Bubble**
+
+   * With Julien's support, we made strong progress in mastering Bubble’s capabilities and limitations, which will help us finalize the technical specifications.
+
+### Challenges
+
+1. **Client Communication Confusion**
+
+   * As mentioned last week, an earlier email created confusion when the client assumed all mockups had been submitted, though only Team 5’s had. This misunderstanding affected multiple teams and required time to resolve.
+2. **Dip in Motivation**
+
+   * The focus on research and repetitive documentation tasks led to a slight decrease in team motivation. We plan to address this through individual interviews next week to better support each team member.
+
+### Plans for Next Week
+
+1. **Individual Team Member Interviews**
+
+   * Scheduled for Monday morning, these one-on-one interviews aim to check in on individual challenges, concerns, and motivation, as we approach the halfway point of the project.
+2. **Refine Technical Specifications & Test Plan**
+
+   * Our goal is to finalize both documents to ensure our developers can work efficiently without ambiguity.
+3. **Continue Interface Development**
+
+   * With mockups validated, we will now accelerate the implementation of user interfaces in Bubble before tackling technical integration.
+
+### Conclusion
+
+This week marked a key turning point in the project. With finalized functional specifications and clearer alignment with the client, we’ve moved out of the planning phase and into execution. Julien’s guidance has accelerated our technical understanding of Bubble, giving us the confidence to push forward. While minor setbacks in communication and motivation surfaced, we are actively addressing them. The team is committed to moving ahead with clarity, unity, and renewed energy to deliver a polished and impactful product.
 
 ## Weekly Report - Week 5
 
