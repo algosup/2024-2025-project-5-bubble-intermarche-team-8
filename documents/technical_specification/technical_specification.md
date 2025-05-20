@@ -65,6 +65,17 @@
       - [Properties](#properties)
     - [Text](#text)
       - [Body 12](#body-12)
+      - [Body 14](#body-14)
+      - [Body 16](#body-16)
+      - [Bold 16](#bold-16)
+      - [Card Text 14](#card-text-14)
+      - [Card Text 16](#card-text-16)
+      - [Heading 1](#heading-1)
+      - [Heading 2](#heading-2)
+      - [Heading 2 Underlined](#heading-2-underlined)
+      - [Heading 3](#heading-3)
+      - [Popup Header 16](#popup-header-16)
+      - [Tags](#tags)
 
 </details>
 
@@ -1018,4 +1029,470 @@ To maintain consistent styling, the following global variables are defined:
   <tr><td>Padding - Bottom</td><td>0px</td></tr>
   <tr><td>Padding - Left</td><td>0px</td></tr>
   <tr><td>Padding - Right</td><td>0px</td></tr>
+<table>
+
+##### Body 14
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Medium (500)</td></tr>
+  <tr><td>Font Size</td><td>14px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+
+  <tr>
+    <td rowspan="1">Conditional Logic</td>
+    <td>Current page width < Mobile (320px)</td>
+    <td>Font Size: 12px</td>
+  </tr>
+</table>
+
+##### Body 16
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Medium (500)</td></tr>
+  <tr><td>Font Size</td><td>16px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+
+  <tr>
+    <td rowspan="1">Conditional Logic</td>
+    <td>Current page width < Mobile (320px)</td>
+    <td>Font Size: 14px</td>
+  </tr>
+</table>
+
+##### Bold 16
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Bold (700)</td></tr>
+  <tr><td>Font Size</td><td>16px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+
+  <tr>
+    <td rowspan="1">Conditional Logic</td>
+    <td>Current page width < Mobile (320px)</td>
+    <td>Font Size: 14px</td>
+  </tr>
+</table>
+
+##### Card Text 14
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>14px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Card Text 16
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>16px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Heading 1
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>h1</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>32px</td></tr>
+  <tr><td>Alignment</td><td>Center</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Heading 2
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>h2</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>24px</td></tr>
+  <tr><td>Alignment</td><td>Center</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Heading 2 Underlined
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="22">Appearance</td>
+    <td>HTML Tag</td>
+    <td>h2</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>24px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>Yes</td></tr>
+  <tr><td>Border Style - Top</td><td>None</td></tr>
+  <tr><td>Border Style - Right</td><td>None</td></tr>
+  <tr><td>Border Style - Bottom</td><td>Solid</td></tr>
+  <tr><td>Border Style - Bottom - Width</td><td>1px</td></tr>
+  <tr><td>Border Style - Bottom - Color</td><td>#E00E1F</td></tr>
+  <tr><td>Border Style - Left</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>32px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Heading 3
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>h3</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>20px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Popup Header 16
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Semi-Bold (600)</td></tr>
+  <tr><td>Font Size</td><td>16px</td></tr>
+  <tr><td>Alignment</td><td>Right</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>None</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>None</td></tr>
+  <tr><td>Border Roundness</td><td>0px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>0px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>0px</td></tr>
+  <tr><td>Padding - Left</td><td>0px</td></tr>
+  <tr><td>Padding - Right</td><td>0px</td></tr>
+</table>
+
+##### Tags
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="17">Appearance</td>
+    <td>HTML Tag</td>
+    <td>Normal</td>
+  </tr>
+  <tr><td>Opacity</td><td>100%</td></tr>
+  <tr><td>Font Style</td><td>Inter</td></tr>
+  <tr><td>Font Weight</td><td>Medium (500)</td></tr>
+  <tr><td>Font Size</td><td>16px</td></tr>
+  <tr><td>Alignment</td><td>Center</td></tr>
+  <tr><td>Font Color</td><td>#000000</td></tr>
+  <tr><td>Word Spacing</td><td>0px</td></tr>
+  <tr><td>Line Spacing</td><td>1.4px</td></tr>
+  <tr><td>Letter Spacing</td><td>0px</td></tr>
+  <tr><td>Center Text Vertically</td><td>yes</td></tr>
+  <tr><td>Background Style</td><td>Solid</td></tr>
+  <tr><td>Background Color</td><td>#DECE9C 75%</td></tr>
+  <tr><td>Define Each Border Independently</td><td>No</td></tr>
+  <tr><td>Border Style</td><td>Solid</td></tr>
+  <tr><td>Border Width</td><td>4px</td></tr>
+  <tr><td>Border Color</td><td>#DECE9C</td></tr>
+  <tr><td>Border Roundness</td><td>30px</td></tr>
+  <tr><td>Show Text Shadow</td><td>No</td></tr>
+  <tr><td>Shadow Style</td><td>None</td></tr>
+
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Padding - Top</td>
+    <td>12px</td>
+  </tr>
+  <tr><td>Padding - Bottom</td><td>12px</td></tr>
+  <tr><td>Padding - Left</td><td>8px</td></tr>
+  <tr><td>Padding - Right</td><td>8px</td></tr>
 </table>
