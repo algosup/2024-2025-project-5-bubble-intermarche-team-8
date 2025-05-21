@@ -14,13 +14,9 @@
 
 </details>
 
----
-
 ## 1. Introduction
 
 This document defines the coding, Git, and file-naming conventions used throughout the BiteMatch project. Adhering to these standards ensures consistency, collaboration efficiency, and long-term maintainability.
-
----
 
 ## 2. Conventions
 
