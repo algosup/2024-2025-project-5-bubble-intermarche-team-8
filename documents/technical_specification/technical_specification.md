@@ -47,6 +47,8 @@
     - [4.2.3. Themes](#423-themes)
     - [4.2.4. Global Style Variables](#424-global-style-variables)
   - [4.2.5. Component Styles](#425-component-styles)
+    - [4.2.5.1. Structure of `styles.md`](#4251-structure-of-stylesmd)
+    - [4.2.5.2. Usage](#4252-usage)
 
 </details>
 
@@ -284,8 +286,6 @@ The routing of the app will be done doing the pre-bundled router integrated into
 
 ### 3.10. Localization & Internationalization
 
-
-
 ### 3.11. Error Handling & Logging
 
 ## 2. System Architecture
@@ -349,7 +349,7 @@ erDiagram
 
 #### 4.2.1. Color Palette
 
-| **Name**         | **Preview**                                                                                        | **Hex** | **RGB**          |
+| Name             | Preview                                                                                            | Hex     | RGB              |
 | ---------------- | -------------------------------------------------------------------------------------------------- | ------- | ---------------- |
 | Primary          | <span style="background-color: #E00E1F; width: 10px; height: 10px; display: inline-block;"></span> | #E00E1F | rgb(224,14,31)   |
 | Primary Contrast | <span style="background-color: #DECE9C; width: 10px; height: 10px; display: inline-block;"></span> | #DECE9C | rgb(222,206,156) |
@@ -360,9 +360,16 @@ erDiagram
 | Success          | <span style="background-color: #1E6C30; width: 10px; height: 10px; display: inline-block;"></span> | #1E6C30 | rgb(30,108,48)   |
 | Alert            | <span style="background-color: #DCA114; width: 10px; height: 10px; display: inline-block;"></span> | #DCA114 | rgb(220,161,20)  |
 
+To set those colors as the default colors in the application, click **Styles > Style Variables > Colors** and apply the value of the color to the corresponding name.
+
+> [!WARNING]
+> Any colors **not listed** in this table are considered deprecated and should not be used in the final application. Ohter colors than these can be safely discarded from the default colors loaded in the application **Styles Variables**.
+
 #### 4.2.2. Typography
 
 The application uses the **Inter** typeface—a modern, legible, and highly versatile font that enhances readability and consistency across the interface.
+
+To set this font as the default font of the app, click **Styles > Style Variables > Fonts** and apply the `Inter` value.
 
 #### 4.2.3. Themes
 
@@ -373,24 +380,66 @@ The application uses the **Inter** typeface—a modern, legible, and highly vers
 
 To maintain consistent styling, the following global variables are defined:
 
-| **Variable**     | **Value** |
-| ---------------- | --------- |
-| App Font         | Inter     |
-| Primary          | #E00E1F   |
-| Primary Contrast | #DECE9C   |
-| Text             | #000000   |
-| Surface          | #F1F1F2   |
-| Background       | #FFFFFF   |
-| Destructive      | #B0200C   |
-| Success          | #1E6C30   |
-| Alert            | #DCA114   |
+| Variable         | Value   |
+| ---------------- | ------- |
+| App Font         | Inter   |
+| Primary          | #E00E1F |
+| Primary Contrast | #DECE9C |
+| Text             | #000000 |
+| Surface          | #F1F1F2 |
+| Background       | #FFFFFF |
+| Destructive      | #B0200C |
+| Success          | #1E6C30 |
+| Alert            | #DCA114 |
 
 > [!NOTE]
 > All values are considered with 100% opacity. Default color scales are disabled for this project.
 
----
-
 ### 4.2.5. Component Styles
 
----
+To ensure design consistency and maintainability across the application, a set of predefined styles has been established and documented in the [`styles.md`](./styles.md) file. These styles serve as the foundation for all UI components implemented in the Bubble platform.
 
+#### 4.2.5.1. Structure of `styles.md`
+
+The `styles.md` file is organized into structured tables, with each style grouped under a specific **tab** (e.g., _Appearance_, _Layout_, _Conditional Logic_). Each entry includes the property name and its assigned value.
+
+Example format:
+
+<table>
+  <tr>
+    <th>Tab</th>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td rowspan="14">Appearance</td>
+    <td>Font</td>
+    <td>Inter</td>
+  </tr>
+  <tr><td>Font Size</td><td>20px</td></tr>
+  <tr><td>Font Weight</td><td>Bold (700)</td></tr>
+  <tr><td>Text Alignment</td><td>Center</td></tr>
+  <tr>
+    <td rowspan="4">Layout</td>
+    <td>Gap</td>
+    <td>12px</td>
+  </tr>
+  <tr><td>Padding Left</td><td>12px</td></tr>
+  <tr><td>Padding Right</td><td>12px</td></tr>
+  <tr><td>Padding Top / Bottom</td><td>0px</td></tr>
+  <tr>
+    <td rowspan="1">Conditional Logic</td>
+    <td>Event</td>
+    <td>Updated Properties</td>
+  </tr>
+</table>
+
+> [!NOTE]
+> Due to Markdown limitations with tables, and to enhance readability for developers, the style tables in `styles.md` are written using raw HTML.
+
+#### 4.2.5.2. Usage
+
+These styles must be implemented within the **Styles** tab of the Bubble editor. They define the visual identity of the application and should be consistently applied across all components.
+
+> [!WARNING]
+> Any styles **not listed** in `styles.md` are considered deprecated and should not be used in the final application.
