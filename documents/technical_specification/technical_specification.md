@@ -17,15 +17,18 @@
   - [2.2. Initial steps](#22-initial-steps)
     - [2.2.1. Create An Account](#221-create-an-account)
     - [2.2.2. Create an Application](#222-create-an-application)
-  - [2.3. Minimum Required Versions for Android and IOS](#23-minimum-required-versions-for-android-and-ios)
-    - [2.3.1. Android](#231-android)
-    - [2.3.2. IOS](#232-ios)
+  - [2.3. Minimum Required Versions for Android and iOS](#23-minimum-required-versions-for-android-and-ios)
+    - [2.3.1. Android Compatibility](#231-android-compatibility)
+    - [2.3.2. iOS Compatibility](#232-ios-compatibility)
   - [2.4. Bubble Components Architecture](#24-bubble-components-architecture)
 - [3. Tehcnical Specifications](#3-tehcnical-specifications)
   - [3.1. Coding Conventions](#31-coding-conventions)
     - [3.1.1. Naming Conventions](#311-naming-conventions)
     - [3.1.2. File Architecture](#312-file-architecture)
-  - [3.2. Routing \& Pages](#32-routing--pages)
+  - [3.2. Routing and Pages](#32-routing-and-pages)
+    - [3.2.1. Standard Pages](#321-standard-pages)
+    - [3.2.2. Arabic-Language Pages](#322-arabic-language-pages)
+    - [3.2.3. Navigation Flow between pages](#323-navigation-flow-between-pages)
   - [3.3. Application Logic](#33-application-logic)
   - [3.4. Data Management](#34-data-management)
   - [3.5. Caching \& Offline support](#35-caching--offline-support)
@@ -35,12 +38,15 @@
   - [3.9. Accessibility](#39-accessibility)
   - [3.10. Localization \& Internationalization](#310-localization--internationalization)
   - [3.11. Error Handling \& Logging](#311-error-handling--logging)
+  - [3.12. Bundling \& Deployment](#312-bundling--deployment)
 - [2. System Architecture](#2-system-architecture)
   - [2.1. High-level Overview](#21-high-level-overview)
   - [Description of User Flows](#description-of-user-flows)
   - [(Optional) Placeholder: Database Tables Overview](#optional-placeholder-database-tables-overview)
 - [4. UI/UX Guidelines](#4-uiux-guidelines)
   - [4.1. Design Principles](#41-design-principles)
+    - [4.1.1. Key Design Objectives](#411-key-design-objectives)
+    - [4.1.2. User Experience Guidelines](#412-user-experience-guidelines)
   - [4.2. Styles \& Theming](#42-styles--theming)
     - [4.2.1. Color Palette](#421-color-palette)
     - [4.2.2. Typography](#422-typography)
@@ -135,11 +141,34 @@ In order to build your project you need to create an application. To create an a
 
 After a few seconds, you will be shown an editor with a blank page of your app.
 
-### 2.3. Minimum Required Versions for Android and IOS
+### 2.3. Minimum Required Versions for Android and iOS
 
-#### 2.3.1. Android
+As Bubble does not natively support mobile app bundling, the application will be packaged using the **BDK Native wrapper**. This introduces specific constraints related to supported operating system versions for Android and iOS.
 
-#### 2.3.2. IOS
+> [!NOTE]
+> Since the app does\*not rely on native mobile features (e.g., camera, GPS, push notifications), compatibility is based solely on operating system version support.
+
+#### 2.3.1. Android Compatibility
+
+| Parameter                     | Value                                                                |
+| ----------------------------- | -------------------------------------------------------------------- |
+| **Packaging Tool**            | BDK Native                                                           |
+| **Minimum Supported Version** | Not explicitly defined by BDK                                        |
+| **Store Requirement**         | Must target **Android 13+** (API level 33), per Google Play policies |
+| **Deployment Target**         | Android 13 and above                                                 |
+| **Distribution Method**       | Google Play Store only                                               |
+| **Justification**             | Ensures compliance, performance, and compatibility                   |
+
+#### 2.3.2. iOS Compatibility
+
+| Parameter                           | Value                                                              |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| **Packaging Tool**                  | BDK Native                                                         |
+| **Minimum Supported Version (BDK)** | iOS 9.1+                                                           |
+| **Apple App Store Expectation**     | Support for latest iOS version (currently iOS 17)                  |
+| **Deployment Target**               | iOS 17 and above                                                   |
+| **Distribution Method**             | Apple App Store                                                    |
+| **Justification**                   | Aligns with Apple’s guidelines and ensures optimal user experience |
 
 ### 2.4. Bubble Components Architecture
 
@@ -254,14 +283,70 @@ You can find a comprehensive list of all the naming conventions we will apply du
   ├── README.md
 ```
 
-### 3.2. Routing & Pages
+### 3.2. Routing and Pages
 
-The routing of the app will be done doing the pre-bundled router integrated into Bubble. Here is a comprehensive list of all the pages with their params and usage:
+The application uses Bubble's pre-bundled router to handle all navigation. Below is a list of all routes, their query parameters, and their intended usage.
 
-| Page URL | Params | Usage                                                                     |
-| -------- | ------ | ------------------------------------------------------------------------- |
-| /        | None   | Home of the application used for searching the dish you are going to cook |
-|          |        |                                                                           |
+#### 3.2.1. Standard Pages
+
+| Page URL     | Bubble Page Name | Query Parameters                                                                                            | Description                                  | Example query with params                   |
+| ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------- |
+| `/`          | `index`          | None                                                                                                        | Splash screen of the application             | `/`                                         |
+| `/home`      | `home`           | None                                                                                                        | Main interface for searching recipes         | `/home`                                     |
+| `/search`    | `search`         | - `query`: `string` – Name of the searched dish <br> - `tags`: `string` – Comma-separated, URL-encoded tags | Displays search results for dishes           | `/search?query=pasta&tags=vegan%5C%2Cquick` |
+| `/wine`      | `wine`           | - `id`: `string` – Database ID of the wine                                                                  | Displays detailed information about a wine   | `/wine?id=21`                               |
+| `/cheese`    | `cheese`         | - `id`: `string` – Database ID of the cheese                                                                | Displays detailed information about a cheese | `/wine?id=21`                               |
+| _Other URLs_ | `404`            | None                                                                                                        | Fallback page for non-existent routes        | `/driller`                                  |
+
+#### 3.2.2. Arabic-Language Pages
+
+All routes have an Arabic-specific equivalent with the `ar_` prefix. These pages present a horizontally mirrored layout to accommodate right-to-left reading. They mirror the structure and functionality of their English counterparts.
+
+| English Page | Arabic Equivalent |
+| ------------ | ----------------- |
+| `/home`      | `/ar_home`        |
+| `/search`    | `/ar_search`      |
+| `/wine`      | `/ar_wine`        |
+| `/cheese`    | `/ar_cheese`      |
+
+> [!WARNING]
+> All Arabic routes share the same query parameters and behavior as their English counterparts.
+
+#### 3.2.3. Navigation Flow between pages
+
+```mermaid
+graph TD
+A[Splash Screen] --> B[Home]
+B --> C[Search]
+C --> D[Wine Details]
+C --> E[Cheese Details]
+A --> F[404]
+
+    %% Arabic Routes
+    A_AR[Splash Screen] --> B_AR[Arabic Home]
+    B_AR --> C_AR[Arabic Search]
+    C_AR --> D_AR[Arabic Wine Details]
+    C_AR --> E_AR[Arabic Cheese Details]
+    A_AR --> F_AR[404]
+
+    subgraph Standard_Routes
+        A
+        B
+        C
+        D
+        E
+        F
+    end
+
+    subgraph Arabic_Routes
+        A_AR
+        B_AR
+        C_AR
+        D_AR
+        E_AR
+        F_AR
+    end
+```
 
 ### 3.3. Application Logic
 
@@ -287,6 +372,8 @@ The routing of the app will be done doing the pre-bundled router integrated into
 ### 3.10. Localization & Internationalization
 
 ### 3.11. Error Handling & Logging
+
+### 3.12. Bundling & Deployment
 
 ## 2. System Architecture
 
@@ -344,6 +431,24 @@ erDiagram
 ## 4. UI/UX Guidelines
 
 ### 4.1. Design Principles
+
+The Intermarché Wine & Cheese Pairing App is designed for **tourists and non-experts** in wine, cheese, or gastronomy. The goal is to offer a **simple, intuitive, and accessible** experience for all users.
+
+#### 4.1.1. Key Design Objectives
+
+| Principle              | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| **Simplicity**         | Use of plain language, minimal UI complexity, and clear visual hierarchy.       |
+| **Accessibility**      | High contrast, readable text, touch-friendly buttons, and multilingual support. |
+| **Guided Use**         | Step-by-step user flows (e.g., dish → recommended wine/cheese).                 |
+| **Consistency**        | Reusable UI patterns and predictable interactions.                              |
+| **Cultural Relevance** | Local French design elements to enhance authenticity and engagement.            |
+
+#### 4.1.2. User Experience Guidelines
+
+- **Icons and visuals** support understanding without relying on text.
+- **Pairing suggestions** explain "why it works" in simple terms.
+- **No prior knowledge** is assumed; tooltips and helper texts are included where needed.
 
 ### 4.2. Styles & Theming
 
@@ -443,3 +548,7 @@ These styles must be implemented within the **Styles** tab of the Bubble editor.
 
 > [!WARNING]
 > Any styles **not listed** in `styles.md` are considered deprecated and should not be used in the final application.
+
+```
+
+```
