@@ -31,6 +31,7 @@
     - [3.2.3. Navigation Flow between pages](#323-navigation-flow-between-pages)
   - [3.3. Application Logic](#33-application-logic)
   - [3.4. Data Management](#34-data-management)
+    - [3.4.1. Database Structure](#341-database-structure)
   - [3.5. Caching \& Offline support](#35-caching--offline-support)
   - [3.6. Performance](#36-performance)
   - [3.7. Scalability](#37-scalability)
@@ -42,7 +43,6 @@
 - [2. System Architecture](#2-system-architecture)
   - [2.1. High-level Overview](#21-high-level-overview)
   - [Description of User Flows](#description-of-user-flows)
-  - [(Optional) Placeholder: Database Tables Overview](#optional-placeholder-database-tables-overview)
 - [4. UI/UX Guidelines](#4-uiux-guidelines)
   - [4.1. Design Principles](#41-design-principles)
     - [4.1.1. Key Design Objectives](#411-key-design-objectives)
@@ -352,6 +352,71 @@ A --> F[404]
 
 ### 3.4. Data Management
 
+#### 3.4.1. Database Structure
+
+```mermaid
+classDiagram
+    class Wine {
+        +int id
+        +string name
+        +url image
+        +string description
+        +int itm8
+        +int ean
+        +float price
+        +string taste
+        +string alcohol_degree
+        +url itm_website
+        +string region
+        +string location
+        +Tag[] tags
+        +Label[] labels
+    }
+
+    class Cheese {
+        +int id
+        +string name
+        +url image
+        +string description
+        +int itm8
+        +int ean
+        +float price
+        +url itm_website
+        +string region
+        +string location
+        +Tag[] tags
+        +Label[] labels
+    }
+
+    class Dish {
+        +int id
+        +string name
+        +url image
+        +string description
+        +Tag[] tags
+    }
+
+    class Tag {
+        +int id
+        +string name
+        +string category
+    }
+
+    class Label {
+        +string name
+        +string description
+        +url image
+    }
+
+    %% Relationships (UML associations)
+    Wine --> "0..*" Tag : tags
+    Cheese --> "0..*" Tag : tags
+    Dish --> "0..*" Tag : tags
+
+    Wine --> "0..*" Label : labels
+    Cheese --> "0..*" Label : labels
+```
+
 ### 3.5. Caching & Offline support
 
 ### 3.6. Performance
@@ -396,37 +461,6 @@ flowchart TD
 
 > [!NOTE]
 > This flow represents the user journey for the proof of concept we are building. Future flows can be added for onboarding, profile editing, or feedback submission.
-
----
-
-### (Optional) Placeholder: Database Tables Overview
-
-```mermaid
-erDiagram
-    USER {
-        string id
-        string email
-        string preferred_language
-    }
-    WINE {
-        string id
-        string name
-        string region
-        string image_url
-    }
-    CHEESE {
-        string id
-        string name
-        string milk_type
-        string pairing_notes
-    }
-    DISHES {
-        string id
-        string name
-        string milk_type
-        string pairing_notes
-    }
-```
 
 ## 4. UI/UX Guidelines
 
