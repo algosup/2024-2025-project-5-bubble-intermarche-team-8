@@ -26,7 +26,7 @@ This application allow the consumer to search for a specific wine/cheese directl
   - [Prerequisites](#prerequisites)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
-- [Copyrights](#copyrights)
+- [License \& Copyrights](#license--copyrights)
 - [Contacts](#contacts)
 - [Credits and Acknowledgement](#credits-and-acknowledgement)
 
@@ -108,10 +108,6 @@ The application is available with the following code:
 E-mail: <> \
 Password: \ -->
 
-<!-- ---
-
-For better information, please, refer to the [User Manual](documents/manual/userManual.md). -->
-
 ---
 
 ## Roadmap
@@ -130,8 +126,6 @@ This Roadmap is an estimation of the time that will take the project to be accom
 **[Project Charter](./documents/management/project_charter.md)**: Officially initiates the project by defining its scope, objectives, stakeholders, and overall framework.
 
 **[Test Plan](./documents/quality_assurance/test_plan.md)**: Outlines the strategy, procedures, and criteria for verifying that the system meets its requirements.
-
-<!-- **[User Manual](documents/manual/userManual.md)**: Provides end-users with instructions on how to use the system and how to troubleshoot common issues. -->
 
 ---
 
@@ -160,44 +154,9 @@ The only prerequisites to use Bubble is to have an account in the free plan at l
 
 ---
 
-<!-- TODO:
-## Tests
-
-This section explains how to run the end-to-end tests created by the quality assurance. \
-You must be at the root of the project and Node.JS is already installed. \
-If not you need to fork the project at [this link](https://github.com/algosup/2024-2025-project-4-web-fpga-team-5/fork) and install Node.JS at [this one](https://nodejs.org/en/download).
-
-To test the front-end:
-
-```shell
-# Move to the correct folder
-cd frontend/
-
-# Dependencies installation
-npm i
-
-# Execute the test suites
-npm run test:e2e
-```
-
-To test the back-end:
-
-```shell
-# Move to the correct folder
-cd backend/
-
-# Dependencies installation
-npm i
-
-# Execute the test suites
-npm run test:e2e
-```
-
---- -->
-
 ## Contributing
 
-To contribute to our project, follow the conventions written in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+To contribute to our project, follow the conventions written in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
 ---
 
@@ -209,11 +168,13 @@ To contribute to our project, follow the conventions written in the [CONTRIBUTIN
 
 ---
 
-## Copyrights
+## License & Copyrights
+
+You can refer the license of the project at the root of the project, within the [LICENSE.md file](./LICENSE.md).
 
 **Ownership:** Intermarché Saint-Rémy-de-Provence and ALGOSUP
 
-**Copyright Notice:** © 2024 Intermarché Saint-Rémy-de-Provence and ALGOSUP. All rights reserved.
+**Copyright Notice:** © 2025 Intermarché Saint-Rémy-de-Provence and ALGOSUP. All rights reserved.
 
 ---
 
@@ -221,7 +182,7 @@ To contribute to our project, follow the conventions written in the [CONTRIBUTIN
 
 To contact our project team. Please, send a message to the following E-mails:
 
-- Project Manager's E-mail: <>
+- Project Manager's E-mail: NOT DEFINED
 - Program Manager's E-mail: <maxime.thizeau@algosup.com>
 
 For other social media information, please, refer to [Credits and Acknowledgement](#credits-and-acknowledgement).
