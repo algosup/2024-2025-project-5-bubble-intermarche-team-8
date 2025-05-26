@@ -20,7 +20,7 @@
     - [5.1 Test Methodology](#51-test-methodology)
       - [Phase 0: Smoke Testing](#phase-0-smoke-testing)
       - [Phase 1: Functional Testing](#phase-1-functional-testing)
-      - [Phase 2: UI/UX Testing on Desktop](#phase-2-uiux-testing-on-desktop)
+      - [Phase 2: UI/UX Testing](#phase-2-uiux-testing)
       - [Phase 3: Edge Case \& Data Behavior Testing](#phase-3-edge-case--data-behavior-testing)
       - [Phase 4: Regression Testing (Post-Changes)](#phase-4-regression-testing-post-changes)
   - [5.2 Test Cases](#52-test-cases)
@@ -34,7 +34,7 @@
     - [6.4. Resumption Criteria](#64-resumption-criteria)
   - [7. Risks and Mitigation Strategies](#7-risks-and-mitigation-strategies)
   - [8. Deliverables](#8-deliverables)
-  - [Glossary](#glossary)
+  - [9. Glossary](#9-glossary)
 
 ---
 
@@ -190,7 +190,7 @@ Additional functional checks include:
 - Price slider: test minimum and maximum values and confirm that product lists update accordingly.
 - Tag system: validate that filters like wine color or cheese family behave logically (e.g., red and white wine cannot be selected at the same time).
 
-#### Phase 2: UI/UX Testing on Desktop
+#### Phase 2: UI/UX Testing
 - Confirm layout consistency on different screen resolutions.
 - Test button click areas, label alignment, and feedback (e.g., hover/click).
 - Ensure text is legible and color contrast is adequate.
@@ -317,7 +317,7 @@ To resume the testing phase, the cause of the suspension should have been identi
 | Test Reports                  | Released after each test session                      |
 | Testing resources and scripts | 1 Major Releases with daily iterations for refinement |
 
-## Glossary
+## 9. Glossary
 
 | **Term**                      | **Explanation**                                                                                                                                       |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
