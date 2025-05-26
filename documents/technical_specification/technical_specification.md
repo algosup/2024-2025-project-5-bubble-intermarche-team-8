@@ -30,19 +30,49 @@
     - [3.2.2. Arabic-Language Pages](#322-arabic-language-pages)
     - [3.2.3. Navigation Flow between pages](#323-navigation-flow-between-pages)
   - [3.3. Application Logic](#33-application-logic)
+    - [3.3.1. Workflows](#331-workflows)
+      - [3.3.1.1. Workflow Execution Model](#3311-workflow-execution-model)
+      - [3.3.1.2. Core Workflows](#3312-core-workflows)
+        - [Workflow B: Matching Engine Execution](#workflow-b-matching-engine-execution)
+        - [Workflow C: Save Recommendation](#workflow-c-save-recommendation)
+      - [3.3.1.3. Backend Workflows and Scheduled Events](#3313-backend-workflows-and-scheduled-events)
+        - [Workflow D: Daily Product Sync](#workflow-d-daily-product-sync)
+        - [Workflow E: Expired Data Cleanup](#workflow-e-expired-data-cleanup)
+      - [3.3.1.4. Conditional Logic Handling](#3314-conditional-logic-handling)
+      - [3.3.1.5. Error Handling and Fallbacks](#3315-error-handling-and-fallbacks)
   - [3.4. Data Management](#34-data-management)
     - [3.4.1. Database Structure](#341-database-structure)
-  - [3.5. Caching \& Offline support](#35-caching--offline-support)
+  - [3.5. Caching \& Offline Support](#35-caching--offline-support)
+    - [3.5.1. Caching Strategy](#351-caching-strategy)
+      - [A. Types of Caching Used](#a-types-of-caching-used)
+      - [B. Caching Strategy Flow](#b-caching-strategy-flow)
+    - [3.5.2. Offline Support](#352-offline-support)
+      - [A. Offline Behavior](#a-offline-behavior)
+      - [B. Offline Startup Flow](#b-offline-startup-flow)
+    - [3.5.3. Limitations](#353-limitations)
+    - [3.5.4. Recommendations](#354-recommendations)
   - [3.6. Performance](#36-performance)
+    - [3.6.1. Performance Overview](#361-performance-overview)
+    - [3.6.2. Known Bottlenecks](#362-known-bottlenecks)
+    - [3.6.3. Performance Optimization Techniques](#363-performance-optimization-techniques)
+      - [3.6.3.1. Database Optimization](#3631-database-optimization)
+      - [3.6.3.2. Workflow Optimization](#3632-workflow-optimization)
+      - [3.6.3.3. UI/UX Optimization](#3633-uiux-optimization)
+    - [3.6.4. Testing Metrics](#364-testing-metrics)
+    - [3.6.5. Performance Recommendations](#365-performance-recommendations)
   - [3.7. Scalability](#37-scalability)
+    - [3.7.1. Infrastructure and Hosting](#371-infrastructure-and-hosting)
+    - [3.7.2. Capabilities on Free Tier](#372-capabilities-on-free-tier)
+    - [3.7.3. Limitations on Free Tier](#373-limitations-on-free-tier)
+    - [3.7.4. Upgrade and Scaling Strategy](#374-upgrade-and-scaling-strategy)
+      - [3.7.4.1. Paid Bubble Plans](#3741-paid-bubble-plans)
+      - [3.7.4.2. External API Offloading](#3742-external-api-offloading)
+    - [3.7.5. Suitability Summary](#375-suitability-summary)
   - [3.8. Security \& Privacy](#38-security--privacy)
   - [3.9. Accessibility](#39-accessibility)
   - [3.10. Localization \& Internationalization](#310-localization--internationalization)
   - [3.11. Error Handling \& Logging](#311-error-handling--logging)
   - [3.12. Bundling \& Deployment](#312-bundling--deployment)
-- [2. System Architecture](#2-system-architecture)
-  - [2.1. High-level Overview](#21-high-level-overview)
-  - [Description of User Flows](#description-of-user-flows)
 - [4. UI/UX Guidelines](#4-uiux-guidelines)
   - [4.1. Design Principles](#41-design-principles)
     - [4.1.1. Key Design Objectives](#411-key-design-objectives)
@@ -350,6 +380,127 @@ A --> F[404]
 
 ### 3.3. Application Logic
 
+#### 3.3.1. Workflows
+
+The application logic is primarily implemented using **Bubble's visual workflow engine**, which enables reactive programming by defining sequences of actions triggered by events such as user interactions, data changes, or scheduled backend processes. Each workflow consists of a set of conditionally executed actions, often interacting with Bubble’s database or UI components through custom states and visibility logic. Plugin actions can also be triggered through these workflows.
+
+This section documents the major workflow structures used in the application, including triggering mechanisms, conditional branches, state manipulations, data processing, and interaction with backend APIs or scheduled events.
+
+> [!NOTE]
+> Non-described workflows include :
+>
+> - Sole navigation between pages on user action
+> - Sole appearance/disappearance of elements on the canvas
+
+##### 3.3.1.1. Workflow Execution Model
+
+In Bubble, workflows are divided into:
+
+- **Frontend workflows (event-based)**: Triggered by UI elements (e.g., buttons, inputs) or page events.
+- **Backend workflows (API Workflows)**: Executed via HTTP calls or scheduled server-side logic.
+- **Custom Events**: Reusable workflow fragments invoked across multiple entry points.
+
+All workflows follow a **deterministic execution path**. Actions are executed **sequentially** unless explicitly deferred (e.g., using `schedule API workflow`, `add a pause`, or asynchronous API calls).
+
+---
+
+##### 3.3.1.2. Core Workflows
+
+Below are the primary workflow groups and their technical behavior:
+
+###### Workflow B: Matching Engine Execution
+
+- Trigger: `Button "Find My Match" is clicked`
+- Preconditions:
+
+  - `Custom State: selected_dish` is not empty
+  - `Current User` has accepted cookie/session storage (for data persistence)
+
+- Execution:
+
+  1. Run a `Search for Dishes` where `name = selected_dish`
+  2. Extract tags (`taste`, `season`, `occasion`) from dish
+  3. Filter `Wine` entries using intersecting tags + availability flag
+  4. Repeat for `Cheese` entries, adding dietary and allergy filters
+  5. Store results in custom states (`state_wine_result`, `state_cheese_result`)
+  6. Show recommendation group using conditional visibility based on result state
+
+- Edge Handling:
+
+  - If no result found, store `state_no_match = yes`
+  - Trigger fallback content rendering
+
+###### Workflow C: Save Recommendation
+
+- **Trigger**: `Button "Save Pairing"` is clicked
+- **Actions**:
+
+  1. Create a new `Recommendation` thing:
+
+     - `user_id = Current User`
+     - `dish_id = selected_dish`
+     - `wine_id = wine_result`
+     - `cheese_id = cheese_result`
+
+  2. Trigger toast confirmation
+  3. Optionally redirect to “Saved Matches” if `Custom State: auto_redirect = yes`
+
+---
+
+##### 3.3.1.3. Backend Workflows and Scheduled Events
+
+###### Workflow D: Daily Product Sync
+
+- Type: Scheduled API Workflow
+- Trigger: Daily at 03:00 UTC via Bubble Scheduler
+- Steps:
+
+  1. Make external API call to Intermarché catalog (secured with Bearer token)
+  2. For each item:
+
+     - Create or update `Wine`, `Cheese`, or `Dish` entry
+     - Normalize tags based on controlled vocabulary (`label`, `taste`, `season`)
+
+  3. Store timestamp in `System_Log` for auditability
+
+###### Workflow E: Expired Data Cleanup
+
+- Type: Scheduled API Workflow
+- Trigger: Weekly at 04:00 UTC
+- Steps:
+
+  - Delete `Recommendation` entries older than 90 days where `user_id is empty` (i.e., anonymous session)
+  - Purge logs not linked to persistent users
+
+##### 3.3.1.4. Conditional Logic Handling
+
+All workflows implement conditional logic directly within Bubble’s step configuration using the `Only when` clause. Examples include:
+
+- **Visibility control**: Groups are only shown when specific states or conditions are met
+- **Role enforcement**: Admin-only workflows (e.g., content validation) are hidden unless `Current User.role = "admin"`
+- **Fallback execution**: Match fallback only runs when both primary queries return empty lists
+
+##### 3.3.1.5. Error Handling and Fallbacks
+
+Bubble lacks native try/catch logic, so fallback behavior is enforced via:
+
+- **Workflow branches**: e.g., check for empty result before proceeding
+- **Conditional actions**: e.g., if `Search for Wine:first item is empty`, then trigger fallback workflow
+- **Alert system**: User-friendly error messages triggered via `Show Message` or `Set State`
+
+Logging for errors or unexpected states is handled via a custom data type `System_Log`, storing:
+
+- Timestamp
+- Workflow name
+- Error context
+- Affected user (if applicable)
+
+<!-- ## 📌 Notes
+
+- All workflows are **modularized** using **Custom Events** for reuse and maintainability.
+- Bubble’s **backend workflows** are rate-limited and serialized by default. Concurrent execution is avoided using inter-step dependencies (e.g., conditional filters on input presence).
+- Data privacy and workflow security are enforced by Bubble’s privacy rules and server-side condition checks. -->
+
 ### 3.4. Data Management
 
 #### 3.4.1. Database Structure
@@ -359,14 +510,14 @@ classDiagram
     class Wine {
         +int id
         +string name
-        +url image
+        +image image
         +string description
         +int itm8
         +int ean
         +float price
         +string taste
         +string alcohol_degree
-        +url itm_website
+        +string itm_website
         +string region
         +string location
         +Tag[] tags
@@ -376,12 +527,12 @@ classDiagram
     class Cheese {
         +int id
         +string name
-        +url image
+        +image image
         +string description
         +int itm8
         +int ean
         +float price
-        +url itm_website
+        +string itm_website
         +string region
         +string location
         +Tag[] tags
@@ -391,7 +542,7 @@ classDiagram
     class Dish {
         +int id
         +string name
-        +url image
+        +image image
         +string description
         +Tag[] tags
     }
@@ -405,7 +556,7 @@ classDiagram
     class Label {
         +string name
         +string description
-        +url image
+        +image image
     }
 
     %% Relationships (UML associations)
@@ -417,11 +568,261 @@ classDiagram
     Cheese --> "0..*" Label : labels
 ```
 
-### 3.5. Caching & Offline support
+### 3.5. Caching & Offline Support
+
+This section outlines the current caching mechanisms available in the application and how the system handles offline scenarios, especially given Bubble.io’s cloud-based, web-first environment.
+
+#### 3.5.1. Caching Strategy
+
+Bubble.io does not offer native server-side caching on the free tier, but it does support **client-side caching** via the browser and **custom states** for session-local data persistence.
+
+##### A. Types of Caching Used
+
+| Caching Layer       | Type                 | Scope              | Volatility                  | Purpose                                |
+| ------------------- | -------------------- | ------------------ | --------------------------- | -------------------------------------- |
+| Browser Cache       | Static file cache    | Browser memory     | Persistent                  | HTML, JS, CSS, images                  |
+| Bubble Custom State | Runtime memory       | Page-level session | Volatile (reset on refresh) | Store selections, filtered lists       |
+| Data Cache          | Implicit from Bubble | App session memory | Volatile                    | Temporarily caches repeated DB queries |
+
+##### B. Caching Strategy Flow
+
+```mermaid
+flowchart TD
+    A[User loads app] --> B{Page already cached?}
+    B -- Yes --> C[Load static assets from browser cache]
+    B -- No --> D[Fetch assets from Bubble CDN]
+    C --> E[Check for data in custom state]
+    D --> E
+    E --> F{Custom state exists?}
+    F -- Yes --> G[Render from state cache]
+    F -- No --> H[Query Bubble database]
+    H --> I[Store results in custom state]
+    G --> Z[Display data]
+    I --> Z
+```
+
+**Key Notes:**
+
+* Custom states avoid redundant DB queries during a session
+* Repeating group elements benefit from implicit Bubble-level memoization for short durations
+* Static assets are cached using the browser’s default caching policies
+
+#### 3.5.2. Offline Support
+
+Bubble applications are inherently **not designed for offline-first operation**. The frontend is delivered as a web app and requires an internet connection to:
+
+* Authenticate users
+* Query the Bubble database
+* Execute workflows
+* Fetch dynamic content
+
+##### A. Offline Behavior
+
+| Component               | Behavior Offline                    |
+| ----------------------- | ----------------------------------- |
+| App Shell (HTML/CSS/JS) | May load from cache                 |
+| Database Queries        | Fail silently or with error message |
+| Workflows               | Do not execute                      |
+| UI Interactions         | Work if based on custom states      |
+| Local Image Assets      | May load from browser cache         |
+
+##### B. Offline Startup Flow
+
+```mermaid
+flowchart TD
+    A[User opens app with no connection] --> B{App previously loaded?}
+    B -- Yes --> C[Load from browser cache]
+    B -- No --> D[Show "No Internet" error]
+    C --> E[Basic UI visible]
+    E --> F{Data needed from DB?}
+    F -- No --> G[Allow interaction with static UI]
+    F -- Yes --> H[Show fallback / empty state]
+```
+
+#### 3.5.3. Limitations
+
+| Limitation                      | Description                                      |
+| ------------------------------- | ------------------------------------------------ |
+| No true offline support         | Dynamic content requires a live connection       |
+| Volatile cache                  | Custom states lost on reload or tab close        |
+| No background sync              | Changes made offline cannot be queued for upload |
+| No service worker customization | Cannot define offline cache policy manually      |
+
+#### 3.5.4. Recommendations
+
+To improve perceived performance and prepare for offline-tolerant behavior:
+
+* **Preload critical data** on page load and store in custom states
+* **Defer non-essential data fetching** until needed (lazy loading)
+* Use **conditional visibility** to show fallback content or cached values if data is missing
+* Consider **PWA migration** for full offline capability (requires leaving Bubble)
 
 ### 3.6. Performance
 
+#### 3.6.1. Performance Overview
+
+The app runs on Bubble’s shared infrastructure with client-heavy rendering and server-side logic executed through visual workflows.
+
+| Component       | Performance Characteristic                              |
+| --------------- | ------------------------------------------------------- |
+| Frontend UI     | Rendered client-side using dynamic Bubble elements      |
+| Database Access | Server-side, synchronous and relatively slow under load |
+| Workflows       | Executed on shared compute, limited throughput          |
+| Page Load Times | Acceptable for small datasets (<1000 items)             |
+
+#### 3.6.2. Known Bottlenecks
+
+The following bottlenecks can be observed as the dataset grows or the app gains more users:
+
+- **Search latency**: Filtering meals, wines, or cheeses dynamically leads to high database read latency
+- **Workflow execution delays**: Multiple concurrent workflows can queue up and timeout
+- **UI rendering slowness**: Repeating groups with complex filters cause noticeable delay
+- **File/image loading**: Use of large images slows page load and responsiveness
+
+#### 3.6.3. Performance Optimization Techniques
+
+##### 3.6.3.1. Database Optimization
+
+- Use **constraints** inside repeating group searches rather than filtering with `:filtered`
+- Avoid **nested searches** and instead rely on pre-linked data types (e.g., wine → grape → region)
+- Limit the number of items retrieved and use **pagination** or **infinite scroll**
+
+##### 3.6.3.2. Workflow Optimization
+
+| Optimization Strategy                | Description                                                       |
+| ------------------------------------ | ----------------------------------------------------------------- |
+| Use Custom States                    | Store data client-side to avoid repeated DB reads                 |
+| Delay Heavy Workflows                | Trigger backend workflows on paid plan or offload to external API |
+| Break Down Multi-Step Workflows      | Avoid performance drops from long synchronous chains              |
+| Avoid Triggers on Every Input Change | Use debounce logic or buttons to trigger filtering                |
+
+##### 3.6.3.3. UI/UX Optimization
+
+- Use **reusable elements** to reduce rendering complexity
+- Lazy-load non-critical sections (e.g., recommendations or descriptions)
+- Limit use of conditionals that show/hide elements on every user action
+
+#### 3.6.4. Testing Metrics
+
+Bubble does not expose detailed APM (Application Performance Monitoring) metrics on the free tier, but basic performance observations can be made manually.
+
+| Scenario                  | Expected Response Time (Free Tier)  |
+| ------------------------- | ----------------------------------- |
+| Load meal pairing page    | 2–3 seconds (with <100 items)       |
+| Search wines with filters | 1–2 seconds with indexed attributes |
+| Execute pairing workflow  | 500ms – 1s                          |
+| Image-heavy content       | 3–5 seconds total page render time  |
+
+#### 3.6.5. Performance Recommendations
+
+- **Prototype scale only**: App should remain under 1000 total database entries (meals + cheeses + wines)
+- **Avoid live search for production**: Use search triggers or batch filters.
+- **Preprocess data externally** if matching logic grows (e.g., using a backend API for pairing calculations).
+
 ### 3.7. Scalability
+
+This section outlines the current scalability of the application built on the **Bubble.io free-tier**, as well as its limitations, performance considerations, and upgrade paths to support growth.
+
+#### 3.7.1. Infrastructure and Hosting
+
+The application runs on **Bubble.io**, a platform with the following integrated features:
+
+| Feature           | Description                                                 |
+| ----------------- | ----------------------------------------------------------- |
+| Hosting Model     | Cloud-based, shared environment (multi-tenant)              |
+| Deployment        | Handled automatically by Bubble                             |
+| Backend Execution | Event-driven workflows, executed on Bubble’s infrastructure |
+| Database          | Integrated with Bubble (non-relational, key-value style)    |
+| Frontend          | Built with Bubble’s visual editor using reusable components |
+
+#### 3.7.2. Capabilities on Free Tier
+
+The free tier enables basic functionality suitable for prototypes, internal demos, and early user testing. Key scalability-related capabilities include:
+
+- **Auto-managed hosting**: No setup or maintenance required
+- **Integrated database**: Supports basic storage for wines, cheeses, meals, and user sessions
+- **Reusable UI components**: Optimizes frontend rendering for small apps
+- **Client-side rendering**: Reduces server-side load
+
+**Recommended Usage Range:**
+
+| Metric             | Approximate Limit (Free Tier) |
+| ------------------ | ----------------------------- |
+| Concurrent Users   | 3–5 active users              |
+| Total Records (DB) | < 200 entries                 |
+| Monthly Workflows  | \~100–200 (non-intensive)     |
+| External API Calls | Limited (no API scheduling)   |
+
+#### 3.7.3. Limitations on Free Tier
+
+While functional for limited traffic, the free tier imposes key constraints that affect scalability:
+
+- **Shared server**: Subject to variable performance based on other users
+- **Capacity Units (CU)**: Low throughput limits the number of simultaneous actions
+- **No backend workflows**: Cannot schedule background jobs (e.g., daily pairing updates)
+- **No version control or staging**: Limited flexibility for continuous integration
+- **Limited storage and bandwidth**
+
+**Key Limitations Summary:**
+
+| Area               | Limitation                                 |
+| ------------------ | ------------------------------------------ |
+| Server Performance | Slower response under load                 |
+| Workflow Execution | Delays or timeouts for complex logic       |
+| Data Querying      | Inefficient for large or filtered searches |
+| Concurrency        | Not suitable for high-traffic apps         |
+| Scheduled Tasks    | Not available (requires paid plan)         |
+
+#### 3.7.4. Upgrade and Scaling Strategy
+
+To support scaling as the app gains users or complexity, the following strategy is proposed:
+
+##### 3.7.4.1. Paid Bubble Plans
+
+Upgrade to Bubble’s paid plans to unlock:
+
+| Feature                       | Benefit                                      |
+| ----------------------------- | -------------------------------------------- |
+| Increased Capacity Units (CU) | Supports more concurrent users and workflows |
+| Backend Workflows             | Enables scheduled tasks (e.g., data sync)    |
+| Priority Server Access        | Reduces latency during peak hours            |
+| Collaboration Tools           | Allows team-based development                |
+
+> [!NOTE]
+> The recommended Bubble plan would be the **Growth plan**, containing the following features:
+>
+> - 2 app editors
+> - Premium version control with 10 branches
+> - Two-factor authentication support for users
+> - 250k workload units/mo
+> - 14 days of server logs
+>
+> You can have access to the comprehensive list of features of the **Growth plan** by checking the [Bubble Pricing Page](https://bubble.io/pricing).
+
+##### 3.7.4.2. External API Offloading
+
+Move compute-heavy logic (e.g., pairing algorithm) to an external backend (Node.js):
+
+```mermaid
+graph TD
+    User[User Interface - Bubble Frontend]
+    API[External Pairing API - Node.js]
+    DB[External DB -  PostgreSQL]
+
+    User -->|Input: Meal| API
+    API -->|GET| DB
+    API -->|Response: Pairing| User
+```
+
+#### 3.7.5. Suitability Summary
+
+| Use Case                                 | Free Tier Suitability |
+| ---------------------------------------- | --------------------- |
+| MVP / Prototype                          | ✅ Suitable           |
+| Internal Demo / Stakeholder Presentation | ✅ Suitable           |
+| Beta Testing (Low Traffic)               | ⚠️ Limited            |
+| Public Launch (Moderate Traffic)         | ❌ Not Recommended    |
+| High-Traffic Production                  | ❌ Not Supported      |
 
 ### 3.8. Security & Privacy
 
@@ -439,28 +840,6 @@ classDiagram
 ### 3.11. Error Handling & Logging
 
 ### 3.12. Bundling & Deployment
-
-## 2. System Architecture
-
-### 2.1. High-level Overview
-
-### Description of User Flows
-
-```mermaid
-flowchart TD
-    Start([User Opens App])
-    Start --> Lang[Selects Language if first time]
-    Lang --> Recipe[Chooses a recipe]
-    Recipe --> Recommend[Receives wine & cheese recommendations]
-    Recommend --> Details[Clicks for more info on wine/cheese]
-    Details --> End([Session ends or returns to Home])
-
-    style Start fill:#E3F6F5
-    style End fill:#E3F6F5
-```
-
-> [!NOTE]
-> This flow represents the user journey for the proof of concept we are building. Future flows can be added for onboarding, profile editing, or feedback submission.
 
 ## 4. UI/UX Guidelines
 
@@ -582,7 +961,3 @@ These styles must be implemented within the **Styles** tab of the Bubble editor.
 
 > [!WARNING]
 > Any styles **not listed** in `styles.md` are considered deprecated and should not be used in the final application.
-
-```
-
-```
