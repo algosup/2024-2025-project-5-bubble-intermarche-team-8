@@ -29,17 +29,17 @@
     - [3.2.1. Standard Pages](#321-standard-pages)
     - [3.2.2. Arabic-Language Pages](#322-arabic-language-pages)
     - [3.2.3. Navigation Flow between pages](#323-navigation-flow-between-pages)
+  - [3.3. Bubble Plugins Used](#33-bubble-plugins-used)
   - [3.3. Application Logic](#33-application-logic)
     - [3.3.1. Workflows](#331-workflows)
       - [3.3.1.1. Workflow Execution Model](#3311-workflow-execution-model)
       - [3.3.1.2. Core Workflows](#3312-core-workflows)
-        - [Workflow B: Matching Engine Execution](#workflow-b-matching-engine-execution)
-        - [Workflow C: Save Recommendation](#workflow-c-save-recommendation)
-      - [3.3.1.3. Backend Workflows and Scheduled Events](#3313-backend-workflows-and-scheduled-events)
-        - [Workflow D: Daily Product Sync](#workflow-d-daily-product-sync)
-        - [Workflow E: Expired Data Cleanup](#workflow-e-expired-data-cleanup)
-      - [3.3.1.4. Conditional Logic Handling](#3314-conditional-logic-handling)
-      - [3.3.1.5. Error Handling and Fallbacks](#3315-error-handling-and-fallbacks)
+        - [Workflow A : Localization on App Load](#workflow-a--localization-on-app-load)
+        - [Workflow B: User-Initiated Language Change](#workflow-b-user-initiated-language-change)
+        - [Workflow C : Tag-Based Dish Search](#workflow-c--tag-based-dish-search)
+        - [Workflow D : Wine/Cheese Recommendation by Tags](#workflow-d--winecheese-recommendation-by-tags)
+      - [3.3.1.3. Conditional Logic Handling](#3313-conditional-logic-handling)
+      - [3.3.1.4. Error Handling and Fallbacks](#3314-error-handling-and-fallbacks)
   - [3.4. Data Management](#34-data-management)
     - [3.4.1. Database Structure](#341-database-structure)
   - [3.5. Caching \& Offline Support](#35-caching--offline-support)
@@ -208,17 +208,17 @@ After a few seconds, you will be shown an editor with a blank page of your app.
 
 ### 2.3. Minimum Required Versions for Android and iOS
 
-As Bubble does not natively support mobile app bundling, the application will be packaged using the **BDK Native wrapper**. This introduces specific constraints related to supported operating system versions for Android and iOS.
+As Bubble does not natively support mobile app bundling, the application will be packaged using the **Mobiloud Canvas wrapper**. This introduces specific constraints related to supported operating system versions for Android and iOS.
 
 > [!NOTE]
-> Since the app does\*not rely on native mobile features (e.g., camera, GPS, push notifications), compatibility is based solely on operating system version support.
+> Since the app does not rely on native mobile features (e.g., camera, GPS, push notifications), compatibility is based solely on operating system version support.
 
 #### 2.3.1. Android Compatibility
 
 | Parameter                     | Value                                                                |
 | ----------------------------- | -------------------------------------------------------------------- |
-| **Packaging Tool**            | BDK Native                                                           |
-| **Minimum Supported Version** | Not explicitly defined by BDK                                        |
+| **Packaging Tool**            | Mobiloud Canvas                                                      |
+| **Minimum Supported Version** | Not explicitly defined by Mobiloud Canvas                            |
 | **Store Requirement**         | Must target **Android 13+** (API level 33), per Google Play policies |
 | **Deployment Target**         | Android 13 and above                                                 |
 | **Distribution Method**       | Google Play Store only                                               |
@@ -226,14 +226,17 @@ As Bubble does not natively support mobile app bundling, the application will be
 
 #### 2.3.2. iOS Compatibility
 
-| Parameter                           | Value                                                              |
-| ----------------------------------- | ------------------------------------------------------------------ |
-| **Packaging Tool**                  | BDK Native                                                         |
-| **Minimum Supported Version (BDK)** | iOS 9.1+                                                           |
-| **Apple App Store Expectation**     | Support for latest iOS version (currently iOS 17)                  |
-| **Deployment Target**               | iOS 17 and above                                                   |
-| **Distribution Method**             | Apple App Store                                                    |
-| **Justification**                   | Aligns with Apple’s guidelines and ensures optimal user experience |
+| Parameter                                       | Value                                                              |
+| ----------------------------------------------- | ------------------------------------------------------------------ |
+| **Packaging Tool**                              | Mobiloud Canvas                                                    |
+| **Minimum Supported Version (Mobiloud Canvas)** | iOS 9.1+                                                           |
+| **Apple App Store Expectation**                 | Support for latest iOS version (currently iOS 17)                  |
+| **Deployment Target**                           | iOS 17 and above                                                   |
+| **Distribution Method**                         | Apple App Store                                                    |
+| **Justification**                               | Aligns with Apple’s guidelines and ensures optimal user experience |
+
+> [!NOTE]
+> Further information can be found about Mobiloud Canvas in the [Bundling & Deployment section](#312-bundling--deployment).
 
 ### 2.4. Bubble Components Architecture
 
@@ -413,6 +416,18 @@ A --> F[404]
     end
 ```
 
+### 3.3. Bubble Plugins Used
+
+The following plugins are integrated into the application to enhance functionality, localization, and user experience:
+
+| Plugin Name                                                                                                  | Description                                                                                                      | Purpose                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| **[Localize Translation](https://manual.bubble.io/core-resources/bubble-made-plugins/localize-translation)** | Integrates the app with [Localize.js](https://app.localizejs.com) to manage and inject translations dynamically. | Real-time localization and internationalization. |
+| **[Feather Icons](https://bubble.io/plugin/feather-icons-1553889862898x186125300131692540)**                 | Provides scalable vector icons for use across UI components.                                                     | Consistent, lightweight iconography.             |
+
+> [!NOTE]
+> All plugins are vetted for performance and GDPR compliance. Only actively maintained, production-grade plugins are used.
+
 ### 3.3. Application Logic
 
 #### 3.3.1. Workflows
@@ -441,69 +456,87 @@ All workflows follow a **deterministic execution path**. Actions are executed **
 
 Below are the primary workflow groups and their technical behavior:
 
-###### Workflow B: Matching Engine Execution
+###### Workflow A : Localization on App Load
 
-- Trigger: `Button "Find My Match" is clicked`
-- Preconditions:
+- **Page**:
+- **Trigger**: `Page is loaded`
+- **Preconditions**:
+  - Localize Translation Plugin is active.
+  - Device/browser locale is detectable.
+- **Execution**:
 
-  - `Custom State: selected_dish` is not empty
-  - `Current User` has accepted cookie/session storage (for data persistence)
+```mermaid
+graph TD
+  A[App Startup] --> B[Detect Browser/Device Locale]
+  B --> C[Call Localize Plugin]
+  C --> D[Set UI Language Dynamically]
+  D --> E[Render Translated Content]
+```
 
-- Execution:
+- **Edge Handling**:
+  - If locale not supported, fallback to `fr-FR`.
+  - Log unsupported locales for analytics.
 
-  1. Run a `Search for Dishes` where `name = selected_dish`
-  2. Extract tags (`taste`, `season`, `occasion`) from dish
-  3. Filter `Wine` entries using intersecting tags + availability flag
-  4. Repeat for `Cheese` entries, adding dietary and allergy filters
-  5. Store results in custom states (`state_wine_result`, `state_cheese_result`)
-  6. Show recommendation group using conditional visibility based on result state
+###### Workflow B: User-Initiated Language Change
 
-- Edge Handling:
+- **Trigger**: `User selects language from dropdown`
+- **Preconditions**:
+  - Localize plugin loaded and UI wrapped in translatable tags.
+- **Execution**:
 
-  - If no result found, store `state_no_match = yes`
-  - Trigger fallback content rendering
+```mermaid
+graph TD
+  A[User Selects Language] --> B[Update User Preference in Local Storage]
+  B --> C[Trigger Localize.setLanguage function]
+  C --> D[Rerender UI with New Language]
+```
 
-###### Workflow C: Save Recommendation
+- **Edge Handling**:
+  - Language persists across sessions via local storage.
+  - Manual fallback if Localize call fails.
 
-- **Trigger**: `Button "Save Pairing"` is clicked
-- **Actions**:
+###### Workflow C : Tag-Based Dish Search
 
-  1. Create a new `Recommendation` thing:
+- **Trigger**: `User types into search input`
+- **Preconditions**:
+  - Minimum 2 characters entered.
+- **Execution**:
 
-     - `user_id = Current User`
-     - `dish_id = selected_dish`
-     - `wine_id = wine_result`
-     - `cheese_id = cheese_result`
+```mermaid
+graph TD
+  A[User Input: Search Term] --> B[Search Dishes by Name/Tags]
+  B --> C[Match Dish Metadata: taste, season, occasion]
+  C --> D[Display Matched Dish Cards]
+```
 
-  2. Trigger toast confirmation
-  3. Optionally redirect to “Saved Matches” if `Custom State: auto_redirect = yes`
+- **Edge Handling**:
+  - If no match, show empty state with suggestions.
+  - Throttled input to prevent excessive searches.
 
-##### 3.3.1.3. Backend Workflows and Scheduled Events
+###### Workflow D : Wine/Cheese Recommendation by Tags
 
-###### Workflow D: Daily Product Sync
+- **Trigger**: `User selects a dish (selected_dish ≠ null)`
+- **Preconditions**:
+  - Valid tags are extracted from the selected dish.
+  - Allergy/dietary filters are applied if set.
+- **Execution**:
 
-- Type: Scheduled API Workflow
-- Trigger: Daily at 03:00 UTC via Bubble Scheduler
-- Steps:
+```mermaid
+graph TD
+  A[Dish Selected] --> B[Extract Tags - eg. taste, season, occasion]
+  B --> C[Filter Wines by Tags + Availability]
+  B --> D[Filter Cheeses by Tags + Dietary Flags]
+  C --> E[Store in state_wine_result]
+  D --> F[Store in state_cheese_result]
+  E --> G[Show Recommendations]
+  F --> G
+```
 
-  1. Make external API call to Intermarché catalog (secured with Bearer token)
-  2. For each item:
+- **Edge Handling**:
+  - If no matches, set `state_no_match = yes` and render fallback.
+  - Logged for improvement analysis in tagging logic.
 
-     - Create or update `Wine`, `Cheese`, or `Dish` entry
-     - Normalize tags based on controlled vocabulary (`label`, `taste`, `season`)
-
-  3. Store timestamp in `System_Log` for auditability
-
-###### Workflow E: Expired Data Cleanup
-
-- Type: Scheduled API Workflow
-- Trigger: Weekly at 04:00 UTC
-- Steps:
-
-  - Delete `Recommendation` entries older than 90 days where `user_id is empty` (i.e., anonymous session)
-  - Purge logs not linked to persistent users
-
-##### 3.3.1.4. Conditional Logic Handling
+##### 3.3.1.3. Conditional Logic Handling
 
 All workflows implement conditional logic directly within Bubble’s step configuration using the `Only when` clause. Examples include:
 
@@ -511,7 +544,7 @@ All workflows implement conditional logic directly within Bubble’s step config
 - **Role enforcement**: Admin-only workflows (e.g., content validation) are hidden unless `Current User.role = "admin"`
 - **Fallback execution**: Match fallback only runs when both primary queries return empty lists
 
-##### 3.3.1.5. Error Handling and Fallbacks
+##### 3.3.1.4. Error Handling and Fallbacks
 
 Bubble lacks native try/catch logic, so fallback behavior is enforced via:
 
@@ -986,10 +1019,6 @@ While the app doesn’t collect personal data today, the following consideration
 - The UI shall be fully responsive and accessible on any mobile devices.
 - Tap targets shall comply with **[minimum spacing guidelines](https://www.w3.org/TR/WCAG21/#text-spacing)** to avoid interaction errors.
 - All touch gestures (e.g., scrolling, tapping) shall have accessible alternatives where required.
-
-Certainly! Here's the updated **Section 3.10 – Localization & Internationalization**, now including the detail about automatic locale detection on app load via the device's language settings:
-
----
 
 ### 3.10. Localization & Internationalization
 
