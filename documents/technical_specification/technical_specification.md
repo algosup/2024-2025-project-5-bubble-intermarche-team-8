@@ -69,10 +69,45 @@
       - [3.7.4.2. External API Offloading](#3742-external-api-offloading)
     - [3.7.5. Suitability Summary](#375-suitability-summary)
   - [3.8. Security \& Privacy](#38-security--privacy)
+    - [3.8.1. Data Sensitivity \& Classification](#381-data-sensitivity--classification)
+    - [3.8.2. Access Control](#382-access-control)
+      - [3.8.2.1. Privacy Rule Configuration (Bubble)](#3821-privacy-rule-configuration-bubble)
+      - [3.8.2.2. Access Limitations](#3822-access-limitations)
+    - [3.8.3. Data Transmission \& Storage Security](#383-data-transmission--storage-security)
+    - [3.8.4. Privacy Policy Considerations](#384-privacy-policy-considerations)
+    - [3.8.5. Platform Limitations (Free Tier)](#385-platform-limitations-free-tier)
+    - [3.8.6. Risk Mitigation](#386-risk-mitigation)
   - [3.9. Accessibility](#39-accessibility)
+    - [3.9.1. Standards Compliance](#391-standards-compliance)
+    - [3.9.2. Visual Accessibility](#392-visual-accessibility)
+    - [3.9.3. Input Accessibility](#393-input-accessibility)
+    - [3.9.4. Screen Reader \& Semantic Support](#394-screen-reader--semantic-support)
+    - [3.9.5. Language \& Internationalization](#395-language--internationalization)
+    - [3.9.6. Error Handling \& Validation](#396-error-handling--validation)
+    - [3.9.7. Mobile Accessibility](#397-mobile-accessibility)
   - [3.10. Localization \& Internationalization](#310-localization--internationalization)
+    - [3.10.1. Architecture Overview](#3101-architecture-overview)
+    - [3.10.2. Language Support](#3102-language-support)
+    - [3.10.3. Integration Pipeline](#3103-integration-pipeline)
+    - [3.10.4. Key Features](#3104-key-features)
+    - [3.10.5. Developer Notes](#3105-developer-notes)
+    - [3.10.6. Compliance](#3106-compliance)
   - [3.11. Error Handling \& Logging](#311-error-handling--logging)
+    - [3.11.1. Error Handling Strategy](#3111-error-handling-strategy)
+    - [3.11.2. Logging \& Monitoring](#3112-logging--monitoring)
+    - [3.11.3. Developer Access](#3113-developer-access)
+    - [3.11.4. User Feedback Loop](#3114-user-feedback-loop)
   - [3.12. Bundling \& Deployment](#312-bundling--deployment)
+    - [3.12.1. Overview](#3121-overview)
+    - [3.12.2. Pipeline Diagram](#3122-pipeline-diagram)
+    - [3.12.3. Stage Breakdown](#3123-stage-breakdown)
+      - [1. Build](#1-build)
+      - [2. Bundling](#2-bundling)
+      - [3. Testing](#3-testing)
+      - [4. Packaging](#4-packaging)
+      - [5. Deployment](#5-deployment)
+    - [3.12.4. Artifact Structure](#3124-artifact-structure)
+    - [3.12.5. Versioning \& Rollback](#3125-versioning--rollback)
 - [4. UI/UX Guidelines](#4-uiux-guidelines)
   - [4.1. Design Principles](#41-design-principles)
     - [4.1.1. Key Design Objectives](#411-key-design-objectives)
@@ -402,8 +437,6 @@ In Bubble, workflows are divided into:
 
 All workflows follow a **deterministic execution path**. Actions are executed **sequentially** unless explicitly deferred (e.g., using `schedule API workflow`, `add a pause`, or asynchronous API calls).
 
----
-
 ##### 3.3.1.2. Core Workflows
 
 Below are the primary workflow groups and their technical behavior:
@@ -444,8 +477,6 @@ Below are the primary workflow groups and their technical behavior:
 
   2. Trigger toast confirmation
   3. Optionally redirect to “Saved Matches” if `Custom State: auto_redirect = yes`
-
----
 
 ##### 3.3.1.3. Backend Workflows and Scheduled Events
 
@@ -570,8 +601,6 @@ classDiagram
 
 ### 3.5. Caching & Offline Support
 
-This section outlines the current caching mechanisms available in the application and how the system handles offline scenarios, especially given Bubble.io’s cloud-based, web-first environment.
-
 #### 3.5.1. Caching Strategy
 
 Bubble.io does not offer native server-side caching on the free tier, but it does support **client-side caching** via the browser and **custom states** for session-local data persistence.
@@ -603,18 +632,18 @@ flowchart TD
 
 **Key Notes:**
 
-* Custom states avoid redundant DB queries during a session
-* Repeating group elements benefit from implicit Bubble-level memoization for short durations
-* Static assets are cached using the browser’s default caching policies
+- Custom states avoid redundant DB queries during a session
+- Repeating group elements benefit from implicit Bubble-level memoization for short durations
+- Static assets are cached using the browser’s default caching policies
 
 #### 3.5.2. Offline Support
 
 Bubble applications are inherently **not designed for offline-first operation**. The frontend is delivered as a web app and requires an internet connection to:
 
-* Authenticate users
-* Query the Bubble database
-* Execute workflows
-* Fetch dynamic content
+- Authenticate users
+- Query the Bubble database
+- Execute workflows
+- Fetch dynamic content
 
 ##### A. Offline Behavior
 
@@ -632,7 +661,7 @@ Bubble applications are inherently **not designed for offline-first operation**.
 flowchart TD
     A[User opens app with no connection] --> B{App previously loaded?}
     B -- Yes --> C[Load from browser cache]
-    B -- No --> D[Show "No Internet" error]
+    B -- No --> D[Show No Internet error popup]
     C --> E[Basic UI visible]
     E --> F{Data needed from DB?}
     F -- No --> G[Allow interaction with static UI]
@@ -652,10 +681,12 @@ flowchart TD
 
 To improve perceived performance and prepare for offline-tolerant behavior:
 
-* **Preload critical data** on page load and store in custom states
-* **Defer non-essential data fetching** until needed (lazy loading)
-* Use **conditional visibility** to show fallback content or cached values if data is missing
-* Consider **PWA migration** for full offline capability (requires leaving Bubble)
+- **Preload critical data** on page load and store in custom states
+- **Defer non-essential data fetching** until needed (lazy loading)
+- Use **conditional visibility** to show fallback content or cached values if data is missing
+
+> [!NOTE]
+> By default, Bubble does not support offline usage of its apps. Consequently, we will create a PWA as described in the [Bundling & Deployment section](#312-bundling--deployment).
 
 ### 3.6. Performance
 
@@ -668,7 +699,7 @@ The app runs on Bubble’s shared infrastructure with client-heavy rendering and
 | Frontend UI     | Rendered client-side using dynamic Bubble elements      |
 | Database Access | Server-side, synchronous and relatively slow under load |
 | Workflows       | Executed on shared compute, limited throughput          |
-| Page Load Times | Acceptable for small datasets (<1000 items)             |
+| Page Load Times | Acceptable for small datasets (<200 items)              |
 
 #### 3.6.2. Known Bottlenecks
 
@@ -818,28 +849,320 @@ graph TD
 
 | Use Case                                 | Free Tier Suitability |
 | ---------------------------------------- | --------------------- |
-| MVP / Prototype                          | ✅ Suitable           |
-| Internal Demo / Stakeholder Presentation | ✅ Suitable           |
+| MVP / Prototype                          | Suitable              |
+| Internal Demo / Stakeholder Presentation | Suitable              |
 | Beta Testing (Low Traffic)               | ⚠️ Limited            |
 | Public Launch (Moderate Traffic)         | ❌ Not Recommended    |
 | High-Traffic Production                  | ❌ Not Supported      |
 
 ### 3.8. Security & Privacy
 
-| Role | Description                | Permissions                                                                |
-| ---- | -------------------------- | -------------------------------------------------------------------------- |
-| User | End-user of the mobile app | - View and select recipes<br>- Receive recommendations<br>- Save favorites |
+#### 3.8.1. Data Sensitivity & Classification
+
+The application primarily stores **publicly accessible product metadata** with no user authentication or personal data collection at this stage.
+
+| Data Type            | Sensitivity Level | Notes                          |
+| -------------------- | ----------------- | ------------------------------ |
+| Wine/Cheese metadata | Low               | Public product info, no PII    |
+| Dish metadata        | Low               | Content curated by admins only |
+| Tags / Labels        | Low               | Taxonomy for filtering         |
+
+Since the application does **not collect user accounts, emails, or payments**, **GDPR/PII compliance** is not currently required.
+
+#### 3.8.2. Access Control
+
+Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at the data type level. In this app:
+
+- All data types (Wine, Cheese, Dish, Tag, Label) are **read-only for all users**
+- The **Bubble editor** is the only place where data modifications are permitted by designated admins
+- **No separate admin panel** exists beyond Bubble’s editor interface
+- **API access is disabled** on the free-tier to prevent external scraping
 
 > [!NOTE]
-> As this application is a proof of concept, it will only contain the end user side, with the user role. In future updates, interfaces of rhte administrators of the website will need to be created in order to manage more easily the app's data.
+> Admins operate directly in the Bubble editor for content curation and updates.
+
+##### 3.8.2.1. Privacy Rule Configuration (Bubble)
+
+| Data Type | Who Can View | Who Can Modify | Notes                            |
+| --------- | ------------ | -------------- | -------------------------------- |
+| Wine      | Everyone     | Admin only     | Metadata only, no sensitive data |
+| Cheese    | Everyone     | Admin only     |                                  |
+| Dish      | Everyone     | Admin only     |                                  |
+| Tag       | Everyone     | Admin only     |                                  |
+| Label     | Everyone     | Admin only     |                                  |
+
+##### 3.8.2.2. Access Limitations
+
+| Data Type | Public User Access | Admin Access (via Bubble Editor) | Notes                                   |
+| --------- | ------------------ | -------------------------------- | --------------------------------------- |
+| Wine      | Read-only          | Full CRUD                        | Only metadata; no sensitive information |
+| Cheese    | Read-only          | Full CRUD                        |                                         |
+| Dish      | Read-only          | Full CRUD                        |                                         |
+| Tag       | Read-only          | Full CRUD                        | Taxonomy data                           |
+| Label     | Read-only          | Full CRUD                        | Descriptive metadata only               |
+
+#### 3.8.3. Data Transmission & Storage Security
+
+| Vector             | Protection Level         | Notes                                     |
+| ------------------ | ------------------------ | ----------------------------------------- |
+| HTTPS              | Enabled (via Bubble CDN) | All frontend/backend traffic is encrypted |
+| Data at Rest       | Encrypted by Bubble      | Bubble handles data encryption internally |
+| File/Image Storage | Bubble CDN               | Cached securely with read-only links      |
+| Public API Access  | Disabled                 | Avoids uncontrolled exposure of data      |
+
+#### 3.8.4. Privacy Policy Considerations
+
+While the app doesn’t collect personal data today, the following considerations should be prepared for future expansion:
+
+- **Cookie usage**: Bubble automatically sets session cookies (non-identifying)
+- **Analytics**: Bubble may use its own analytics. If third-party tools are added, disclose them.
+- **Future user accounts**: If added, must include Terms of Service and Privacy Policy documents
+- **External APIs**: If using wine/cheese APIs, ensure compliance with their usage and storage guidelines
+
+#### 3.8.5. Platform Limitations (Free Tier)
+
+| Limitation                          | Impact                                 |
+| ----------------------------------- | -------------------------------------- |
+| No audit logging                    | No visibility on unauthorized access   |
+| No field-level encryption options   | All encryption is platform-wide        |
+| No DDoS protection or rate-limiting | May be vulnerable to excessive traffic |
+| No version rollback or backups      | Data loss if accidentally deleted      |
+
+#### 3.8.6. Risk Mitigation
+
+| Risk                               | Mitigation Strategy                         |
+| ---------------------------------- | ------------------------------------------- |
+| Public data scraping               | Disable Bubble Data API and indexing        |
+| Unauthorized data edits            | Restrict editor access, use privacy rules   |
+| Data loss (manual error)           | Export backups regularly from Bubble editor |
+| Downtime (Bubble-level outage)     | Communicate via status page or social media |
+| Future GDPR compliance (if needed) | Add cookie banner, ToS, and Privacy Policy  |
 
 ### 3.9. Accessibility
 
+> [!WARNING]
+> Accessibility testing will be part of the QA acceptance criteria prior to production release.
+
+#### 3.9.1. Standards Compliance
+
+- The application shall conform to **[WCAG 2.1 Level AA](https://www.w3.org/TR/WCAG21/)** guidelines.
+- All accessibility features shall be tested against standard assistive technologies (e.g., screen readers).
+
+#### 3.9.2. Visual Accessibility
+
+- All text elements shall maintain a **minimum contrast ratio of 4.5:1** relative to their background.
+- The UI shall support **text scaling** via system/browser zoom settings up to 200% without loss of functionality or content.
+- The default font is **Inter**, selected for readability at multiple sizes and weights.
+
+#### 3.9.3. Input Accessibility
+
+- All interactive elements (buttons, links, form fields) shall have a **minimum hit area of 44x44px**.
+- Inputs should indicate their purpose and expected value format.
+
+#### 3.9.4. Screen Reader & Semantic Support
+
+- All form inputs and controls shall include **[aria-roledescriptions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)**, **[aria-labels](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)**, and **[aria-descriptions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)** as applicable.
+- All images, icons, and non-text elements shall include **meaningful alt text** or **[ARIA-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)="true"** if decorative.
+- Dynamic content updates shall be announced via **[ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)** where necessary.
+
+#### 3.9.5. Language & Internationalization
+
+- The default UI language shall be **English**, with **French** provided as an alternative via Bubble's [Localize Translation Plugin](https://help.localizejs.com/docs/bubble).
+- Cultural formatting (e.g., date, currency, measurement units) shall follow ISO standards by default and be formatted in the standard format of the locale.
+- All elements on the UI should be updated in the current locale.
+
+> [!NOTE]
+> Further details for this section are described in the [3.10. Localization & Internationalization section](#310-localization--internationalization)
+
+#### 3.9.6. Error Handling & Validation
+
+- All form inputs shall include:
+  - **Client-side validation** with clear, accessible [error messages](https://www.w3.org/TR/WCAG21/#status-messages).
+  - **[ARIA-invalid](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)** attributes where applicable.
+  - **[Tooltips or helper text](https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus)** to explain input requirements before submission.
+
+#### 3.9.7. Mobile Accessibility
+
+- The UI shall be fully responsive and accessible on any mobile devices.
+- Tap targets shall comply with **[minimum spacing guidelines](https://www.w3.org/TR/WCAG21/#text-spacing)** to avoid interaction errors.
+- All touch gestures (e.g., scrolling, tapping) shall have accessible alternatives where required.
+
+Certainly! Here's the updated **Section 3.10 – Localization & Internationalization**, now including the detail about automatic locale detection on app load via the device's language settings:
+
+---
+
 ### 3.10. Localization & Internationalization
+
+#### 3.10.1. Architecture Overview
+
+| Layer                  | Responsibility                                                                |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| **UI Components**      | Render translatable keys using Localize-compatible tags.                      |
+| **Translation Engine** | Manage keys and language variants via [Localize](https://app.localizejs.com). |
+| **Content Sync**       | Automatically push Bubble text elements to Localize on change.                |
+| **User Context**       | Detect language via browser or device locale; override via user settings.     |
+
+#### 3.10.2. Language Support
+
+- **Primary Locale**: `en-US`
+- **Secondary Locale(s)**: `fr-FR`, `de-DE`, `gr-GR`, `ar-AR`, `es-ES`, `cn-CN`
+- All content updates are reflected in real-time after approval in the Localize dashboard.
+
+#### 3.10.3. Integration Pipeline
+
+```mermaid
+graph LR
+  A[Bubble UI Elements] --> B[Localize Plugin Key Injection]
+  B --> C[app.localizejs.com]
+  C --> D[Locale-specific Render]
+  E[Device/Browser Locale Detection] --> D
+```
+
+#### 3.10.4. Key Features
+
+- **Automatic Key Extraction**: Texts wrapped in Localize tags are detected and synced.
+- **Dynamic Text Replacement**: Keys are swapped at runtime based on active locale.
+- **Locale Detection**: On app load, Bubble detects the device or browser’s language and auto-sets the matching translation layer.
+- **Fallback Strategy**: If a translation key is missing, default (`fr-FR`) is displayed.
+- **Admin Workflow**: Translations are reviewed and published via the Localize dashboard.
+
+#### 3.10.5. Developer Notes
+
+- All UI components must use text elements or HTML blocks supported by the Localize plugin.
+- Avoid hardcoded strings outside of Bubble text fields to ensure complete i18n coverage.
+- Translation keys should follow consistent naming (e.g., `menu.header.title`) for maintainability.
+
+#### 3.10.6. Compliance
+
+- All language handling respects **GDPR**, with no personally identifiable information sent to Localize.
+- Users can manually override their preferred language via a settings dropdown stored in local storage.
+
+> [!NOTE]
+> Localize API usage is monitored; rate limits and quota should be validated for production readiness.
 
 ### 3.11. Error Handling & Logging
 
+#### 3.11.1. Error Handling Strategy
+
+| Type                  | Handling Approach                                                              |
+| --------------------- | ------------------------------------------------------------------------------ |
+| **User Errors**       | Display contextual error messages using modals or inline alerts.               |
+| **Form Validation**   | Prevent submission and show specific guidance near affected fields.            |
+| **API Failures**      | Fallback gracefully with retry logic and toast notifications if recoverable.   |
+| **Navigation Errors** | Redirect to a fallback page with a descriptive message (e.g., 404 or timeout). |
+| **Unhandled Errors**  | Log silently and prompt the user to refresh or restart the session.            |
+
+#### 3.11.2. Logging & Monitoring
+
+| Component       | Implementation                                                                                                                      |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Client-side** | Use Bubble's built-in error workflows (`An unhandled error occurs`) to log key events.                                              |
+| **Server-side** | Capture API errors via Bubble’s Logs tab; include step-specific diagnostics.                                                        |
+| **Third-party** | Canvas by Mobiloud ([Section 3.12](#312-bundling--deployment)) logs network and native wrapper errors accessible via its dashboard. |
+| **Analytics**   | Optional integration with tools like Google Analytics or LogSnag for error funnel tracking.                                         |
+
+#### 3.11.3. Developer Access
+
+- Bubble Logs and error traces are accessible via the **Logs** tab.
+- Real-time error monitoring requires **Bubble Professional** plan or above.
+- Canvas crash logs (native) can be exported on demand from the MobiLoud admin panel.
+
+#### 3.11.4. User Feedback Loop
+
+- When a critical error is detected, the app prompts users to submit optional feedback via a lightweight form, described in the [functional spcecifications](../functional_specification/functional_specification.md)
+- Non-blocking UI errors are logged silently and reviewed during regular QA cycles.
+
+> [!NOTE]
+> No personal data is captured in logs. All error logs are anonymized in compliance with [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679).
+
 ### 3.12. Bundling & Deployment
+
+> [!IMPORTANT]
+> Mobile bundling and deployment will remain in **preview** only and will not proceed to **full release** due to current cost constraints.
+
+#### 3.12.1. Overview
+
+| Stage   | Description                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------- |
+| Build   | Prepare Bubble assets and static resources.                                                 |
+| Bundle  | Wrap the app using **[Canvas by MobiLoud](https://canvas.mobiloud.com)** for native export. |
+| Test    | Run automated accessibility and UI validations.                                             |
+| Package | Generate platform-ready binaries.                                                           |
+| Release | Publish to distribution channels.                                                           |
+
+#### 3.12.2. Pipeline Diagram
+
+```mermaid
+graph TD
+  A[Source Commit - Bubble Project] --> B[Build Assets]
+  B --> C[Wrap with Canvas]
+  C --> D[Test UI + Accessibility]
+  D --> E[Package Artifacts]
+  E --> F[Deploy to Targets]
+```
+
+#### 3.12.3. Stage Breakdown
+
+##### 1. Build
+
+- Trigger: Manual or main branch commit.
+- Tasks:
+  - Export Bubble UI and logic.
+  - Generate stylesheets, translations, and metadata.
+
+##### 2. Bundling
+
+- Tool: [Canvas by MobiLoud](https://canvas.mobiloud.com/)
+- Platforms: Android (APK, AAB), iOS (IPA)
+- Features:
+  - Offline support via embedded WebView.
+  - Native navigation, push, and splash handling.
+
+##### 3. Testing
+
+- Automated:
+  - UI and visual regression tests.
+  - WCAG 2.1 AA checks (Axe CLI).
+- Manual:
+  - Keyboard navigation, screen reader compatibility, tap targets.
+
+##### 4. Packaging
+
+- Tasks:
+  - Sign mobile builds (Apple Developer / Google Play).
+  - Version builds using SemVer.
+  - Attach manifest for tracking and updates.
+
+##### 5. Deployment
+
+- Channels:
+  - App Store / Google Play.
+  - Optional kiosk/tablet sideloading.
+- Update Strategy:
+  - Live updates handled via Bubble.
+  - Native wrapper updates through app store resubmission when required.
+
+#### 3.12.4. Artifact Structure
+
+```
+dist/
+├── wine-cheese-app.apk
+├── wine-cheese-app.ipa
+├── manifest.json
+├── styles.md
+└── assets/
+    ├── icons/
+    ├── fonts/
+    └── translations/
+```
+
+#### 3.12.5. Versioning & Rollback
+
+- **Versioning**: Follows Semantic Versioning (`MAJOR.MINOR.PATCH`)
+- **Rollback**: Previous builds retained for 3 versions; Bubble logic can be hot-fixed without republishing the wrapper.
+
+> [!NOTE]
+> MobiLoud manages native build, submission, and wrapper maintenance. Configuration is handled via the Canvas dashboard.
 
 ## 4. UI/UX Guidelines
 
@@ -930,7 +1253,7 @@ Example format:
     <th>Value</th>
   </tr>
   <tr>
-    <td rowspan="14">Appearance</td>
+    <td rowspan="4">Appearance</td>
     <td>Font</td>
     <td>Inter</td>
   </tr>
