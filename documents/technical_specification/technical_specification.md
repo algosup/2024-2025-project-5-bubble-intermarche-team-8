@@ -473,6 +473,9 @@ graph TD
   D --> E[Render Translated Content]
 ```
 
+> [!IMPORTANT]
+> Detecting a browser locale can be done with the following statement: `BrowserTimezone/Locale A’s Browser Locale`
+
 - **Edge Handling**:
   - If locale not supported, fallback to `fr-FR`.
   - Log unsupported locales for analytics.
