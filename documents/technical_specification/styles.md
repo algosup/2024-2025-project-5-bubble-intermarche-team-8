@@ -1082,7 +1082,7 @@ This document defines comprehensively the styles which will be set up in the Bub
     <th>Value</th>
   </tr>
   <tr>
-    <td rowspan="17">Appearance</td>
+    <td rowspan="20">Appearance</td>
     <td>HTML Tag</td>
     <td>Normal</td>
   </tr>
