@@ -482,7 +482,7 @@ graph TD
 
 ###### Workflow B: User-Initiated Language Change
 
-- **Trigger**: `User selects language from dropdown`
+- **Trigger**: `User selects language from popup`
 - **Preconditions**:
   - Localize plugin loaded and UI wrapped in translatable tags.
 - **Execution**:
@@ -1067,7 +1067,7 @@ graph LR
 #### 3.10.6. Compliance
 
 - All language handling respects **GDPR**, with no personally identifiable information sent to Localize.
-- Users can manually override their preferred language via a settings dropdown stored in local storage.
+- Users can manually override their preferred language via a settings popup with the locale value stored in local storage.
 
 > [!NOTE]
 > Localize API usage is monitored; rate limits and quota should be validated for production readiness.
