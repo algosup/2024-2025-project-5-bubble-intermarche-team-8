@@ -139,9 +139,6 @@ This document defines comprehensively the styles which will be set up in the Bub
 
 #### 2.2.2. Filled Light Primary Contrast
 
-> [!CAUTION]
-> TO FIX
-
 <table>
   <tr>
     <th>Tab</th>

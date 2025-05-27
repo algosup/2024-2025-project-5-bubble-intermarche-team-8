@@ -15,20 +15,20 @@
 - [2. Technology Used](#2-technology-used)
   - [2.1. Presentation](#21-presentation)
   - [2.2. Initial steps](#22-initial-steps)
-    - [2.2.1. Create An Account](#221-create-an-account)
+    - [2.2.1. Create an Account](#221-create-an-account)
     - [2.2.2. Create an Application](#222-create-an-application)
   - [2.3. Minimum Required Versions for Android and iOS](#23-minimum-required-versions-for-android-and-ios)
     - [2.3.1. Android Compatibility](#231-android-compatibility)
     - [2.3.2. iOS Compatibility](#232-ios-compatibility)
   - [2.4. Bubble Components Architecture](#24-bubble-components-architecture)
-- [3. Tehcnical Specifications](#3-tehcnical-specifications)
+- [3. Technical Specifications](#3-technical-specifications)
   - [3.1. Coding Conventions](#31-coding-conventions)
     - [3.1.1. Naming Conventions](#311-naming-conventions)
     - [3.1.2. File Architecture](#312-file-architecture)
   - [3.2. Routing and Pages](#32-routing-and-pages)
     - [3.2.1. Standard Pages](#321-standard-pages)
     - [3.2.2. Arabic-Language Pages](#322-arabic-language-pages)
-    - [3.2.3. Navigation Flow between pages](#323-navigation-flow-between-pages)
+    - [3.2.3. Navigation Flow between Pages](#323-navigation-flow-between-pages)
   - [3.3. Bubble Plugins Used](#33-bubble-plugins-used)
   - [3.3. Application Logic](#33-application-logic)
     - [3.3.1. Workflows](#331-workflows)
@@ -188,12 +188,12 @@ From a technical standpoint, Bubble operates as a backend-as-a-service (BaaS) an
 
 ### 2.2. Initial steps
 
-#### 2.2.1. Create An Account
+#### 2.2.1. Create an Account
 
 To start developping with Bubble, you first need to create an account:
 
 1. Go to [Bubble's Signup Page](https://bubble.io/login?mode=signup) and enter your email and password.
-2. Click the Verify Account link you received in the mailbox of the email you filled in and foloow the instructions on your screen
+2. Click the Verify Account link you received in the mailbox of the email you filled in and follow the instructions on your screen
 
 You are now ready to use Bubble.
 
@@ -307,7 +307,7 @@ I --> I2[Authentication Handling]
 I --> I3[Dynamic API Calls]
 ```
 
-## 3. Tehcnical Specifications
+## 3. Technical Specifications
 
 ### 3.1. Coding Conventions
 
@@ -357,14 +357,15 @@ The application uses Bubble's pre-bundled router to handle all navigation. Below
 
 #### 3.2.1. Standard Pages
 
-| Page URL     | Bubble Page Name | Query Parameters                                                                                            | Description                                  | Example query with params                   |
-| ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------- |
-| `/`          | `index`          | None                                                                                                        | Splash screen of the application             | `/`                                         |
-| `/home`      | `home`           | None                                                                                                        | Main interface for searching recipes         | `/home`                                     |
-| `/search`    | `search`         | - `query`: `string` – Name of the searched dish <br> - `tags`: `string` – Comma-separated, URL-encoded tags | Displays search results for dishes           | `/search?query=pasta&tags=vegan%5C%2Cquick` |
-| `/wine`      | `wine`           | - `id`: `string` – Database ID of the wine                                                                  | Displays detailed information about a wine   | `/wine?id=21`                               |
-| `/cheese`    | `cheese`         | - `id`: `string` – Database ID of the cheese                                                                | Displays detailed information about a cheese | `/wine?id=21`                               |
-| _Other URLs_ | `404`            | None                                                                                                        | Fallback page for non-existent routes        | `/driller`                                  |
+| Page URL     | Bubble Page Name | Query Parameters                                                                                            | Description                                                    | Example query with params                   |
+| ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------- |
+| `/`          | `index`          | None                                                                                                        | Splash screen of the application                               | `/`                                         |
+| `/home`      | `home`           | None                                                                                                        | Main interface for searching recipes                           | `/home`                                     |
+| `/search`    | `search`         | - `query`: `string` – Name of the searched dish <br> - `tags`: `string` – Comma-separated, URL-encoded tags | Displays search results for dishes                             | `/search?query=pasta&tags=vegan%5C%2Cquick` |
+| `/wine`      | `wine`           | - `id`: `string` – Database ID of the wine                                                                  | Displays detailed information about a wine                     | `/wine?id=21`                               |
+| `/cheese`    | `cheese`         | - `id`: `string` – Database ID of the cheese                                                                | Displays detailed information about a cheese                   | `/cheese?id=21`                             |
+| `/dish`      | `dish`           | - `id: string` - Database ID of the dish                                                                    | Displays detailed wines and cheeses recommendations for a dish | `/dish?id=21`                               |
+| _Other URLs_ | `404`            | None                                                                                                        | Fallback page for non-existent routes                          | `/driller`                                  |
 
 #### 3.2.2. Arabic-Language Pages
 
@@ -375,12 +376,13 @@ All routes have an Arabic-specific equivalent with the `ar_` prefix. These pages
 | `/home`      | `/ar_home`        |
 | `/search`    | `/ar_search`      |
 | `/wine`      | `/ar_wine`        |
+| `/dish`      | `/ar_dish`        |
 | `/cheese`    | `/ar_cheese`      |
 
 > [!WARNING]
 > All Arabic routes share the same query parameters and behavior as their English counterparts.
 
-#### 3.2.3. Navigation Flow between pages
+#### 3.2.3. Navigation Flow between Pages
 
 ```mermaid
 graph TD
@@ -388,6 +390,7 @@ A[Splash Screen] --> B[Home]
 B --> C[Search]
 C --> D[Wine Details]
 C --> E[Cheese Details]
+B --> G[Meal Details]
 A --> F[404]
 
     %% Arabic Routes
@@ -395,6 +398,7 @@ A --> F[404]
     B_AR --> C_AR[Arabic Search]
     C_AR --> D_AR[Arabic Wine Details]
     C_AR --> E_AR[Arabic Cheese Details]
+    B_AR --> G_AR[Arabic Meal]
     A_AR --> F_AR[404]
 
     subgraph Standard_Routes
@@ -404,6 +408,7 @@ A --> F[404]
         D
         E
         F
+        G
     end
 
     subgraph Arabic_Routes
@@ -413,6 +418,7 @@ A --> F[404]
         D_AR
         E_AR
         F_AR
+        G_AR
     end
 ```
 
@@ -1101,7 +1107,7 @@ graph LR
 
 #### 3.11.4. User Feedback Loop
 
-- When a critical error is detected, the app prompts users to submit optional feedback via a lightweight form, described in the [functional spcecifications](../functional_specification/functional_specification.md)
+- When a critical error is detected, the app prompts users to submit optional feedback via a lightweight form, described in the [functional specifications](../functional_specification/functional_specification.md)
 - Non-blocking UI errors are logged silently and reviewed during regular QA cycles.
 
 > [!NOTE]
@@ -1222,21 +1228,21 @@ The Intermarché Wine & Cheese Pairing App is designed for **tourists and non-ex
 
 #### 4.2.1. Color Palette
 
-| Name             | Preview                                                                                            | Hex     | RGB              |
-| ---------------- | -------------------------------------------------------------------------------------------------- | ------- | ---------------- |
-| Primary          | <span style="background-color: #E00E1F; width: 10px; height: 10px; display: inline-block;"></span> | #E00E1F | rgb(224,14,31)   |
-| Primary Contrast | <span style="background-color: #DECE9C; width: 10px; height: 10px; display: inline-block;"></span> | #DECE9C | rgb(222,206,156) |
-| Text             | <span style="background-color: #000000; width: 10px; height: 10px; display: inline-block;"></span> | #000000 | rgb(0,0,0)       |
-| Surface          | <span style="background-color: #F1F1F2; width: 10px; height: 10px; display: inline-block;"></span> | #F1F1F2 | rgb(241,241,242) |
-| Background       | <span style="background-color: #FFFFFF; width: 10px; height: 10px; display: inline-block;"></span> | #FFFFFF | rgb(255,255,255) |
-| Destructive      | <span style="background-color: #B0200C; width: 10px; height: 10px; display: inline-block;"></span> | #B0200C | rgb(176,32,12)   |
-| Success          | <span style="background-color: #1E6C30; width: 10px; height: 10px; display: inline-block;"></span> | #1E6C30 | rgb(30,108,48)   |
-| Alert            | <span style="background-color: #DCA114; width: 10px; height: 10px; display: inline-block;"></span> | #DCA114 | rgb(220,161,20)  |
+| Name             | Preview                                                                                 | Hex     | RGB              |
+| ---------------- | --------------------------------------------------------------------------------------- | ------- | ---------------- |
+| Primary          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/E00E1F'/></a>  | #E00E1F | rgb(224,14,31)   |
+| Primary Contrast | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/DECE9C'/></a>  | #DECE9C | rgb(222,206,156) |
+| Text             | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/000000'/></a>  | #000000 | rgb(0,0,0)       |
+| Surface          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/F1F1F2'/></a>  | #F1F1F2 | rgb(241,241,242) |
+| Background       | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/FFFFFF'/></a>  | #FFFFFF | rgb(255,255,255) |
+| Destructive      | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/B0200C'/></a>  | #B0200C | rgb(176,32,12)   |
+| Success          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/1E6C30'/></a>  | #1E6C30 | rgb(30,108,48)   |
+| Alert            | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/DCA114'/></a> | #DCA114 | rgb(220,161,20)  |
 
 To set those colors as the default colors in the application, click **Styles > Style Variables > Colors** and apply the value of the color to the corresponding name.
 
 > [!WARNING]
-> Any colors **not listed** in this table are considered deprecated and should not be used in the final application. Ohter colors than these can be safely discarded from the default colors loaded in the application **Styles Variables**.
+> Any colors **not listed** in this table are considered deprecated and should not be used in the final application. Other colors than these can be safely discarded from the default colors loaded in the application **Styles Variables**.
 
 #### 4.2.2. Typography
 
