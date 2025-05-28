@@ -10,17 +10,15 @@
     - [2.1.2. Commit Messages](#212-commit-messages)
     - [2.1.3. Pull Request Guidelines](#213-pull-request-guidelines)
   - [2.2. Bubble Naming Conventions](#22-bubble-naming-conventions)
+    - [2.2.1. Pages Names](#221-pages-names)
+    - [2.2.2. Elements Tree Components](#222-elements-tree-components)
   - [2.3. File Naming Conventions](#23-file-naming-conventions)
 
 </details>
 
----
-
 ## 1. Introduction
 
 This document defines the coding, Git, and file-naming conventions used throughout the BiteMatch project. Adhering to these standards ensures consistency, collaboration efficiency, and long-term maintainability.
-
----
 
 ## 2. Conventions
 
@@ -120,6 +118,18 @@ Pull Requests must:
 
 
 ### 2.2. Bubble Naming Conventions
+
+#### 2.2.1. Pages Names
+
+Page names are case sensitive and some of them play a critical role in the correct app working. To ensure compatibility between the pages, those are written in snake\_case.
+
+**Examples:**
+
+- `index`
+- `home`
+- `splash_screen`
+
+#### 2.2.2. Elements Tree Components
 
 In Bubble, elements must be clearly named to improve searchability and clarity in the elements tree.
 
