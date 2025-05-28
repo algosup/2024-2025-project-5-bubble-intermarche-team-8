@@ -127,8 +127,28 @@
 
 ### 1.1. Glossary
 
-| Term | Definition |
-| ---- | ---------- |
+| Term                                 | Definition                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| **Bubble**                           | A no-code platform used to visually build web applications without writing code.                        |
+| **Workflow**                         | A sequence of actions in Bubble triggered by events such as page load or button clicks.                 |
+| **Custom State**                     | Temporary, client-side memory storage used in Bubble to manage UI state during a session.               |
+| **Localize Plugin**                  | A tool that dynamically translates app content based on the user's language or locale.                  |
+| **Mobiloud Canvas**                  | A wrapper tool used to convert web applications into native mobile apps for Android and iOS.            |
+| **Repeating Group**                  | A UI component in Bubble that displays a list of dynamic content from the database.                     |
+| **Tag**                              | Metadata used to categorize dishes, wines, or cheeses (e.g., taste, season, occasion).                  |
+| **Label**                            | Descriptive metadata attached to wines or cheeses, often representing certifications or origins.        |
+| **Capacity Units (CU)**              | A resource measurement used by Bubble to limit usage on different pricing tiers.                        |
+| **PWA (Progressive Web App)**        | A web application that can function like a native app, including offline support and installability.    |
+| **Frontend Workflow**                | User-interface-triggered logic such as clicking a button or changing an input.                          |
+| **Backend Workflow**                 | Scheduled or server-triggered workflows, available only on paid Bubble plans.                           |
+| **Semantic Versioning (SemVer)**     | A versioning system in the format MAJOR.MINOR.PATCH, e.g., 1.0.2.                                       |
+| **ARIA**                             | Accessibility attributes that improve screen reader support and navigation for users with disabilities. |
+| **GDPR**                             | European regulation for data privacy and protection.                                                    |
+| **WCAG 2.1**                         | Web Content Accessibility Guidelines for building accessible digital content.                           |
+| **API Connector**                    | Bubble feature for connecting to external APIs via HTTP requests.                                       |
+| **RBAC (Role-Based Access Control)** | A system that restricts access to app functions based on user roles.                                    |
+| **UI Builder**                       | Visual interface within Bubble for designing the front-end of the application.                          |
+| **404 Page**                         | The fallback page displayed when a user navigates to a non-existent route.                              |
 
 ### 1.2. Project Overview
 
