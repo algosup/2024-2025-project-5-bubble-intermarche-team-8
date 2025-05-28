@@ -1,4 +1,4 @@
-# Technical Specifications - BiteMatch <!-- omit in toc -->
+# Technical Specification - BiteMatch <!-- omit in toc -->
 
 <details>
 <summary>Table of Contents</summary>
@@ -30,84 +30,84 @@
     - [3.2.2. Arabic-Language Pages](#322-arabic-language-pages)
     - [3.2.3. Navigation Flow between Pages](#323-navigation-flow-between-pages)
   - [3.3. Bubble Plugins Used](#33-bubble-plugins-used)
-  - [3.3. Application Logic](#33-application-logic)
-    - [3.3.1. Workflows](#331-workflows)
-      - [3.3.1.1. Workflow Execution Model](#3311-workflow-execution-model)
-      - [3.3.1.2. Core Workflows](#3312-core-workflows)
+  - [3.4. Application Logic](#34-application-logic)
+    - [3.4.1. Workflows](#341-workflows)
+      - [3.4.1.1. Workflow Execution Model](#3411-workflow-execution-model)
+      - [3.4.1.2. Core Workflows](#3412-core-workflows)
         - [Workflow A : Localization on App Load](#workflow-a--localization-on-app-load)
         - [Workflow B: User-Initiated Language Change](#workflow-b-user-initiated-language-change)
         - [Workflow C : Tag-Based Dish Search](#workflow-c--tag-based-dish-search)
         - [Workflow D : Wine/Cheese Recommendation by Tags](#workflow-d--winecheese-recommendation-by-tags)
-      - [3.3.1.3. Conditional Logic Handling](#3313-conditional-logic-handling)
-      - [3.3.1.4. Error Handling and Fallbacks](#3314-error-handling-and-fallbacks)
-  - [3.4. Data Management](#34-data-management)
-    - [3.4.1. Database Structure](#341-database-structure)
-  - [3.5. Caching \& Offline Support](#35-caching--offline-support)
-    - [3.5.1. Caching Strategy](#351-caching-strategy)
-      - [A. Types of Caching Used](#a-types-of-caching-used)
-      - [B. Caching Strategy Flow](#b-caching-strategy-flow)
-    - [3.5.2. Offline Support](#352-offline-support)
-      - [A. Offline Behavior](#a-offline-behavior)
-      - [B. Offline Startup Flow](#b-offline-startup-flow)
-    - [3.5.3. Limitations](#353-limitations)
-    - [3.5.4. Recommendations](#354-recommendations)
-  - [3.6. Performance](#36-performance)
-    - [3.6.1. Performance Overview](#361-performance-overview)
-    - [3.6.2. Known Bottlenecks](#362-known-bottlenecks)
-    - [3.6.3. Performance Optimization Techniques](#363-performance-optimization-techniques)
-      - [3.6.3.1. Database Optimization](#3631-database-optimization)
-      - [3.6.3.2. Workflow Optimization](#3632-workflow-optimization)
-      - [3.6.3.3. UI/UX Optimization](#3633-uiux-optimization)
-    - [3.6.4. Testing Metrics](#364-testing-metrics)
-    - [3.6.5. Performance Recommendations](#365-performance-recommendations)
-  - [3.7. Scalability](#37-scalability)
-    - [3.7.1. Infrastructure and Hosting](#371-infrastructure-and-hosting)
-    - [3.7.2. Capabilities on Free Tier](#372-capabilities-on-free-tier)
-    - [3.7.3. Limitations on Free Tier](#373-limitations-on-free-tier)
-    - [3.7.4. Upgrade and Scaling Strategy](#374-upgrade-and-scaling-strategy)
-      - [3.7.4.1. Paid Bubble Plans](#3741-paid-bubble-plans)
-      - [3.7.4.2. External API Offloading](#3742-external-api-offloading)
-    - [3.7.5. Suitability Summary](#375-suitability-summary)
-  - [3.8. Security \& Privacy](#38-security--privacy)
-    - [3.8.1. Data Sensitivity \& Classification](#381-data-sensitivity--classification)
-    - [3.8.2. Access Control](#382-access-control)
-      - [3.8.2.1. Privacy Rule Configuration (Bubble)](#3821-privacy-rule-configuration-bubble)
-      - [3.8.2.2. Access Limitations](#3822-access-limitations)
-    - [3.8.3. Data Transmission \& Storage Security](#383-data-transmission--storage-security)
-    - [3.8.4. Privacy Policy Considerations](#384-privacy-policy-considerations)
-    - [3.8.5. Platform Limitations (Free Tier)](#385-platform-limitations-free-tier)
-    - [3.8.6. Risk Mitigation](#386-risk-mitigation)
-  - [3.9. Accessibility](#39-accessibility)
-    - [3.9.1. Standards Compliance](#391-standards-compliance)
-    - [3.9.2. Visual Accessibility](#392-visual-accessibility)
-    - [3.9.3. Input Accessibility](#393-input-accessibility)
-    - [3.9.4. Screen Reader \& Semantic Support](#394-screen-reader--semantic-support)
-    - [3.9.5. Language \& Internationalization](#395-language--internationalization)
-    - [3.9.6. Error Handling \& Validation](#396-error-handling--validation)
-    - [3.9.7. Mobile Accessibility](#397-mobile-accessibility)
-  - [3.10. Localization \& Internationalization](#310-localization--internationalization)
-    - [3.10.1. Architecture Overview](#3101-architecture-overview)
-    - [3.10.2. Language Support](#3102-language-support)
-    - [3.10.3. Integration Pipeline](#3103-integration-pipeline)
-    - [3.10.4. Key Features](#3104-key-features)
-    - [3.10.5. Developer Notes](#3105-developer-notes)
-    - [3.10.6. Compliance](#3106-compliance)
-  - [3.11. Error Handling \& Logging](#311-error-handling--logging)
-    - [3.11.1. Error Handling Strategy](#3111-error-handling-strategy)
-    - [3.11.2. Logging \& Monitoring](#3112-logging--monitoring)
-    - [3.11.3. Developer Access](#3113-developer-access)
-    - [3.11.4. User Feedback Loop](#3114-user-feedback-loop)
-  - [3.12. Bundling \& Deployment](#312-bundling--deployment)
-    - [3.12.1. Overview](#3121-overview)
-    - [3.12.2. Pipeline Diagram](#3122-pipeline-diagram)
-    - [3.12.3. Stage Breakdown](#3123-stage-breakdown)
+      - [3.4.1.3. Conditional Logic Handling](#3413-conditional-logic-handling)
+      - [3.4.1.4. Error Handling and Fallbacks](#3414-error-handling-and-fallbacks)
+  - [3.5. Data Management](#35-data-management)
+    - [3.5.1. Database Structure](#351-database-structure)
+  - [3.6. Caching \& Offline Support](#36-caching--offline-support)
+    - [3.6.1. Caching Strategy](#361-caching-strategy)
+      - [3.6.1.1. Types of Caching Used](#3611-types-of-caching-used)
+      - [3.6.1.2. Caching Strategy Flow](#3612-caching-strategy-flow)
+    - [3.6.2. Offline Support](#362-offline-support)
+      - [3.6.2.1. Offline Behavior](#3621-offline-behavior)
+      - [3.6.2.2. Offline Startup Flow](#3622-offline-startup-flow)
+    - [3.6.3. Limitations](#363-limitations)
+    - [3.6.4. Recommendations](#364-recommendations)
+  - [3.7. Performance](#37-performance)
+    - [3.7.1. Performance Overview](#371-performance-overview)
+    - [3.7.2. Known Bottlenecks](#372-known-bottlenecks)
+    - [3.7.3. Performance Optimization Techniques](#373-performance-optimization-techniques)
+      - [3.7.3.1. Database Optimization](#3731-database-optimization)
+      - [3.7.3.2. Workflow Optimization](#3732-workflow-optimization)
+      - [3.7.3.3. UI/UX Optimization](#3733-uiux-optimization)
+    - [3.7.4. Testing Metrics](#374-testing-metrics)
+    - [3.7.5. Performance Recommendations](#375-performance-recommendations)
+  - [3.8. Scalability](#38-scalability)
+    - [3.8.1. Infrastructure and Hosting](#381-infrastructure-and-hosting)
+    - [3.8.2. Capabilities on Free Tier](#382-capabilities-on-free-tier)
+    - [3.8.3. Limitations on Free Tier](#383-limitations-on-free-tier)
+    - [3.8.4. Upgrade and Scaling Strategy](#384-upgrade-and-scaling-strategy)
+      - [3.8.4.1. Paid Bubble Plans](#3841-paid-bubble-plans)
+      - [3.8.4.2. External API Offloading](#3842-external-api-offloading)
+    - [3.8.5. Suitability Summary](#385-suitability-summary)
+  - [3.9. Security \& Privacy](#39-security--privacy)
+    - [3.9.1. Data Sensitivity \& Classification](#391-data-sensitivity--classification)
+    - [3.9.2. Access Control](#392-access-control)
+      - [3.9.2.1. Privacy Rule Configuration (Bubble)](#3921-privacy-rule-configuration-bubble)
+      - [3.9.2.2. Access Limitations](#3922-access-limitations)
+    - [3.9.3. Data Transmission \& Storage Security](#393-data-transmission--storage-security)
+    - [3.9.4. Privacy Policy Considerations](#394-privacy-policy-considerations)
+    - [3.9.5. Platform Limitations (Free Tier)](#395-platform-limitations-free-tier)
+    - [3.9.6. Risk Mitigation](#396-risk-mitigation)
+  - [3.10. Accessibility](#310-accessibility)
+    - [3.10.1. Standards Compliance](#3101-standards-compliance)
+    - [3.10.2. Visual Accessibility](#3102-visual-accessibility)
+    - [3.10.3. Input Accessibility](#3103-input-accessibility)
+    - [3.10.4. Screen Reader \& Semantic Support](#3104-screen-reader--semantic-support)
+    - [3.10.5. Language \& Internationalization](#3105-language--internationalization)
+    - [3.10.6. Error Handling \& Validation](#3106-error-handling--validation)
+    - [3.10.7. Mobile Accessibility](#3107-mobile-accessibility)
+  - [3.11. Localization \& Internationalization](#311-localization--internationalization)
+    - [3.11.1. Architecture Overview](#3111-architecture-overview)
+    - [3.11.2. Language Support](#3112-language-support)
+    - [3.11.3. Integration Pipeline](#3113-integration-pipeline)
+    - [3.11.4. Key Features](#3114-key-features)
+    - [3.11.5. Developer Notes](#3115-developer-notes)
+    - [3.11.6. Compliance](#3116-compliance)
+  - [3.12. Error Handling \& Logging](#312-error-handling--logging)
+    - [3.12.1. Error Handling Strategy](#3121-error-handling-strategy)
+    - [3.12.2. Logging \& Monitoring](#3122-logging--monitoring)
+    - [3.12.3. Developer Access](#3123-developer-access)
+    - [3.12.4. User Feedback Loop](#3124-user-feedback-loop)
+  - [3.13. Bundling \& Deployment](#313-bundling--deployment)
+    - [3.13.1. Overview](#3131-overview)
+    - [3.13.2. Pipeline Diagram](#3132-pipeline-diagram)
+    - [3.13.3. Stage Breakdown](#3133-stage-breakdown)
       - [1. Build](#1-build)
       - [2. Bundling](#2-bundling)
       - [3. Testing](#3-testing)
       - [4. Packaging](#4-packaging)
       - [5. Deployment](#5-deployment)
-    - [3.12.4. Artifact Structure](#3124-artifact-structure)
-    - [3.12.5. Versioning \& Rollback](#3125-versioning--rollback)
+    - [3.13.4. Artifact Structure](#3134-artifact-structure)
+    - [3.13.5. Versioning \& Rollback](#3135-versioning--rollback)
 - [4. UI/UX Guidelines](#4-uiux-guidelines)
   - [4.1. Design Principles](#41-design-principles)
     - [4.1.1. Key Design Objectives](#411-key-design-objectives)
@@ -434,9 +434,9 @@ The following plugins are integrated into the application to enhance functionali
 > [!NOTE]
 > All plugins are vetted for performance and GDPR compliance. Only actively maintained, production-grade plugins are used.
 
-### 3.3. Application Logic
+### 3.4. Application Logic
 
-#### 3.3.1. Workflows
+#### 3.4.1. Workflows
 
 The application logic is primarily implemented using **Bubble's visual workflow engine**, which enables reactive programming by defining sequences of actions triggered by events such as user interactions, data changes, or scheduled backend processes. Each workflow consists of a set of conditionally executed actions, often interacting with Bubble’s database or UI components through custom states and visibility logic. Plugin actions can also be triggered through these workflows.
 
@@ -448,7 +448,7 @@ This section documents the major workflow structures used in the application, in
 > - Sole navigation between pages on user action
 > - Sole appearance/disappearance of elements on the canvas
 
-##### 3.3.1.1. Workflow Execution Model
+##### 3.4.1.1. Workflow Execution Model
 
 In Bubble, workflows are divided into:
 
@@ -458,7 +458,7 @@ In Bubble, workflows are divided into:
 
 All workflows follow a **deterministic execution path**. Actions are executed **sequentially** unless explicitly deferred (e.g., using `schedule API workflow`, `add a pause`, or asynchronous API calls).
 
-##### 3.3.1.2. Core Workflows
+##### 3.4.1.2. Core Workflows
 
 Below are the primary workflow groups and their technical behavior:
 
@@ -545,7 +545,7 @@ graph TD
   - If no matches, set `state_no_match = yes` and render fallback.
   - Logged for improvement analysis in tagging logic.
 
-##### 3.3.1.3. Conditional Logic Handling
+##### 3.4.1.3. Conditional Logic Handling
 
 All workflows implement conditional logic directly within Bubble’s step configuration using the `Only when` clause. Examples include:
 
@@ -553,7 +553,7 @@ All workflows implement conditional logic directly within Bubble’s step config
 - **Role enforcement**: Admin-only workflows (e.g., content validation) are hidden unless `Current User.role = "admin"`
 - **Fallback execution**: Match fallback only runs when both primary queries return empty lists
 
-##### 3.3.1.4. Error Handling and Fallbacks
+##### 3.4.1.4. Error Handling and Fallbacks
 
 Bubble lacks native try/catch logic, so fallback behavior is enforced via:
 
@@ -568,15 +568,9 @@ Logging for errors or unexpected states is handled via a custom data type `Syste
 - Error context
 - Affected user (if applicable)
 
-<!-- ## 📌 Notes
+### 3.5. Data Management
 
-- All workflows are **modularized** using **Custom Events** for reuse and maintainability.
-- Bubble’s **backend workflows** are rate-limited and serialized by default. Concurrent execution is avoided using inter-step dependencies (e.g., conditional filters on input presence).
-- Data privacy and workflow security are enforced by Bubble’s privacy rules and server-side condition checks. -->
-
-### 3.4. Data Management
-
-#### 3.4.1. Database Structure
+#### 3.5.1. Database Structure
 
 ```mermaid
 classDiagram
@@ -595,6 +589,13 @@ classDiagram
         +string location
         +Tag[] tags
         +Label[] labels
+    }
+
+    class System_Log {
+        +date timestamp
+        +string workflow_name
+        +string error_context
+        +user affected_user
     }
 
     class Cheese {
@@ -641,13 +642,13 @@ classDiagram
     Cheese --> "0..*" Label : labels
 ```
 
-### 3.5. Caching & Offline Support
+### 3.6. Caching & Offline Support
 
-#### 3.5.1. Caching Strategy
+#### 3.6.1. Caching Strategy
 
 Bubble.io does not offer native server-side caching on the free tier, but it does support **client-side caching** via the browser and **custom states** for session-local data persistence.
 
-##### A. Types of Caching Used
+##### 3.6.1.1. Types of Caching Used
 
 | Caching Layer       | Type                 | Scope              | Volatility                  | Purpose                                |
 | ------------------- | -------------------- | ------------------ | --------------------------- | -------------------------------------- |
@@ -655,7 +656,7 @@ Bubble.io does not offer native server-side caching on the free tier, but it doe
 | Bubble Custom State | Runtime memory       | Page-level session | Volatile (reset on refresh) | Store selections, filtered lists       |
 | Data Cache          | Implicit from Bubble | App session memory | Volatile                    | Temporarily caches repeated DB queries |
 
-##### B. Caching Strategy Flow
+##### 3.6.1.2. Caching Strategy Flow
 
 ```mermaid
 flowchart TD
@@ -672,13 +673,12 @@ flowchart TD
     I --> Z
 ```
 
-**Key Notes:**
+> [!NOTE]
+> - Custom states avoid redundant DB queries during a session
+> - Repeating group elements benefit from implicit Bubble-level memoization for short durations
+> - Static assets are cached using the browser’s default caching policies
 
-- Custom states avoid redundant DB queries during a session
-- Repeating group elements benefit from implicit Bubble-level memoization for short durations
-- Static assets are cached using the browser’s default caching policies
-
-#### 3.5.2. Offline Support
+#### 3.6.2. Offline Support
 
 Bubble applications are inherently **not designed for offline-first operation**. The frontend is delivered as a web app and requires an internet connection to:
 
@@ -687,7 +687,7 @@ Bubble applications are inherently **not designed for offline-first operation**.
 - Execute workflows
 - Fetch dynamic content
 
-##### A. Offline Behavior
+##### 3.6.2.1. Offline Behavior
 
 | Component               | Behavior Offline                    |
 | ----------------------- | ----------------------------------- |
@@ -697,7 +697,7 @@ Bubble applications are inherently **not designed for offline-first operation**.
 | UI Interactions         | Work if based on custom states      |
 | Local Image Assets      | May load from browser cache         |
 
-##### B. Offline Startup Flow
+##### 3.6.2.2. Offline Startup Flow
 
 ```mermaid
 flowchart TD
@@ -710,7 +710,7 @@ flowchart TD
     F -- Yes --> H[Show fallback / empty state]
 ```
 
-#### 3.5.3. Limitations
+#### 3.6.3. Limitations
 
 | Limitation                      | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
@@ -719,7 +719,7 @@ flowchart TD
 | No background sync              | Changes made offline cannot be queued for upload |
 | No service worker customization | Cannot define offline cache policy manually      |
 
-#### 3.5.4. Recommendations
+#### 3.6.4. Recommendations
 
 To improve perceived performance and prepare for offline-tolerant behavior:
 
@@ -730,9 +730,9 @@ To improve perceived performance and prepare for offline-tolerant behavior:
 > [!NOTE]
 > By default, Bubble does not support offline usage of its apps. Consequently, we will create a PWA as described in the [Bundling & Deployment section](#312-bundling--deployment).
 
-### 3.6. Performance
+### 3.7. Performance
 
-#### 3.6.1. Performance Overview
+#### 3.7.1. Performance Overview
 
 The app runs on Bubble’s shared infrastructure with client-heavy rendering and server-side logic executed through visual workflows.
 
@@ -743,7 +743,7 @@ The app runs on Bubble’s shared infrastructure with client-heavy rendering and
 | Workflows       | Executed on shared compute, limited throughput          |
 | Page Load Times | Acceptable for small datasets (<200 items)              |
 
-#### 3.6.2. Known Bottlenecks
+#### 3.7.2. Known Bottlenecks
 
 The following bottlenecks can be observed as the dataset grows or the app gains more users:
 
@@ -752,15 +752,15 @@ The following bottlenecks can be observed as the dataset grows or the app gains 
 - **UI rendering slowness**: Repeating groups with complex filters cause noticeable delay
 - **File/image loading**: Use of large images slows page load and responsiveness
 
-#### 3.6.3. Performance Optimization Techniques
+#### 3.7.3. Performance Optimization Techniques
 
-##### 3.6.3.1. Database Optimization
+##### 3.7.3.1. Database Optimization
 
 - Use **constraints** inside repeating group searches rather than filtering with `:filtered`
 - Avoid **nested searches** and instead rely on pre-linked data types (e.g., wine → grape → region)
 - Limit the number of items retrieved and use **pagination** or **infinite scroll**
 
-##### 3.6.3.2. Workflow Optimization
+##### 3.7.3.2. Workflow Optimization
 
 | Optimization Strategy                | Description                                                       |
 | ------------------------------------ | ----------------------------------------------------------------- |
@@ -769,13 +769,13 @@ The following bottlenecks can be observed as the dataset grows or the app gains 
 | Break Down Multi-Step Workflows      | Avoid performance drops from long synchronous chains              |
 | Avoid Triggers on Every Input Change | Use debounce logic or buttons to trigger filtering                |
 
-##### 3.6.3.3. UI/UX Optimization
+##### 3.7.3.3. UI/UX Optimization
 
 - Use **reusable elements** to reduce rendering complexity
 - Lazy-load non-critical sections (e.g., recommendations or descriptions)
 - Limit use of conditionals that show/hide elements on every user action
 
-#### 3.6.4. Testing Metrics
+#### 3.7.4. Testing Metrics
 
 Bubble does not expose detailed APM (Application Performance Monitoring) metrics on the free tier, but basic performance observations can be made manually.
 
@@ -786,17 +786,17 @@ Bubble does not expose detailed APM (Application Performance Monitoring) metrics
 | Execute pairing workflow  | 500ms – 1s                          |
 | Image-heavy content       | 3–5 seconds total page render time  |
 
-#### 3.6.5. Performance Recommendations
+#### 3.7.5. Performance Recommendations
 
 - **Prototype scale only**: App should remain under 1000 total database entries (meals + cheeses + wines)
 - **Avoid live search for production**: Use search triggers or batch filters.
 - **Preprocess data externally** if matching logic grows (e.g., using a backend API for pairing calculations).
 
-### 3.7. Scalability
+### 3.8. Scalability
 
 This section outlines the current scalability of the application built on the **Bubble.io free-tier**, as well as its limitations, performance considerations, and upgrade paths to support growth.
 
-#### 3.7.1. Infrastructure and Hosting
+#### 3.8.1. Infrastructure and Hosting
 
 The application runs on **Bubble.io**, a platform with the following integrated features:
 
@@ -808,7 +808,7 @@ The application runs on **Bubble.io**, a platform with the following integrated 
 | Database          | Integrated with Bubble (non-relational, key-value style)    |
 | Frontend          | Built with Bubble’s visual editor using reusable components |
 
-#### 3.7.2. Capabilities on Free Tier
+#### 3.8.2. Capabilities on Free Tier
 
 The free tier enables basic functionality suitable for prototypes, internal demos, and early user testing. Key scalability-related capabilities include:
 
@@ -826,7 +826,7 @@ The free tier enables basic functionality suitable for prototypes, internal demo
 | Monthly Workflows  | \~100–200 (non-intensive)     |
 | External API Calls | Limited (no API scheduling)   |
 
-#### 3.7.3. Limitations on Free Tier
+#### 3.8.3. Limitations on Free Tier
 
 While functional for limited traffic, the free tier imposes key constraints that affect scalability:
 
@@ -846,11 +846,11 @@ While functional for limited traffic, the free tier imposes key constraints that
 | Concurrency        | Not suitable for high-traffic apps         |
 | Scheduled Tasks    | Not available (requires paid plan)         |
 
-#### 3.7.4. Upgrade and Scaling Strategy
+#### 3.8.4. Upgrade and Scaling Strategy
 
 To support scaling as the app gains users or complexity, the following strategy is proposed:
 
-##### 3.7.4.1. Paid Bubble Plans
+##### 3.8.4.1. Paid Bubble Plans
 
 Upgrade to Bubble’s paid plans to unlock:
 
@@ -872,7 +872,7 @@ Upgrade to Bubble’s paid plans to unlock:
 >
 > You can have access to the comprehensive list of features of the **Growth plan** by checking the [Bubble Pricing Page](https://bubble.io/pricing).
 
-##### 3.7.4.2. External API Offloading
+##### 3.8.4.2. External API Offloading
 
 Move compute-heavy logic (e.g., pairing algorithm) to an external backend (Node.js):
 
@@ -887,7 +887,7 @@ graph TD
     API -->|Response: Pairing| User
 ```
 
-#### 3.7.5. Suitability Summary
+#### 3.8.5. Suitability Summary
 
 | Use Case                                 | Free Tier Suitability |
 | ---------------------------------------- | --------------------- |
@@ -897,9 +897,9 @@ graph TD
 | Public Launch (Moderate Traffic)         | ❌ Not Recommended    |
 | High-Traffic Production                  | ❌ Not Supported      |
 
-### 3.8. Security & Privacy
+### 3.9. Security & Privacy
 
-#### 3.8.1. Data Sensitivity & Classification
+#### 3.9.1. Data Sensitivity & Classification
 
 The application primarily stores **publicly accessible product metadata** with no user authentication or personal data collection at this stage.
 
@@ -911,7 +911,7 @@ The application primarily stores **publicly accessible product metadata** with n
 
 Since the application does **not collect user accounts, emails, or payments**, **GDPR/PII compliance** is not currently required.
 
-#### 3.8.2. Access Control
+#### 3.9.2. Access Control
 
 Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at the data type level. In this app:
 
@@ -923,7 +923,7 @@ Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at th
 > [!NOTE]
 > Admins operate directly in the Bubble editor for content curation and updates.
 
-##### 3.8.2.1. Privacy Rule Configuration (Bubble)
+##### 3.9.2.1. Privacy Rule Configuration (Bubble)
 
 | Data Type | Who Can View | Who Can Modify | Notes                            |
 | --------- | ------------ | -------------- | -------------------------------- |
@@ -933,7 +933,7 @@ Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at th
 | Tag       | Everyone     | Admin only     |                                  |
 | Label     | Everyone     | Admin only     |                                  |
 
-##### 3.8.2.2. Access Limitations
+##### 3.9.2.2. Access Limitations
 
 | Data Type | Public User Access | Admin Access (via Bubble Editor) | Notes                                   |
 | --------- | ------------------ | -------------------------------- | --------------------------------------- |
@@ -943,7 +943,7 @@ Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at th
 | Tag       | Read-only          | Full CRUD                        | Taxonomy data                           |
 | Label     | Read-only          | Full CRUD                        | Descriptive metadata only               |
 
-#### 3.8.3. Data Transmission & Storage Security
+#### 3.9.3. Data Transmission & Storage Security
 
 | Vector             | Protection Level         | Notes                                     |
 | ------------------ | ------------------------ | ----------------------------------------- |
@@ -952,7 +952,7 @@ Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at th
 | File/Image Storage | Bubble CDN               | Cached securely with read-only links      |
 | Public API Access  | Disabled                 | Avoids uncontrolled exposure of data      |
 
-#### 3.8.4. Privacy Policy Considerations
+#### 3.9.4. Privacy Policy Considerations
 
 While the app doesn’t collect personal data today, the following considerations should be prepared for future expansion:
 
@@ -961,7 +961,7 @@ While the app doesn’t collect personal data today, the following consideration
 - **Future user accounts**: If added, must include Terms of Service and Privacy Policy documents
 - **External APIs**: If using wine/cheese APIs, ensure compliance with their usage and storage guidelines
 
-#### 3.8.5. Platform Limitations (Free Tier)
+#### 3.9.5. Platform Limitations (Free Tier)
 
 | Limitation                          | Impact                                 |
 | ----------------------------------- | -------------------------------------- |
@@ -970,7 +970,7 @@ While the app doesn’t collect personal data today, the following consideration
 | No DDoS protection or rate-limiting | May be vulnerable to excessive traffic |
 | No version rollback or backups      | Data loss if accidentally deleted      |
 
-#### 3.8.6. Risk Mitigation
+#### 3.9.6. Risk Mitigation
 
 | Risk                               | Mitigation Strategy                         |
 | ---------------------------------- | ------------------------------------------- |
@@ -980,34 +980,34 @@ While the app doesn’t collect personal data today, the following consideration
 | Downtime (Bubble-level outage)     | Communicate via status page or social media |
 | Future GDPR compliance (if needed) | Add cookie banner, ToS, and Privacy Policy  |
 
-### 3.9. Accessibility
+### 3.10. Accessibility
 
 > [!WARNING]
 > Accessibility testing will be part of the QA acceptance criteria prior to production release.
 
-#### 3.9.1. Standards Compliance
+#### 3.10.1. Standards Compliance
 
 - The application shall conform to **[WCAG 2.1 Level AA](https://www.w3.org/TR/WCAG21/)** guidelines.
 - All accessibility features shall be tested against standard assistive technologies (e.g., screen readers).
 
-#### 3.9.2. Visual Accessibility
+#### 3.10.2. Visual Accessibility
 
 - All text elements shall maintain a **minimum contrast ratio of 4.5:1** relative to their background.
 - The UI shall support **text scaling** via system/browser zoom settings up to 200% without loss of functionality or content.
 - The default font is **Inter**, selected for readability at multiple sizes and weights.
 
-#### 3.9.3. Input Accessibility
+#### 3.10.3. Input Accessibility
 
 - All interactive elements (buttons, links, form fields) shall have a **minimum hit area of 44x44px**.
 - Inputs should indicate their purpose and expected value format.
 
-#### 3.9.4. Screen Reader & Semantic Support
+#### 3.10.4. Screen Reader & Semantic Support
 
 - All form inputs and controls shall include **[aria-roledescriptions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription)**, **[aria-labels](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)**, and **[aria-descriptions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)** as applicable.
 - All images, icons, and non-text elements shall include **meaningful alt text** or **[ARIA-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)="true"** if decorative.
 - Dynamic content updates shall be announced via **[ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)** where necessary.
 
-#### 3.9.5. Language & Internationalization
+#### 3.10.5. Language & Internationalization
 
 - The default UI language shall be **English**, with **French** provided as an alternative via Bubble's [Localize Translation Plugin](https://help.localizejs.com/docs/bubble).
 - Cultural formatting (e.g., date, currency, measurement units) shall follow ISO standards by default and be formatted in the standard format of the locale.
@@ -1016,22 +1016,22 @@ While the app doesn’t collect personal data today, the following consideration
 > [!NOTE]
 > Further details for this section are described in the [3.10. Localization & Internationalization section](#310-localization--internationalization)
 
-#### 3.9.6. Error Handling & Validation
+#### 3.10.6. Error Handling & Validation
 
 - All form inputs shall include:
   - **Client-side validation** with clear, accessible [error messages](https://www.w3.org/TR/WCAG21/#status-messages).
   - **[ARIA-invalid](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)** attributes where applicable.
   - **[Tooltips or helper text](https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus)** to explain input requirements before submission.
 
-#### 3.9.7. Mobile Accessibility
+#### 3.10.7. Mobile Accessibility
 
 - The UI shall be fully responsive and accessible on any mobile devices.
 - Tap targets shall comply with **[minimum spacing guidelines](https://www.w3.org/TR/WCAG21/#text-spacing)** to avoid interaction errors.
 - All touch gestures (e.g., scrolling, tapping) shall have accessible alternatives where required.
 
-### 3.10. Localization & Internationalization
+### 3.11. Localization & Internationalization
 
-#### 3.10.1. Architecture Overview
+#### 3.11.1. Architecture Overview
 
 | Layer                  | Responsibility                                                                |
 | ---------------------- | ----------------------------------------------------------------------------- |
@@ -1040,13 +1040,13 @@ While the app doesn’t collect personal data today, the following consideration
 | **Content Sync**       | Automatically push Bubble text elements to Localize on change.                |
 | **User Context**       | Detect language via browser or device locale; override via user settings.     |
 
-#### 3.10.2. Language Support
+#### 3.11.2. Language Support
 
 - **Primary Locale**: `en-US`
 - **Secondary Locale(s)**: `fr-FR`, `de-DE`, `gr-GR`, `ar-AR`, `es-ES`, `cn-CN`
 - All content updates are reflected in real-time after approval in the Localize dashboard.
 
-#### 3.10.3. Integration Pipeline
+#### 3.11.3. Integration Pipeline
 
 ```mermaid
 graph LR
@@ -1056,7 +1056,7 @@ graph LR
   E[Device/Browser Locale Detection] --> D
 ```
 
-#### 3.10.4. Key Features
+#### 3.11.4. Key Features
 
 - **Automatic Key Extraction**: Texts wrapped in Localize tags are detected and synced.
 - **Dynamic Text Replacement**: Keys are swapped at runtime based on active locale.
@@ -1064,13 +1064,13 @@ graph LR
 - **Fallback Strategy**: If a translation key is missing, default (`fr-FR`) is displayed.
 - **Admin Workflow**: Translations are reviewed and published via the Localize dashboard.
 
-#### 3.10.5. Developer Notes
+#### 3.11.5. Developer Notes
 
 - All UI components must use text elements or HTML blocks supported by the Localize plugin.
 - Avoid hardcoded strings outside of Bubble text fields to ensure complete i18n coverage.
 - Translation keys should follow consistent naming (e.g., `menu.header.title`) for maintainability.
 
-#### 3.10.6. Compliance
+#### 3.11.6. Compliance
 
 - All language handling respects **GDPR**, with no personally identifiable information sent to Localize.
 - Users can manually override their preferred language via a settings popup with the locale value stored in local storage.
@@ -1078,9 +1078,9 @@ graph LR
 > [!NOTE]
 > Localize API usage is monitored; rate limits and quota should be validated for production readiness.
 
-### 3.11. Error Handling & Logging
+### 3.12. Error Handling & Logging
 
-#### 3.11.1. Error Handling Strategy
+#### 3.12.1. Error Handling Strategy
 
 | Type                  | Handling Approach                                                              |
 | --------------------- | ------------------------------------------------------------------------------ |
@@ -1090,7 +1090,7 @@ graph LR
 | **Navigation Errors** | Redirect to a fallback page with a descriptive message (e.g., 404 or timeout). |
 | **Unhandled Errors**  | Log silently and prompt the user to refresh or restart the session.            |
 
-#### 3.11.2. Logging & Monitoring
+#### 3.12.2. Logging & Monitoring
 
 | Component       | Implementation                                                                                                                      |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -1099,13 +1099,13 @@ graph LR
 | **Third-party** | Canvas by Mobiloud ([Section 3.12](#312-bundling--deployment)) logs network and native wrapper errors accessible via its dashboard. |
 | **Analytics**   | Optional integration with tools like Google Analytics or LogSnag for error funnel tracking.                                         |
 
-#### 3.11.3. Developer Access
+#### 3.12.3. Developer Access
 
 - Bubble Logs and error traces are accessible via the **Logs** tab.
 - Real-time error monitoring requires **Bubble Professional** plan or above.
 - Canvas crash logs (native) can be exported on demand from the MobiLoud admin panel.
 
-#### 3.11.4. User Feedback Loop
+#### 3.12.4. User Feedback Loop
 
 - When a critical error is detected, the app prompts users to submit optional feedback via a lightweight form, described in the [functional specifications](../functional_specification/functional_specification.md)
 - Non-blocking UI errors are logged silently and reviewed during regular QA cycles.
@@ -1113,12 +1113,12 @@ graph LR
 > [!NOTE]
 > No personal data is captured in logs. All error logs are anonymized in compliance with [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679).
 
-### 3.12. Bundling & Deployment
+### 3.13. Bundling & Deployment
 
 > [!IMPORTANT]
 > Mobile bundling and deployment will remain in **preview** only and will not proceed to **full release** due to current cost constraints.
 
-#### 3.12.1. Overview
+#### 3.13.1. Overview
 
 | Stage   | Description                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------- |
@@ -1128,7 +1128,7 @@ graph LR
 | Package | Generate platform-ready binaries.                                                           |
 | Release | Publish to distribution channels.                                                           |
 
-#### 3.12.2. Pipeline Diagram
+#### 3.13.2. Pipeline Diagram
 
 ```mermaid
 graph TD
@@ -1139,7 +1139,7 @@ graph TD
   E --> F[Deploy to Targets]
 ```
 
-#### 3.12.3. Stage Breakdown
+#### 3.13.3. Stage Breakdown
 
 ##### 1. Build
 
@@ -1180,7 +1180,7 @@ graph TD
   - Live updates handled via Bubble.
   - Native wrapper updates through app store resubmission when required.
 
-#### 3.12.4. Artifact Structure
+#### 3.13.4. Artifact Structure
 
 ```
 dist/
@@ -1194,7 +1194,7 @@ dist/
     └── translations/
 ```
 
-#### 3.12.5. Versioning & Rollback
+#### 3.13.5. Versioning & Rollback
 
 - **Versioning**: Follows Semantic Versioning (`MAJOR.MINOR.PATCH`)
 - **Rollback**: Previous builds retained for 3 versions; Bubble logic can be hot-fixed without republishing the wrapper.
