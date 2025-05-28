@@ -211,7 +211,8 @@ Additional functional checks include:
 
 Test cases will be created for each feature and user interaction described in the scope of testing. These cases will be updated iteratively as new features are added or bugs are discovered. Each test case will include an **ID**, **description**, **test steps**, **expected result**, **actual result**, and a **status** that tracks multiple test iterations. Testing will continue through successive iterations until the feature passes all relevant test cases.
 
-Test cases will be managed via GitHub Issues for efficient tracking and version control, and documented in the `TestCases.md` file to ensure traceability and team visibility.
+Test cases will be managed via GitHub Issues for efficient tracking and version control, and documented in the [`test_cases.md`](./test_cases.md) file to ensure traceability and team visibility.
+
 
 Test coverage will focus on the main user journey (meal selection → filtering → recommendation), edge cases, and interface behavior.
 
@@ -315,7 +316,6 @@ To resume the testing phase, the cause of the suspension should have been identi
 | Test Plan                     | 1 Major Releases with daily iterations for refinement |
 | Test Cases Description        | 1 Major Releases with daily iterations for refinement |
 | Test Reports                  | Released after each test session                      |
-| Testing resources and scripts | 1 Major Releases with daily iterations for refinement |
 
 ## 9. Glossary
 
