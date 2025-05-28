@@ -140,12 +140,12 @@ The client is "Intermarché Saint-Rémy-de-Provence". Our contact points are Cé
 
 #### 1.3.1. Vision
 
-The vision of our application is to provide Intermarché's customers best wine and cheese associations with the dish they plan cooking, with the potential to retrieve the product they look for in the supermarket.
+The vision of our application is to provide Intermarché's customers with the best wine and cheese pairings for the dish they plan to cook, with the potential to retrieve the product they look for in the supermarket.
 
 #### 1.3.2. Objectives
 
-- **Helping client find meal assortiment**: The application should allow the user to find wine or cheese without any human help.
-- **Bringing discovery to client**: The application should permit the client to discover new and local ingredients/wines. It would allow the client to have a new experience with the French culture.
+- **Helping the client find meal assortiment**: The application should allow the user to find wine or cheese without any human help.
+- **Bringing discovery to the client**: The application should permit the client to discover new and local ingredients/wines. It would allow the client to have a new experience with the French culture.
 - **Ease of use**: The application should be totally user-friendly and compatible in many languages. The application should be quick to use no more than 3 pages to navigate through-and accessible without connection.
 
 #### 1.3.3. Scope
@@ -464,7 +464,7 @@ Below are the primary workflow groups and their technical behavior:
 
 ###### Workflow A : Localization on App Load
 
-- **Page**:
+- **Page**: `All pages`
 - **Trigger**: `Page is loaded`
 - **Preconditions**:
   - Localize Translation Plugin is active.
@@ -488,6 +488,7 @@ graph TD
 
 ###### Workflow B: User-Initiated Language Change
 
+- **Page**: `/home`
 - **Trigger**: `User selects language from popup`
 - **Preconditions**:
   - Localize plugin loaded and UI wrapped in translatable tags.
@@ -506,6 +507,7 @@ graph TD
 
 ###### Workflow C : Tag-Based Dish Search
 
+- **Page**: `/search`
 - **Trigger**: `User types into search input`
 - **Preconditions**:
   - Minimum 2 characters entered.
@@ -524,6 +526,7 @@ graph TD
 
 ###### Workflow D : Wine/Cheese Recommendation by Tags
 
+- **Page**: `/wine`, `/cheese` & `/dish`
 - **Trigger**: `User selects a dish (selected_dish ≠ null)`
 - **Preconditions**:
   - Valid tags are extracted from the selected dish.
@@ -674,6 +677,7 @@ flowchart TD
 ```
 
 > [!NOTE]
+>
 > - Custom states avoid redundant DB queries during a session
 > - Repeating group elements benefit from implicit Bubble-level memoization for short durations
 > - Static assets are cached using the browser’s default caching policies
@@ -757,7 +761,7 @@ The following bottlenecks can be observed as the dataset grows or the app gains 
 ##### 3.7.3.1. Database Optimization
 
 - Use **constraints** inside repeating group searches rather than filtering with `:filtered`
-- Avoid **nested searches** and instead rely on pre-linked data types (e.g., wine → grape → region)
+- Avoid **nested searches** and instead rely on pre-linked data types (e.g., wine → red → <8% → spicy)
 - Limit the number of items retrieved and use **pagination** or **infinite scroll**
 
 ##### 3.7.3.2. Workflow Optimization
@@ -928,18 +932,18 @@ Bubble provides **Role-Based Access Control (RBAC)** via **privacy rules** at th
 | Data Type | Who Can View | Who Can Modify | Notes                            |
 | --------- | ------------ | -------------- | -------------------------------- |
 | Wine      | Everyone     | Admin only     | Metadata only, no sensitive data |
-| Cheese    | Everyone     | Admin only     |                                  |
-| Dish      | Everyone     | Admin only     |                                  |
-| Tag       | Everyone     | Admin only     |                                  |
-| Label     | Everyone     | Admin only     |                                  |
+| Cheese    | Everyone     | Admin only     | /                                |
+| Dish      | Everyone     | Admin only     | /                                |
+| Tag       | Everyone     | Admin only     | /                                |
+| Label     | Everyone     | Admin only     | /                                |
 
 ##### 3.9.2.2. Access Limitations
 
 | Data Type | Public User Access | Admin Access (via Bubble Editor) | Notes                                   |
 | --------- | ------------------ | -------------------------------- | --------------------------------------- |
 | Wine      | Read-only          | Full CRUD                        | Only metadata; no sensitive information |
-| Cheese    | Read-only          | Full CRUD                        |                                         |
-| Dish      | Read-only          | Full CRUD                        |                                         |
+| Cheese    | Read-only          | Full CRUD                        | /                                       |
+| Dish      | Read-only          | Full CRUD                        | /                                       |
 | Tag       | Read-only          | Full CRUD                        | Taxonomy data                           |
 | Label     | Read-only          | Full CRUD                        | Descriptive metadata only               |
 
@@ -1228,15 +1232,15 @@ The Intermarché Wine & Cheese Pairing App is designed for **tourists and non-ex
 
 #### 4.2.1. Color Palette
 
-| Name             | Preview                                                                                 | Hex     | RGB              |
-| ---------------- | --------------------------------------------------------------------------------------- | ------- | ---------------- |
-| Primary          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/E00E1F'/></a>  | #E00E1F | rgb(224,14,31)   |
-| Primary Contrast | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/DECE9C'/></a>  | #DECE9C | rgb(222,206,156) |
-| Text             | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/000000'/></a>  | #000000 | rgb(0,0,0)       |
-| Surface          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/F1F1F2'/></a>  | #F1F1F2 | rgb(241,241,242) |
-| Background       | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/FFFFFF'/></a>  | #FFFFFF | rgb(255,255,255) |
-| Destructive      | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/B0200C'/></a>  | #B0200C | rgb(176,32,12)   |
-| Success          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/1E6C30'/></a>  | #1E6C30 | rgb(30,108,48)   |
+| Name             | Preview                                                                                | Hex     | RGB              |
+| ---------------- | -------------------------------------------------------------------------------------- | ------- | ---------------- |
+| Primary          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/E00E1F'/></a> | #E00E1F | rgb(224,14,31)   |
+| Primary Contrast | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/DECE9C'/></a> | #DECE9C | rgb(222,206,156) |
+| Text             | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/000000'/></a> | #000000 | rgb(0,0,0)       |
+| Surface          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/F1F1F2'/></a> | #F1F1F2 | rgb(241,241,242) |
+| Background       | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/FFFFFF'/></a> | #FFFFFF | rgb(255,255,255) |
+| Destructive      | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/B0200C'/></a> | #B0200C | rgb(176,32,12)   |
+| Success          | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/1E6C30'/></a> | #1E6C30 | rgb(30,108,48)   |
 | Alert            | <a href='#'><img valign='middle' src='https://readme-swatches.vercel.app/DCA114'/></a> | #DCA114 | rgb(220,161,20)  |
 
 To set those colors as the default colors in the application, click **Styles > Style Variables > Colors** and apply the value of the color to the corresponding name.
