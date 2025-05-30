@@ -167,9 +167,79 @@ This week was focused on consolidating the project foundations. We finalized key
 
 This week marked a key turning point in the project. With finalized functional specifications and clearer alignment with the client, we’ve moved out of the planning phase and into execution. Julien’s guidance has accelerated our technical understanding of Bubble, giving us the confidence to push forward. While minor setbacks in communication and motivation surfaced, we are actively addressing them. The team is committed to moving ahead with clarity, unity, and renewed energy to deliver a polished and impactful product.
 
-## Weekly Report - Week 5
+## Weekly Report – Week 5
 
-## Weekly Report - Week 6
+**Schedule Status:** 🟢 *On Track*
+
+### Overview
+
+This week was dedicated to advancing our technical documentation, particularly the technical specifications and test plan. These documents will form the foundation for the upcoming development and testing phases of the project.
+
+### Accomplishments
+
+1. **Technical Specifications Progress**
+   - We completed the majority of the technical specifications. Special attention was given to structure and clarity to ensure the document is both comprehensive and easy to follow.
+2. **Drafted the Test Plan**
+   - A first version of our test plan has been written. It includes the core testing strategy and key test cases derived from our analysis of the application’s main features and expected user flows.
+3. **Ongoing App Design in Bubble**
+   - We continued designing the interface in Bubble. The structure is now almost ready for us to begin implementing the application logic next week.
+
+### Challenges
+
+1. **Maintaining Consistency in Technical Specifications**
+   - It was challenging to maintain consistency and avoid redundancy while ensuring all important aspects were clearly documented.
+2. **Aligning on Testing Scope**
+   - There were differing views on what should be tested. After a team-wide discussion, we reached a shared understanding and finalized the scope of the initial test plan.
+
+### Plans for Next Week
+
+1. **Complete Technical Specifications**
+   - Finalize the remaining sections of the technical documentation, especially those related to application logic, so development can proceed smoothly.
+2. **Finalize the Test Plan**
+   - Complete the test plan to ensure we are ready to test all core functionalities once development begins.
+3. **Begin Implementing Logic in Bubble**
+   - With documentation in place, we will start implementing workflows and logic within Bubble to bring the application to life.
+
+### Conclusion
+
+This week marked a major shift from planning to execution. With technical specifications nearly finalized and a test plan underway, we’re setting the stage for focused development and iterative user testing. The team is motivated and aligned, and we’re confident that this strong foundation will lead to a smooth and efficient development phase. We're getting closer to delivering a user-ready solution that meets both client expectations and market needs.
+
+## Weekly Report – Week 6
+
+**Schedule Status:** 🔵 *Ahead of Schedule (Test Plan)*
+
+### Overview
+
+This week was split into two key phases: finalizing the project documentation during the first half and initiating the development phase in the second half, with the goal of anticipating next week's testing kick-off.
+
+### Accomplishments
+
+1. **Finalized Technical Specifications**
+
+   * The technical specifications were completed and submitted on time, covering all necessary functional and technical details relevant to the project.
+2. **Completed Testing Documents and Strategy**
+
+   * The full testing strategy has been defined, and all supporting documents are ready for the upcoming testing phase.
+3. **Page Design Nearing Completion**
+
+   * Most application pages have been designed in Bubble, allowing us to shift our focus to logic implementation and initial user testing.
+
+### Challenges
+
+* No significant challenges were encountered this week.
+
+### Plan for Next Week
+
+1. **Continue Logic Implementation**
+
+   * We aim to complete the main algorithm implementations by Wednesday, June 4th.
+2. **Initiate User Testing**
+
+   * We will begin user testing directly at Intermarché in Issoudun, enabling us to gather early feedback and validate our design and feature choices.
+
+### Conclusion
+
+This week was marked by strong momentum and meaningful progress. With our documentation finalized and development well underway, we're positioned to begin user testing ahead of schedule. This early feedback loop will allow us to iterate faster and ensure our product is aligned with both user needs and client expectations. We remain confident in our ability to deliver a high-quality and impactful solution.
 
 ## Weekly Report - Week 7
 
