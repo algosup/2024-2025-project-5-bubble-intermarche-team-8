@@ -42,6 +42,13 @@
       - [3.4.1.4. Error Handling and Fallbacks](#3414-error-handling-and-fallbacks)
   - [3.5. Data Management](#35-data-management)
     - [3.5.1. Database Structure](#351-database-structure)
+    - [3.5.2. Database Explanation](#352-database-explanation)
+      - [3.5.2.1. System\_Log](#3521-system_log)
+      - [3.5.2.2. Dish](#3522-dish)
+      - [3.5.3.3. Wine](#3533-wine)
+      - [3.5.3.4. Cheese](#3534-cheese)
+      - [3.5.3.5. Tag](#3535-tag)
+      - [3.5.3.6. Label](#3536-label)
   - [3.6. Caching \& Offline Support](#36-caching--offline-support)
     - [3.6.1. Caching Strategy](#361-caching-strategy)
       - [3.6.1.1. Types of Caching Used](#3611-types-of-caching-used)
@@ -631,7 +638,7 @@ classDiagram
         +float price
         +string itm_website
         +string region
-        +string location
+        +string[] location
         +Tag[] tags
         +Label[] labels
     }
@@ -664,6 +671,81 @@ classDiagram
     Wine --> "0..*" Label : labels
     Cheese --> "0..*" Label : labels
 ```
+
+#### 3.5.2. Database Explanation
+
+This section contains the explanation about the type of content contained in each of the fields.
+
+##### 3.5.2.1. System_Log
+
+| Property      | Type   | Represented Data                                         |
+| ------------- | ------ | -------------------------------------------------------- |
+| timestamp     | date   | The date at which the error occured                      |
+| workflow_name | string | The name of the workflow during which the error happened |
+| error_context | string | The stacktrace of the error given by Bubble              |
+| affected_user | User   | The user affected by the error                           |
+
+##### 3.5.2.2. Dish
+
+| Property    | Type   | Represented Data                                           |
+| ----------- | ------ | ---------------------------------------------------------- |
+| id          | int    | Unique identifier for the dish                             |
+| name        | string | The name of the dish                                       |
+| image       | image  | A visual representation of the dish                        |
+| description | string | A brief description of the dish                            |
+| tags        | Tag\[] | Tags describing characteristics, ingredients, or meal type |
+
+##### 3.5.3.3. Wine
+
+| Property       | Type      | Represented Data                                                  |
+| -------------- | --------- | ----------------------------------------------------------------- |
+| id             | int       | Unique identifier for the wine                                    |
+| name           | string    | Name of the wine                                                  |
+| image          | image     | Picture of the wine bottle                                        |
+| description    | string    | Short description of the wine (taste, origin, etc.)               |
+| itm8           | int       | Intermarché internal identifier (ITM8)                            |
+| ean            | int       | EAN barcode number                                                |
+| price          | float     | Price of the wine                                                 |
+| taste          | string    | Main taste notes (e.g., fruity, dry, woody)                       |
+| alcohol_degree | string    | Alcohol content (e.g., "13%")                                     |
+| itm_website    | string    | URL to the product page on the Intermarché website                |
+| region         | string    | Geographical region of production (e.g., Bordeaux, Rhône)         |
+| location       | string\[] | Location in the supermarket with the steps to acccess the product |
+| tags           | Tag\[]    | Tags indicating characteristics (e.g., taste, food pairing, etc.) |
+| labels         | Label\[]  | Labels such as AOP, IGP, organic certifications                   |
+
+##### 3.5.3.4. Cheese
+
+| Property    | Type      | Represented Data                                                  |
+| ----------- | --------- | ----------------------------------------------------------------- |
+| id          | int       | Unique identifier for the cheese                                  |
+| name        | string    | Name of the cheese                                                |
+| image       | image     | Image of the cheese                                               |
+| description | string    | Description of the cheese (origin, texture, flavor profile)       |
+| itm8        | int       | Intermarché internal identifier (ITM8)                            |
+| ean         | int       | EAN barcode                                                       |
+| price       | float     | Price of the cheese                                               |
+| itm_website | string    | URL to the product page on the Intermarché website                |
+| region      | string    | Geographical region of production (e.g., Auvergne, Normandy)      |
+| location    | string\[] | Location in the supermarket with the steps to acccess the product |
+| tags        | Tag\[]    | Tags like milk type, taste, texture, seasonality, etc.            |
+| labels      | Label\[]  | Official labels or certifications (e.g., AOP, AB, IGP)            |
+
+##### 3.5.3.5. Tag
+
+| Property | Type   | Represented Data                                          |
+| -------- | ------ | --------------------------------------------------------- |
+| id       | int    | Unique identifier for the tag                             |
+| name     | string | Name of the tag (e.g., "Goat milk", "Spicy", "Winter")    |
+| category | string | Category the tag belongs to (e.g., "milk_type", "season") |
+
+##### 3.5.3.6. Label
+
+| Property    | Type   | Represented Data                                 |
+| ----------- | ------ | ------------------------------------------------ |
+| name        | string | Name of the label (e.g., AOP, IGP, Organic)      |
+| description | string | Explanation of what the label means or certifies |
+| image       | image  | Logo or visual representation of the label       |
 
 ### 3.6. Caching & Offline Support
 
