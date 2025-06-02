@@ -45,10 +45,10 @@
     - [3.5.2. Database Explanation](#352-database-explanation)
       - [3.5.2.1. System\_Log](#3521-system_log)
       - [3.5.2.2. Dish](#3522-dish)
-      - [3.5.3.3. Wine](#3533-wine)
-      - [3.5.3.4. Cheese](#3534-cheese)
-      - [3.5.3.5. Tag](#3535-tag)
-      - [3.5.3.6. Label](#3536-label)
+      - [3.5.2.3. Wine](#3523-wine)
+      - [3.5.2.4. Cheese](#3524-cheese)
+      - [3.5.2.5. Tag](#3525-tag)
+      - [3.5.2.6. Label](#3526-label)
   - [3.6. Caching \& Offline Support](#36-caching--offline-support)
     - [3.6.1. Caching Strategy](#361-caching-strategy)
       - [3.6.1.1. Types of Caching Used](#3611-types-of-caching-used)
@@ -695,7 +695,7 @@ This section contains the explanation about the type of content contained in eac
 | description | string | A brief description of the dish                            |
 | tags        | Tag\[] | Tags describing characteristics, ingredients, or meal type |
 
-##### 3.5.3.3. Wine
+##### 3.5.2.3. Wine
 
 | Property       | Type      | Represented Data                                                  |
 | -------------- | --------- | ----------------------------------------------------------------- |
@@ -714,7 +714,7 @@ This section contains the explanation about the type of content contained in eac
 | tags           | Tag\[]    | Tags indicating characteristics (e.g., taste, food pairing, etc.) |
 | labels         | Label\[]  | Labels such as AOP, IGP, organic certifications                   |
 
-##### 3.5.3.4. Cheese
+##### 3.5.2.4. Cheese
 
 | Property    | Type      | Represented Data                                                  |
 | ----------- | --------- | ----------------------------------------------------------------- |
@@ -731,7 +731,7 @@ This section contains the explanation about the type of content contained in eac
 | tags        | Tag\[]    | Tags like milk type, taste, texture, seasonality, etc.            |
 | labels      | Label\[]  | Official labels or certifications (e.g., AOP, AB, IGP)            |
 
-##### 3.5.3.5. Tag
+##### 3.5.2.5. Tag
 
 | Property | Type   | Represented Data                                          |
 | -------- | ------ | --------------------------------------------------------- |
@@ -739,7 +739,7 @@ This section contains the explanation about the type of content contained in eac
 | name     | string | Name of the tag (e.g., "Goat milk", "Spicy", "Winter")    |
 | category | string | Category the tag belongs to (e.g., "milk_type", "season") |
 
-##### 3.5.3.6. Label
+##### 3.5.2.6. Label
 
 | Property    | Type   | Represented Data                                 |
 | ----------- | ------ | ------------------------------------------------ |
