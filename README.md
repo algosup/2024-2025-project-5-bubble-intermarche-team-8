@@ -7,7 +7,9 @@ This repository contains every document about BiteMatch, an application suggesti
 ## Definition <!-- omit in toc -->
 
 BiteMatch is a mobile application created on Bubble. It was requested by Intermarché Saint-Rémy-de-Provence, France. \
-This application allow the consumer to search for a specific wine/cheese directly from the application. It also allows them to test new traditional meal with their predefined meals in the home page. Each ot them is linked to 2 or 3 wines and cheeses.
+This application allows the consumer to search for a specific wine/cheese directly from the application. It also allows them to test new traditional meals via predefined meal cards on the home page. Each of them is linked to 2 or 3 wines and cheeses.
+
+> **Technical Architecture**: The app is built with [Bubble](https://bubble.io) and wrapped for mobile using [MobiLoud Canvas](https://mobiloud.com), making it compatible with Android 13+ and iOS 17+.
 
 ---
 
@@ -34,7 +36,7 @@ This application allow the consumer to search for a specific wine/cheese directl
 
 ## Status
 
-This project is currently evolving and will be improved regularly until the 20 of June. After this date, updates will be made in a less regular basis.
+This project is currently evolving and will be improved regularly until June 20. After this date, updates will be less frequent.
 
 However, we invite you to help us contribute to this project! \
 If you are interested, please refer to the [Contributing](#contributing) part.
@@ -63,6 +65,11 @@ You have found your wine/cheese, you can now look for more detailed information 
 >   - Taste (for wine).
 >   - Labels.
 
+> [!NOTE]
+>
+> - The search bar supports tag-based filtering (e.g., by taste, occasion, dietary constraints).
+> - The recommendation engine uses metadata stored in a structured Bubble database and is executed via Bubble Workflows.
+
 ---
 
 ### How to Find the Perfect Match for a Traditional Meal
@@ -76,6 +83,9 @@ You are now on the description page of the wine you want to buy.
 
 > [!NOTE]
 > The user can click on the cheese tab to select a cheese.
+
+> [!NOTE]
+> Matches are generated dynamically based on dish tags using visual workflows in Bubble (Workflow D: Tag-Based Pairing).
 
 ---
 
@@ -108,6 +118,9 @@ The application is available with the following code:
 E-mail: <> \
 Password: \ -->
 
+> [!NOTE]
+> Bubble applications are web-hosted. Installation for local development is not applicable. The repository mainly contains documentation and assets.
+
 ---
 
 ## Roadmap
@@ -133,30 +146,32 @@ This Roadmap is an estimation of the time that will take the project to be accom
 
 ### Built With
 
-This Project was coded in a no-code language called [Bubble](https://bubble.io/home/apps).
+This project was built with [Bubble.io](https://bubble.io), a no-code visual development platform. It combines frontend UI design, backend workflows, and database management in a unified environment.
 
-You can also refer to their [Academy](https://bubble.io/academy) to learn more about the language.
-
-<!-- TODO: In case we need any.
-Finally, here are a list of the different plugins used during the project:
-
-| Name | Description |
-| ---- | ----------- |
-||| -->
+> - **Frontend**: Bubble UI Builder (drag-and-drop)
+> - **Logic**: Bubble Workflow Engine (conditional and sequential logic)
+> - **Database**: Bubble DB (non-relational, key-value structure)
+> - **Localization**: Localize.js plugin integration
+> - **Mobile Bundling**: Wrapped using MobiLoud Canvas
 
 ---
 
 ### Prerequisites
 
-The only prerequisites to use Bubble is to have an account in the free plan at least.
+- A **Bubble account** (Free Tier is sufficient)
+- No programming skills required, but knowledge of visual app-building and workflows is recommended.
 
-<!-- The applicaion also needs the basic plugins discribed above, their installation guides are written in the [Technical Specification](./documents/technical_specification/technical_specification.md). -->
+> [!TIP]
+> This project uses **Localize Translation Plugin** and **Feather Icons Plugin**. Refer to the [Technical Specifications](./documents/technical_specification/technical_specification.md#33-bubble-plugins-used) for details.
 
 ---
 
 ## Contributing
 
 To contribute to our project, follow the conventions written in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+
+> [!IMPORTANT]
+> Contributors must follow [Bubble naming conventions](./documents/technical_specification/conventions.md) and use defined reusable styles (`styles.md`) for UI consistency.
 
 ---
 
@@ -165,6 +180,9 @@ To contribute to our project, follow the conventions written in the [CONTRIBUTIN
 **Latest**: NULL \
 **Curren**t: NULL \
 **Version List**: [Click to view](https://github.com/algosup/2024-2025-project-5-bubble-intermarche-team-8/tags)
+
+> [!NOTE]
+> Versioning follows **Semantic Versioning** (`MAJOR.MINOR.PATCH`). Deployment changes are handled via Bubble’s built-in version manager and MobiLoud configuration dashboard.
 
 ---
 

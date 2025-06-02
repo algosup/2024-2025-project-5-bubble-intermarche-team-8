@@ -1,7 +1,7 @@
-# 🧪 Test Plan
+# 🧪 Bite Match - Test Plan
 
 ## 📑 Table of Contents
-- [🧪 Test Plan](#-test-plan)
+- [🧪 Bite Match - Test Plan](#-bite-match---test-plan)
   - [📑 Table of Contents](#-table-of-contents)
   - [1. Introduction](#1-introduction)
   - [2. Test Environment](#2-test-environment)
@@ -41,9 +41,6 @@
 ## 1. Introduction
 This document outlines the test plan for **Bite Match** which is a recommendation app developed for **Intermarché Saint-Rémy-de-Provence**. The app provides personalized **cheese and wine suggestions** based on the user's chosen **meal**. The goal of this test plan is to ensure the application is functionally stable, user-friendly, and ready for in-store usage.
 
-
----
-
 ## 2. Test Environment
 
 The test environment includes all the hardware, software, and configurations required to execute and validate the test cases. It is designed to reflect the real conditions under which the app will be used.
@@ -73,11 +70,7 @@ Testing will be performed on the following devices to ensure proper functionalit
 
 ### 🔐 Data & Configuration
 - **Test database**: A duplicate of the live database used to validate data accuracy without affecting real entries.
-- **Languages**: English, French..
-
-
----
-
+- **Languages**: English, French.
 
 ## 3. Scope of Testing
 
@@ -97,11 +90,6 @@ The scope of testing of our recommendation app encompasses all key requirements 
 - Back-office or admin-side content management
 - AI-generated meal suggestions 
 - Advanced analytics or user behavior tracking
-
-
----
-
-
 
 ## 4. Test Objectives
 
@@ -136,12 +124,9 @@ As the app will be used in a live retail environment, its accuracy and reliabili
 - The app must respond quickly (with minimal lag).
 - Edge cases such as no input, unsupported combinations, or invalid characters must be handled gracefully.
 
-
----
-
 ## 5. Test Strategy
 
-As **BITE MATCH** is currently an MVP developed with **Bubble.io**, the focus is on testing the app on **desktop browsers and mobile devices**. This ensures that the application behaves correctly and consistently across the platforms most commonly used by customers and store employees.
+As **Bite Match** is currently an MVP developed with **Bubble.io**, the focus is on testing the app on **desktop browsers and mobile devices**. This ensures that the application behaves correctly and consistently across the platforms most commonly used by customers and store employees.
 
 The goal is to make sure everything works smoothly for first-time users: clean navigation, accurate recommendations, and bug-free filters.
 
@@ -211,7 +196,8 @@ Additional functional checks include:
 
 Test cases will be created for each feature and user interaction described in the scope of testing. These cases will be updated iteratively as new features are added or bugs are discovered. Each test case will include an **ID**, **description**, **test steps**, **expected result**, **actual result**, and a **status** that tracks multiple test iterations. Testing will continue through successive iterations until the feature passes all relevant test cases.
 
-Test cases will be managed via GitHub Issues for efficient tracking and version control, and documented in the `TestCases.md` file to ensure traceability and team visibility.
+Test cases will be managed via GitHub Issues for efficient tracking and version control, and documented in the [`test_cases.md`](./test_cases.md) file to ensure traceability and team visibility.
+
 
 Test coverage will focus on the main user journey (meal selection → filtering → recommendation), edge cases, and interface behavior.
 
@@ -246,10 +232,6 @@ Reports will be created after each major testing round and shared with stakehold
 To ensure efficient handling of bugs, we follow a clear and repeatable lifecycle. The diagram below illustrates the key steps from detection to resolution:
 
 <img src="images/bug_lifecycle.png" alt="Bug Lifecycle Diagram" width="300"/>
-
-
----
-
 
 ## 6. Testing Criteria
 
@@ -287,14 +269,9 @@ The following situations can trigger a suspension:
 - Major changes in requirements or scope requested by the client.  
 - The application or environment contains severe defects that limit or entirely prevent meaningful testing.
 
-
----
-
 ### 6.4. Resumption Criteria
 
 To resume the testing phase, the cause of the suspension should have been identified, addressed and resolved.
-
----
 
 ## 7. Risks and Mitigation Strategies
 
@@ -307,7 +284,6 @@ To resume the testing phase, the cause of the suspension should have been identi
 | In-store internet or network instability                             | Test offline fallback behavior.                                   |
 | Regression bugs introduced after updates                             | Run full regression test cases after major updates or fixes. Use version control to track changes.              |
 
-
 ## 8. Deliverables
 
 | Deliverable                   | Release/Updates Frequence                             |
@@ -315,7 +291,6 @@ To resume the testing phase, the cause of the suspension should have been identi
 | Test Plan                     | 1 Major Releases with daily iterations for refinement |
 | Test Cases Description        | 1 Major Releases with daily iterations for refinement |
 | Test Reports                  | Released after each test session                      |
-| Testing resources and scripts | 1 Major Releases with daily iterations for refinement |
 
 ## 9. Glossary
 
