@@ -616,7 +616,7 @@ classDiagram
         +string alcohol_degree
         +string itm_website
         +string region
-        +string location
+        +string[] location
         +Tag[] tags
         +Label[] labels
     }
