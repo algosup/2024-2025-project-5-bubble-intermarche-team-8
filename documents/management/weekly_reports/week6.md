@@ -9,27 +9,22 @@ This week was split into two key phases: finalizing the project documentation du
 ## Accomplishments
 
 1. **Finalized Technical Specifications**
-
-   * The technical specifications were completed and submitted on time, covering all necessary functional and technical details relevant to the project.
+   - The technical specifications were completed and submitted on time, covering all necessary functional and technical details relevant to the project.
 2. **Completed Testing Documents and Strategy**
-
-   * The full testing strategy has been defined, and all supporting documents are ready for the upcoming testing phase.
+   - The full testing strategy has been defined, and all supporting documents are ready for the upcoming testing phase.
 3. **Page Design Nearing Completion**
-
-   * Most application pages have been designed in Bubble, allowing us to shift our focus to logic implementation and initial user testing.
+   - Most application pages have been designed in Bubble, allowing us to shift our focus to logic implementation and initial user testing.
 
 ## Challenges
 
-* No significant challenges were encountered this week.
+- No significant challenges were encountered this week.
 
 ## Plan for Next Week
 
 1. **Continue Logic Implementation**
-
-   * We aim to complete the main algorithm implementations by Wednesday, June 4th.
+   - We aim to complete the main algorithm implementations by Wednesday, June 4th.
 2. **Initiate User Testing**
-
-   * We will begin user testing directly at Intermarché in Issoudun, enabling us to gather early feedback and validate our design and feature choices.
+   - We will begin user testing directly at Intermarché in Issoudun, enabling us to gather early feedback and validate our design and feature choices.
 
 ## Conclusion
 
