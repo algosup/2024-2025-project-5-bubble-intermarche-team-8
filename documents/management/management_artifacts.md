@@ -18,7 +18,12 @@ This document aims to centralize the management artifacts links and resources li
 
 ## Tasks and Schedule
 
-You can view the breakdown of all the tasks we've identified for this project following [this link](TO ADD).
+You can view the breakdown of all the tasks we've identified for this project following [this link](https://intime.inkom.ai).
+
+To connect, you will need the following credentials:
+
+- Email: team8.bubble@algosup.com
+- Password: Team8Bubble
 
 ## RACI Matrix
 
@@ -126,7 +131,7 @@ By utilizing these formulas, we ensure that our progress tracking is clear and c
 
 ### Link to the project's KPIs
 
-You can see our project's KPIs which were explained above following [this link]([TO ADD](https://docs.google.com/spreadsheets/d/1lBZwk-SWxh1hNyLRs3QKEs8n5GIxAUGOkLfxDRUiAaw/edit?usp=sharing)).
+You can see our project's KPIs which were explained above following [this link](https://docs.google.com/spreadsheets/d/1lBZwk-SWxh1hNyLRs3QKEs8n5GIxAUGOkLfxDRUiAaw/edit?usp=sharing).
 
 ## Weekly Reports
 
