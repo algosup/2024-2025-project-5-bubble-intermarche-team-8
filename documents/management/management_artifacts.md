@@ -22,7 +22,7 @@ You can view the breakdown of all the tasks we've identified for this project fo
 
 To connect, you will need the following credentials:
 
-- Email: team8.bubble@algosup.com
+- Email: <team8.bubble@algosup.com>
 - Password: Team8Bubble
 
 ## RACI Matrix
@@ -31,7 +31,7 @@ The RACI matrix of this project is as follows considering the [Project Charter](
 
 | Name                     | Project Manager | Program Manager | Technical Leader | Software engineer | Quality assurance | Client | Stakeholders |
 | ------------------------ | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ------ | ------------ |
-| Project kick-off         | I               | I               | I                | I                 | I                 | I      | R            | C |
+| Project kick-off         | I               | I               | I                | I                 | I                 | I      | R            |
 | Project charter          | R               | A               | C                | C                 | C                 | I      | I            |
 | Schedule creation        | R               | C               | C                | C                 | C                 | /      | I            |
 | Functional specification | A               | R               | C                |                   | /                 | C      | I            |
