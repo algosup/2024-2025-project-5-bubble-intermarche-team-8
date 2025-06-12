@@ -5,6 +5,51 @@
 
 - [Weekly Reports Cumulative](#weekly-reports-cumulative)
   - [Scope](#scope)
+  - [Weekly Report - Week 1](#weekly-report---week-1)
+    - [Overview](#overview)
+    - [Accomplishments](#accomplishments)
+    - [Challenges](#challenges)
+    - [Plans for Next Week](#plans-for-next-week)
+    - [Conclusion](#conclusion)
+  - [Weekly Report - Week 2](#weekly-report---week-2)
+    - [Overview](#overview-1)
+    - [Accomplishments](#accomplishments-1)
+    - [Challenges](#challenges-1)
+    - [Plans for Next Week](#plans-for-next-week-1)
+    - [Conclusion](#conclusion-1)
+  - [Weekly Report – Week 3](#weekly-report--week-3)
+    - [Overview](#overview-2)
+    - [Accomplishments](#accomplishments-2)
+    - [Challenges](#challenges-2)
+    - [Plans for Next Week](#plans-for-next-week-2)
+    - [Conclusion](#conclusion-2)
+  - [Weekly Report – Week 4](#weekly-report--week-4)
+    - [Overview](#overview-3)
+    - [Accomplishments](#accomplishments-3)
+    - [Challenges](#challenges-3)
+    - [Plans for Next Week](#plans-for-next-week-3)
+    - [Conclusion](#conclusion-3)
+  - [Weekly Report – Week 5](#weekly-report--week-5)
+    - [Overview](#overview-4)
+    - [Accomplishments](#accomplishments-4)
+    - [Challenges](#challenges-4)
+    - [Plans for Next Week](#plans-for-next-week-4)
+    - [Conclusion](#conclusion-4)
+  - [Weekly Report – Week 6](#weekly-report--week-6)
+    - [Overview](#overview-5)
+    - [Accomplishments](#accomplishments-5)
+    - [Challenges](#challenges-5)
+    - [Plan for Next Week](#plan-for-next-week)
+    - [Conclusion](#conclusion-5)
+  - [Weekly Report - Week 7](#weekly-report---week-7)
+    - [Overview](#overview-6)
+    - [Accomplishments](#accomplishments-6)
+    - [Challenges](#challenges-6)
+    - [Plan for Next Week](#plan-for-next-week-1)
+    - [Conclusion](#conclusion-6)
+  - [Weekly Report - Week 8](#weekly-report---week-8)
+  - [Weekly Report - Week 9](#weekly-report---week-9)
+
 
 </details>
 
@@ -215,33 +260,60 @@ This week was split into two key phases: finalizing the project documentation du
 ### Accomplishments
 
 1. **Finalized Technical Specifications**
-
-   * The technical specifications were completed and submitted on time, covering all necessary functional and technical details relevant to the project.
+   - The technical specifications were completed and submitted on time, covering all necessary functional and technical details relevant to the project.
 2. **Completed Testing Documents and Strategy**
-
-   * The full testing strategy has been defined, and all supporting documents are ready for the upcoming testing phase.
+   - The full testing strategy has been defined, and all supporting documents are ready for the upcoming testing phase.
 3. **Page Design Nearing Completion**
-
-   * Most application pages have been designed in Bubble, allowing us to shift our focus to logic implementation and initial user testing.
+   - Most application pages have been designed in Bubble, allowing us to shift our focus to logic implementation and initial user testing.
 
 ### Challenges
 
-* No significant challenges were encountered this week.
+- No significant challenges were encountered this week.
 
 ### Plan for Next Week
 
 1. **Continue Logic Implementation**
-
-   * We aim to complete the main algorithm implementations by Wednesday, June 4th.
+   - We aim to complete the main algorithm implementations by Wednesday, June 4th.
 2. **Initiate User Testing**
-
-   * We will begin user testing directly at Intermarché in Issoudun, enabling us to gather early feedback and validate our design and feature choices.
+   - We will begin user testing directly at Intermarché in Issoudun, enabling us to gather early feedback and validate our design and feature choices.
 
 ### Conclusion
 
 This week was marked by strong momentum and meaningful progress. With our documentation finalized and development well underway, we're positioned to begin user testing ahead of schedule. This early feedback loop will allow us to iterate faster and ensure our product is aligned with both user needs and client expectations. We remain confident in our ability to deliver a high-quality and impactful solution.
 
 ## Weekly Report - Week 7
+
+**Schedule Status:** 🟢 _On Track_
+
+### Overview
+
+Due to limited time available for the project this week, progress was modest. Our focus was primarily on refining the application and initiating the first round of user testing.
+
+### Accomplishments
+
+1. **Started User Testing**
+   - We began testing the application with friends and family in sample Intermarché stores. While this allowed us to observe initial reactions and guidance needs, the tests were inconclusive due to recurring bugs in the app.
+2. **Refined Application**
+   - We reviewed the existing components of the application, identifying and fixing inconsistencies that had previously gone unnoticed. This also helped us realign the app with the design and naming conventions defined at the start of the project.
+
+### Challenges
+
+1. **Testing on a Diverse User Panel**
+   - Our current testing has been limited to French- and English-speaking users. As a result, we still lack feedback from users with different cultural and linguistic backgrounds, which is essential for validating the app's international usability.
+
+### Plan for Next Week
+
+1. **Finish Development of the Application**
+
+- All core features should be implemented and reviewed. The application must meet the specifications and expectations shared by the client during our previous meetings.
+
+2. **Test on a More Diverse User Panel**
+
+- We plan to conduct testing with a broader range of users from various cultural and linguistic backgrounds to evaluate the app’s accessibility and inclusivity.
+
+### Conclusion
+
+While we made some progress this week, it fell short of our expectations, but we stay on time. Next week will require a concentrated effort on both development and testing to ensure we deliver a complete, stable, and user-friendly product. By reinforcing our focus and expanding our test panel, we aim to meet our quality standards and client expectations in the final stages of the project.
 
 ## Weekly Report - Week 8
 
