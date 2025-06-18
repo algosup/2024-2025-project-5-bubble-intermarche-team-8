@@ -48,6 +48,11 @@
     - [Plan for Next Week](#plan-for-next-week-1)
     - [Conclusion](#conclusion-6)
   - [Weekly Report - Week 8](#weekly-report---week-8)
+    - [Overview](#overview-7)
+    - [Accomplishments](#accomplishments-7)
+    - [Challenges](#challenges-7)
+    - [Plans for Next Week](#plans-for-next-week-5)
+    - [Conclusion](#conclusion-7)
   - [Weekly Report - Week 9](#weekly-report---week-9)
 
 
@@ -304,18 +309,48 @@ Due to limited time available for the project this week, progress was modest. Ou
 ### Plan for Next Week
 
 1. **Finish Development of the Application**
-
-- All core features should be implemented and reviewed. The application must meet the specifications and expectations shared by the client during our previous meetings.
-
+   - All core features should be implemented and reviewed. The application must meet the specifications and expectations shared by the client during our previous meetings.
 2. **Test on a More Diverse User Panel**
-
-- We plan to conduct testing with a broader range of users from various cultural and linguistic backgrounds to evaluate the app’s accessibility and inclusivity.
+   - We plan to conduct testing with a broader range of users from various cultural and linguistic backgrounds to evaluate the app’s accessibility and inclusivity.
 
 ### Conclusion
 
 While we made some progress this week, it fell short of our expectations, but we stay on time. Next week will require a concentrated effort on both development and testing to ensure we deliver a complete, stable, and user-friendly product. By reinforcing our focus and expanding our test panel, we aim to meet our quality standards and client expectations in the final stages of the project.
 
 ## Weekly Report - Week 8
+
+**Schedule Status:*- 🟢 *On Track*
+
+### Overview
+
+This week marked a major milestone in the project as we completed development and shifted our focus toward testing and preparing the final presentation. The team is now fully engaged in wrapping up the project and ensuring it meets user needs and client expectations.
+
+### Accomplishments
+
+1. **Completed Application Development**
+   - All planned features have been implemented. The app is now fully functional and aligned with the specifications defined in earlier stages.
+2. **Continued User Testing**
+   - User testing continued throughout the week to identify and address usability issues. We made further refinements based on feedback.
+3. **Final Presentation Preparation**
+   - We began drafting the final presentation, including both slide content and speaking notes. This marks the beginning of the project’s closing phase.
+
+### Challenges
+
+1. **Limited Diversity in Test Panel**
+   - While we successfully addressed the issue of language accessibility, our testers still came from similar demographic profiles in terms of age and background. This limited the variety of feedback we received. However, we will continue our efforts to gather more diverse insights in the coming week.
+
+### Plans for Next Week
+
+1. **Complete Final Presentation**
+  - Finalize both the visual and oral elements of our presentation, ensuring it clearly showcases the value of our solution.
+2. **Conclude User Testing**
+  - Wrap up the final round of user testing with a focus on gathering last-minute feedback and validating the app’s readiness.
+3. **Project Wrap-Up**
+  - Debrief as a team and with the client to close the project, reflect on the work accomplished, and share final deliverables.
+
+### Conclusion
+
+With development completed and the final presentation underway, we are entering the last phase of the project. The team remains focused and motivated to deliver a polished, user-tested product that meets the needs of both the client and end users. Our priority for next week is to ensure a strong and professional finish, supported by meaningful user insights and clear communication in our final presentation.
 
 ## Weekly Report - Week 9
 
