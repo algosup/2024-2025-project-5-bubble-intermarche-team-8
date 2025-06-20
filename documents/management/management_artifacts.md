@@ -155,4 +155,4 @@ For a centralized collection of copies of all the reports in a single document, 
 
 ## Post Mortem Analysis
 
-This section's content will be added by the end of the project.
+You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md).

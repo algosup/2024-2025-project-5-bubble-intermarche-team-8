@@ -1,6 +1,6 @@
 # Weekly Report - Week 8
 
-**Schedule Status:*- 🟢 *On Track*
+\*_Schedule Status:_- 🟢 _On Track_
 
 ## Overview
 
@@ -23,11 +23,11 @@ This week marked a major milestone in the project as we completed development an
 ## Plans for Next Week
 
 1. **Complete Final Presentation**
-  - Finalize both the visual and oral elements of our presentation, ensuring it clearly showcases the value of our solution.
+   - Finalize both the visual and oral elements of our presentation, ensuring it clearly showcases the value of our solution.
 2. **Conclude User Testing**
-  - Wrap up the final round of user testing with a focus on gathering last-minute feedback and validating the app’s readiness.
+   - Wrap up the final round of user testing with a focus on gathering last-minute feedback and validating the app’s readiness.
 3. **Project Wrap-Up**
-  - Debrief as a team and with the client to close the project, reflect on the work accomplished, and share final deliverables.
+   - Debrief as a team and with the client to close the project, reflect on the work accomplished, and share final deliverables.
 
 ## Conclusion
 

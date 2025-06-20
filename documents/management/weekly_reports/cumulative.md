@@ -53,8 +53,12 @@
     - [Challenges](#challenges-7)
     - [Plans for Next Week](#plans-for-next-week-5)
     - [Conclusion](#conclusion-7)
-  - [Weekly Report - Week 9](#weekly-report---week-9)
-
+  - [Weekly Report – Week 9](#weekly-report--week-9)
+    - [Overview](#overview-8)
+    - [Accomplishments](#accomplishments-8)
+    - [Challenges](#challenges-8)
+    - [Plans for Next Week](#plans-for-next-week-6)
+    - [Conclusion](#conclusion-8)
 
 </details>
 
@@ -66,7 +70,7 @@ This document copies all the weekly reports in a single document, providing a qu
 
 ## Weekly Report - Week 1
 
-Schedule Status: 🟢 *On Time*
+Schedule Status: 🟢 _On Time_
 
 ### Overview
 
@@ -105,8 +109,7 @@ The first week has laid a solid foundation for the project. We clarified expecta
 
 ## Weekly Report - Week 2
 
-
-Schedule Status: 🟠 *Slight Delay on Functional Specifications*
+Schedule Status: 🟠 _Slight Delay on Functional Specifications_
 
 ### Overview
 
@@ -143,7 +146,7 @@ Although this week introduced a slight delay, it marked a key milestone in the p
 
 ## Weekly Report – Week 3
 
-**Schedule Status:** 🟢 *On Time*
+**Schedule Status:** 🟢 _On Time_
 
 ### Overview
 
@@ -182,7 +185,7 @@ This week marked a turning point, as we moved from preparation to active develop
 
 ## Weekly Report – Week 4
 
-**Schedule Status:** 🟢 *On Time*
+**Schedule Status:** 🟢 _On Time_
 
 ### Overview
 
@@ -219,7 +222,7 @@ This week marked a key turning point in the project. With finalized functional s
 
 ## Weekly Report – Week 5
 
-**Schedule Status:** 🟢 *On Track*
+**Schedule Status:** 🟢 _On Track_
 
 ### Overview
 
@@ -256,7 +259,7 @@ This week marked a major shift from planning to execution. With technical specif
 
 ## Weekly Report – Week 6
 
-**Schedule Status:** 🔵 *Ahead of Schedule (Test Plan)*
+**Schedule Status:** 🔵 _Ahead of Schedule (Test Plan)_
 
 ### Overview
 
@@ -319,7 +322,7 @@ While we made some progress this week, it fell short of our expectations, but we
 
 ## Weekly Report - Week 8
 
-**Schedule Status:*- 🟢 *On Track*
+\*_Schedule Status:_- 🟢 _On Track_
 
 ### Overview
 
@@ -342,15 +345,44 @@ This week marked a major milestone in the project as we completed development an
 ### Plans for Next Week
 
 1. **Complete Final Presentation**
-  - Finalize both the visual and oral elements of our presentation, ensuring it clearly showcases the value of our solution.
+   - Finalize both the visual and oral elements of our presentation, ensuring it clearly showcases the value of our solution.
 2. **Conclude User Testing**
-  - Wrap up the final round of user testing with a focus on gathering last-minute feedback and validating the app’s readiness.
+   - Wrap up the final round of user testing with a focus on gathering last-minute feedback and validating the app’s readiness.
 3. **Project Wrap-Up**
-  - Debrief as a team and with the client to close the project, reflect on the work accomplished, and share final deliverables.
+   - Debrief as a team and with the client to close the project, reflect on the work accomplished, and share final deliverables.
 
 ### Conclusion
 
 With development completed and the final presentation underway, we are entering the last phase of the project. The team remains focused and motivated to deliver a polished, user-tested product that meets the needs of both the client and end users. Our priority for next week is to ensure a strong and professional finish, supported by meaningful user insights and clear communication in our final presentation.
 
-## Weekly Report - Week 9
+## Weekly Report – Week 9
 
+\*_Schedule Status:_- ✅ _Project Completed on Time_
+
+### Overview
+
+This final week marked the official conclusion of the project. Our efforts focused on delivering a strong presentation, finalizing user testing insights, and wrapping up all remaining documentation and client communication. The project is now complete and ready for potential continuation in a professional setting.
+
+### Accomplishments
+
+1. **Final Presentation to Jury**
+   - We delivered a clear and engaging final presentation to the jury, successfully covering all aspects of the project—from problem framing to technical implementation and testing outcomes.
+2. **Finalized User Testing Report**
+   - We completed our test reports, which reflect feedback from over 50 users. This wide testing panel provided valuable insights into usability, accessibility, and overall user satisfaction.
+3. **Project Wrap-Up and Post-Mortem**
+   - The team successfully concluded the project with a final wrap-up session and post-mortem analysis. A full summary can be found in the [Management Artifacts](../management_artifacts.md#post-mortem-analysis) file.
+4. **Client Communication & Future Outlook**
+   - Following the conclusion of the project, we reconnected with the client to discuss possible future steps. Antoine informed the client about the opportunity to continue the project through his company. A positive discussion ensued regarding how to take the concept further.
+
+### Challenges
+
+1. **Making the Presentation Engaging and Clear**
+   - One of the key challenges was to ensure the final presentation remained engaging and easy to follow despite the diversity of topics covered—from technical details to business considerations.
+
+### Plans for Next Week
+
+No further actions linked to ALGOSUP are planned, as the project has now officially ended.
+
+### Conclusion
+
+This final week brought the project to a successful close. The presentation was well-received, user testing was extensive and insightful, and our client communication opened promising opportunities for future collaboration. The team can be proud of the work accomplished—delivering a robust, user-tested proof of concept with solid documentation and a potential path forward.
