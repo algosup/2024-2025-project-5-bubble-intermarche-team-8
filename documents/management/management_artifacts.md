@@ -27,6 +27,8 @@ To connect, you will need the following credentials:
 - Email: <team8.bubble@algosup.com>
 - Password: Team8Bubble
 
+You can follow the [Management App Usage Guide](./management_app_usage.md) to guide you through the features of the application.
+
 ## RACI Matrix
 
 The RACI matrix of this project is as follows considering the [Project Charter](./project_charter.md):
