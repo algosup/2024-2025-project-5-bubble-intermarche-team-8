@@ -1,6 +1,6 @@
 # Weekly Report - Week 8
 
-\*_Schedule Status:_- 🟢 _On Track_
+**Schedule Status:** 🟢 _On Track_
 
 ## Overview
 

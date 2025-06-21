@@ -1,6 +1,6 @@
 # Weekly Report – Week 9
 
-\*_Schedule Status:_- ✅ _Project Completed on Time_
+**Schedule Status:** ✅ _Project Completed on Time_
 
 ## Overview
 
@@ -15,7 +15,7 @@ This final week marked the official conclusion of the project. Our efforts focus
 3. **Project Wrap-Up and Post-Mortem**
    - The team successfully concluded the project with a final wrap-up session and post-mortem analysis. A full summary can be found in the [Management Artifacts](../management_artifacts.md#post-mortem-analysis) file.
 4. **Client Communication & Future Outlook**
-   - Following the conclusion of the project, we reconnected with the client to discuss possible future steps. Antoine informed the client about the opportunity to continue the project through his company. A positive discussion ensued regarding how to take the concept further.
+   - Following the conclusion of the project, we reconnected with the client to discuss possible future steps. Antoine informed the client about the opportunity to continue the project through his company.
 
 ## Challenges
 

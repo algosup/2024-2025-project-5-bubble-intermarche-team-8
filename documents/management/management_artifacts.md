@@ -15,6 +15,8 @@ This document aims to centralize the management artifacts links and resources li
     - [Link to the project's KPIs](#link-to-the-projects-kpis)
   - [Weekly Reports](#weekly-reports)
   - [Post Mortem Analysis](#post-mortem-analysis)
+  - [Addendum](#addendum)
+    - [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule)
 
 ## Tasks and Schedule
 
@@ -156,3 +158,15 @@ For a centralized collection of copies of all the reports in a single document, 
 ## Post Mortem Analysis
 
 You can refer to our Post Mortem Analysis to have a retrospective of our project following [this link](./post_mortem.md).
+
+## Addendum
+
+### Differences Between Gantt Chart and Actual Schedule
+
+The discrepancies between our initial Gantt Chart and the actual schedule were primarily due to a major reorganization following the unexpected departure of a team member. This shift forced us to quickly adapt and reprioritize our workflow. To maintain progress and avoid bottlenecks, we made the strategic decision to streamline our focus on documentation earlier in the process. This allowed us to safeguard more time for the development phase later on.
+
+As a result, we experienced a rapid transition from being slightly ahead of schedule to falling behind within the span of a single week. This highlighted the delicate balance between planning and adaptability in dynamic team conditions.
+
+Additionally, I overestimated the time needed to learn Bubble. Contrary to initial expectations, the platform's learning curve was softened by comprehensive course materials and the guidance of our instructor, who provided clear, actionable insights meeting our project’s requirements. Such advice allowed us to progress faster than anticipated on certain technical aspects, though the earlier disruption outweighed those gains in terms of schedule alignment during most of the project.
+
+In future projects, incorporating faster and more responsive reorganization strategies will be key to staying agile. I recognized that I lacked some speed in adjusting the plan during this project, and building that reflex earlier could help us adapt more efficiently when facing similar disruptions and use more effectively the risk analysis we perform.

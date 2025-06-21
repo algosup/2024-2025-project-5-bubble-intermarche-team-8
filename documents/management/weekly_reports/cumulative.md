@@ -70,7 +70,7 @@ This document copies all the weekly reports in a single document, providing a qu
 
 ## Weekly Report - Week 1
 
-Schedule Status: 🟢 _On Time_
+**Schedule Status:** 🟢 _On Time_
 
 ### Overview
 
@@ -109,7 +109,7 @@ The first week has laid a solid foundation for the project. We clarified expecta
 
 ## Weekly Report - Week 2
 
-Schedule Status: 🟠 _Slight Delay on Functional Specifications_
+**Schedule Status:** 🟠 _Slight Delay on Functional Specifications_
 
 ### Overview
 
@@ -322,7 +322,7 @@ While we made some progress this week, it fell short of our expectations, but we
 
 ## Weekly Report - Week 8
 
-\*_Schedule Status:_- 🟢 _On Track_
+**Schedule Status:** 🟢 _On Track_
 
 ### Overview
 
@@ -357,7 +357,7 @@ With development completed and the final presentation underway, we are entering 
 
 ## Weekly Report – Week 9
 
-\*_Schedule Status:_- ✅ _Project Completed on Time_
+**Schedule Status:** ✅ _Project Completed on Time_
 
 ### Overview
 
