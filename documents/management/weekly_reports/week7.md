@@ -21,12 +21,9 @@ Due to limited time available for the project this week, progress was modest. Ou
 ## Plan for Next Week
 
 1. **Finish Development of the Application**
-
-- All core features should be implemented and reviewed. The application must meet the specifications and expectations shared by the client during our previous meetings.
-
+   - All core features should be implemented and reviewed. The application must meet the specifications and expectations shared by the client during our previous meetings.
 2. **Test on a More Diverse User Panel**
-
-- We plan to conduct testing with a broader range of users from various cultural and linguistic backgrounds to evaluate the app’s accessibility and inclusivity.
+   - We plan to conduct testing with a broader range of users from various cultural and linguistic backgrounds to evaluate the app’s accessibility and inclusivity.
 
 ## Conclusion
 
